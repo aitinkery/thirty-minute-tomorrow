@@ -952,7 +952,7 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 
   async function callAIFlavor(acts, interest, age, vibe, duration) {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 10000);
+    const timeoutId = setTimeout(() => controller.abort(), 25000);  // Claude Haiku takes 8-15s for 3 activities
     try {
       const resp = await fetch(FLAVOR_API, {
         method: 'POST',
