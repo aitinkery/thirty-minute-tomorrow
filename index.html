@@ -266,43 +266,50 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 .text-input:focus { transform: translate(-1px,-1px); box-shadow: 5px 5px 0 0 var(--pool); }
 .text-input::placeholder { color: var(--muted); font-weight: 500; }
 
-/* Lucky button row — sits below primary submit */
+/* Lucky path — stacked below primary, secondary weight */
 .lucky-row {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 16px;
+  gap: 8px;
+  margin-top: 18px;
 }
 .lucky-or {
   font-family: 'Fredoka', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--muted);
   text-transform: lowercase;
+  letter-spacing: 0.04em;
 }
 .btn-lucky {
-  padding: 12px 24px;
-  background: var(--grape);
-  color: #fff;
+  width: 70%;
+  max-width: 360px;
+  padding: 14px 24px;
+  background: #f5e9ff;       /* soft grape tint, matches vibe pill family */
+  color: var(--grape-d);
   font-family: 'Fredoka', sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   border: 3px solid var(--ink);
   border-radius: 999px;
   cursor: pointer;
   box-shadow: 4px 4px 0 0 var(--ink);
-  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, color 0.12s ease;
   transform: rotate(1deg);
 }
 .btn-lucky:hover {
-  background: var(--grape-d);
+  background: var(--grape);
+  color: #fff;
   transform: translate(-2px,-2px) rotate(1deg);
   box-shadow: 6px 6px 0 0 var(--ink);
 }
 .btn-lucky:active {
   transform: translate(2px,2px) rotate(1deg);
   box-shadow: 2px 2px 0 0 var(--ink);
+}
+@media (max-width: 480px) {
+  .btn-lucky { width: 100%; max-width: none; }
 }
 
 /* Submit button → tomato sticker */
