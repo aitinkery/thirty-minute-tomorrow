@@ -1,0 +1,3664 @@
+[
+  {
+    "id": "build-marble-ramp-from-paper-tubes",
+    "title": "Build a marble ramp from paper tubes",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 10,
+    "interests": [
+      "engineering",
+      "things-that-roll",
+      "marbles",
+      "building",
+      "ramps",
+      "physics"
+    ],
+    "vibe": [
+      "creative",
+      "focused"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper towel tubes (3+)",
+      "tape",
+      "marble or small ball",
+      "books or boxes (for propping)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "engineering thinking, spatial reasoning, persistence",
+    "parent_role": "co-builder",
+    "steps": [
+      "Flatten one end of a tube slightly so it can slide inside the next tube.",
+      "Tape two tubes together end-to-end at a slight downward angle. Let the marble go — does it roll?",
+      "Add a third tube at a different angle. Test after every new piece.",
+      "Use stacked books or boxes to prop tubes at the right height.",
+      "Aim for a target landing zone: a bowl, a cup, or a taped X on the floor.",
+      "Once the run works, time it. Change one thing — steeper angle, different height — and time again."
+    ],
+    "extension": "Add a gap the marble has to jump across, or bend a tube into a loop-the-loop.",
+    "credit": "classic STEM-at-home",
+    "go_deeper_query": "how to build a marble run from paper tubes kids",
+    "place_categories": [
+      "children's museum",
+      "hands-on science center"
+    ]
+  },
+  {
+    "id": "make-paper-bridge-hold-pennies",
+    "title": "Make a paper bridge that holds pennies",
+    "duration_min": 30,
+    "age_min": 6,
+    "age_max": 12,
+    "interests": [
+      "engineering",
+      "building",
+      "architecture",
+      "physics",
+      "challenges"
+    ],
+    "vibe": [
+      "focused",
+      "creative"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "5 sheets of printer paper",
+      "tape",
+      "2 stacks of books (as bridge towers)",
+      "pennies or small coins (20+)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "structural engineering intuition, hypothesis testing",
+    "parent_role": "co-builder and load-tester",
+    "steps": [
+      "Set two stacks of books about 20 cm apart — these are your bridge towers.",
+      "Use one sheet of paper flat across the gap. Lay a penny on it. How many can it hold before it sags to the table?",
+      "Now fold another sheet into a fan or accordion. Lay it across. Test again.",
+      "Try rolling a sheet into a tube. Or folding the edges up. Which shape holds the most?",
+      "Build your best design using all 5 sheets, then do the official load test: pennies one at a time until collapse.",
+      "Count the winning total and write it on the bridge with a marker."
+    ],
+    "extension": "Compete: each person builds a bridge from the same 5 sheets and you see whose holds more.",
+    "credit": "classic engineering challenge",
+    "go_deeper_query": "paper bridge engineering challenge how many pennies kids",
+    "place_categories": [
+      "children's museum",
+      "hands-on science center"
+    ]
+  },
+  {
+    "id": "balloon-rocket-on-a-string",
+    "title": "Launch a balloon rocket across the room",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 10,
+    "interests": [
+      "rockets",
+      "physics",
+      "things-that-move",
+      "engineering",
+      "space"
+    ],
+    "vibe": [
+      "silly",
+      "noisy",
+      "physical"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "balloon (1+)",
+      "string or fishing line (3-5 meters)",
+      "tape",
+      "drinking straw"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "medium",
+    "skill_developed": "understanding thrust and motion, experimentation",
+    "parent_role": "co-builder and race official",
+    "steps": [
+      "Thread the string through the straw, then tie each end of the string across the room (doorknob to chair leg works).",
+      "Pull the straw to one end. Blow up a balloon but don't tie it — pinch the end.",
+      "Tape the inflated balloon to the straw (two pieces of tape, top and bottom).",
+      "Let go. Watch it fly.",
+      "Try again: does a bigger balloon go faster? What about aiming it slightly upward?",
+      "Race two strings side by side if you have another balloon and string."
+    ],
+    "extension": "Add cargo — tape a small paper cup to the balloon and see if it still launches with a LEGO figure inside.",
+    "credit": "classic physics demo",
+    "go_deeper_query": "balloon rocket on a string physics experiment kids",
+    "place_categories": [
+      "children's museum",
+      "hands-on science center"
+    ]
+  },
+  {
+    "id": "foil-boat-penny-float",
+    "title": "Build a foil boat that floats as many pennies as possible",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 11,
+    "interests": [
+      "engineering",
+      "water",
+      "physics",
+      "building",
+      "challenges"
+    ],
+    "vibe": [
+      "focused",
+      "messy"
+    ],
+    "setting": [
+      "kitchen"
+    ],
+    "materials": [
+      "aluminum foil (3 sheets, each about 30cm square)",
+      "pennies or small coins (30+)",
+      "large bowl or sink filled with water"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "buoyancy intuition, iterative design, problem-solving",
+    "parent_role": "co-builder",
+    "steps": [
+      "Fill a bowl or sink with water.",
+      "Give each person one sheet of foil. Shape it into a boat any way you like — no rules.",
+      "Float your boat and load pennies in one at a time. Count how many it holds before sinking.",
+      "Now redesign. What did you learn from the first attempt? Try taller sides, a flatter bottom, a different shape.",
+      "Test the new design. Did it improve?",
+      "Go back and forth — three designs each, best total wins."
+    ],
+    "extension": "Try adding a sail made of a toothpick and a scrap of paper, then see if the boat still floats with cargo.",
+    "credit": "classic STEM-at-home",
+    "go_deeper_query": "aluminum foil boat buoyancy challenge how many pennies kids",
+    "place_categories": [
+      "children's museum",
+      "hands-on science center"
+    ]
+  },
+  {
+    "id": "paper-helicopter-spinner",
+    "title": "Make a paper helicopter and test it from different heights",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 11,
+    "interests": [
+      "flight",
+      "engineering",
+      "physics",
+      "things-that-spin",
+      "paper-crafts"
+    ],
+    "vibe": [
+      "creative",
+      "focused"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "printer paper (4 sheets)",
+      "scissors",
+      "paper clip (1 per helicopter)",
+      "ruler"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "aerodynamics basics, observation, variable testing",
+    "parent_role": "co-builder and timekeeper",
+    "steps": [
+      "Cut a strip of paper about 20cm long and 4cm wide.",
+      "Cut halfway down the middle from the top to make two blades. Fold one blade forward and one back.",
+      "Fold up the bottom 3cm and clip a paper clip to it for weight.",
+      "Hold it above your head and drop it — it should spin as it falls.",
+      "Make three different sizes. Which stays in the air longest? Time each one.",
+      "Try bending the blades at different angles. What changes?"
+    ],
+    "extension": "Drop from the top of the stairs (parent supervises) to see how long it stays airborne on a big fall.",
+    "credit": "classic paper engineering",
+    "go_deeper_query": "how to make a paper helicopter that spins falling kids",
+    "place_categories": [
+      "children's museum",
+      "hands-on science center"
+    ]
+  },
+  {
+    "id": "straw-bridge-load-test",
+    "title": "Build a straw bridge and load-test it with coins",
+    "duration_min": 30,
+    "age_min": 7,
+    "age_max": 12,
+    "interests": [
+      "engineering",
+      "building",
+      "architecture",
+      "physics",
+      "challenges"
+    ],
+    "vibe": [
+      "focused",
+      "creative"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "drinking straws (20)",
+      "tape",
+      "2 stacks of books",
+      "coins for testing"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "structural thinking, triangles and compression, iterative design",
+    "parent_role": "co-builder",
+    "steps": [
+      "Set two stacks of books 25cm apart as bridge supports.",
+      "Use 10 straws to build a deck — the flat part your coins will rest on.",
+      "Use the remaining 10 straws to add support below or alongside the deck.",
+      "Tape everything at joints — the tape is your glue.",
+      "Rest the bridge across the gap. Load coins one at a time until something bends or breaks.",
+      "Note where it failed, reinforce that spot on your next version."
+    ],
+    "extension": "Google 'truss bridge' together and see if adding a triangular support underneath beats your first score.",
+    "credit": "classic engineering challenge",
+    "go_deeper_query": "straw bridge engineering challenge load test tutorial kids",
+    "place_categories": [
+      "children's museum",
+      "hands-on science center"
+    ]
+  },
+  {
+    "id": "rubber-band-catapult",
+    "title": "Build a rubber band catapult and measure launch distance",
+    "duration_min": 30,
+    "age_min": 6,
+    "age_max": 12,
+    "interests": [
+      "engineering",
+      "things-that-launch",
+      "physics",
+      "building",
+      "challenges"
+    ],
+    "vibe": [
+      "noisy",
+      "physical",
+      "silly"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "7 popsicle sticks or craft sticks",
+      "rubber bands (4)",
+      "plastic spoon (1)",
+      "small marshmallows or balled-up paper"
+    ],
+    "no_special_materials": false,
+    "outdoor": false,
+    "noise_level": "medium",
+    "skill_developed": "stored energy concepts, measurement, trajectory thinking",
+    "parent_role": "co-builder and safety lookout",
+    "steps": [
+      "Stack 5 popsicle sticks and bind them tightly with a rubber band at each end.",
+      "Cross the last 2 sticks in an X and bind the middle with a rubber band.",
+      "Slide the stack of 5 sticks between the crossed sticks near one end, then bind everything together.",
+      "Use a rubber band to attach the spoon to the short end of the top stick.",
+      "Pull the spoon down and load a marshmallow. Release.",
+      "Mark where it lands. Try pulling farther back, or tilting the angle — measure each launch."
+    ],
+    "extension": "Set up cup targets at different distances and score points for hitting them.",
+    "credit": "classic STEM craft",
+    "go_deeper_query": "how to build a popsicle stick rubber band catapult kids",
+    "place_categories": [
+      "children's museum",
+      "maker space"
+    ]
+  },
+  {
+    "id": "cardboard-maze-for-marble",
+    "title": "Build a cardboard maze the marble has to navigate",
+    "duration_min": 60,
+    "age_min": 6,
+    "age_max": 12,
+    "interests": [
+      "engineering",
+      "building",
+      "marbles",
+      "puzzles",
+      "mazes"
+    ],
+    "vibe": [
+      "focused",
+      "creative"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "cardboard box lid (one large, flat)",
+      "strips of cardboard or cereal box pieces",
+      "tape",
+      "scissors",
+      "marble or small ball"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "spatial planning, iterative design, problem-solving",
+    "parent_role": "co-builder",
+    "steps": [
+      "Use the cardboard box lid as your maze tray — this keeps the marble contained.",
+      "Plan your maze on paper first: where's the start? Where's the finish? Add 4-6 walls.",
+      "Cut cardboard strips and fold up a small flap at the bottom — that's how you'll tape them flat.",
+      "Build the walls one at a time and test with the marble as you go.",
+      "Add a dead end or two, then close up the maze with a finish hole cut in the cardboard.",
+      "Tilt the tray to steer the marble from start to finish."
+    ],
+    "extension": "Time how fast you can navigate it, then swap and race.",
+    "credit": "classic build-and-play",
+    "go_deeper_query": "how to build a cardboard marble maze kids diy",
+    "place_categories": [
+      "children's museum",
+      "maker space"
+    ]
+  },
+  {
+    "id": "balance-mobile-from-coat-hanger",
+    "title": "Build a hanging mobile that actually balances",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 10,
+    "interests": [
+      "art",
+      "engineering",
+      "balance",
+      "physics",
+      "sculpture"
+    ],
+    "vibe": [
+      "calm",
+      "creative",
+      "focused"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "wire coat hanger (1)",
+      "string or yarn (2 meters)",
+      "scissors",
+      "small objects from around the house (keys, toy animals, buttons, paper shapes)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "balance and weight intuition, spatial reasoning, aesthetics",
+    "parent_role": "co-builder",
+    "steps": [
+      "Lay out 6-8 small objects — they're your mobile pieces.",
+      "Cut 6 pieces of string, each a different length.",
+      "Tie one object to the end of each string.",
+      "Hang one string from the left end of the hanger, one from the right. Lift the hanger — does it balance?",
+      "Slide strings along the hanger wire to find the balance point. Add more strings one at a time.",
+      "Hang the finished mobile from a doorway or ceiling hook and watch it turn."
+    ],
+    "extension": "Make a second-level mobile by hanging another piece of bent wire from the first hanger and dangling things from that.",
+    "credit": "inspired by Alexander Calder's mobiles",
+    "go_deeper_query": "how to make a hanging mobile that balances kids art project",
+    "place_categories": [
+      "children's museum",
+      "art museum kids program"
+    ]
+  },
+  {
+    "id": "cup-and-string-telephone",
+    "title": "Build a cup-and-string telephone and test its limits",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 9,
+    "interests": [
+      "sound",
+      "physics",
+      "engineering",
+      "communication"
+    ],
+    "vibe": [
+      "silly",
+      "focused"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper or plastic cups (2)",
+      "string or thread (5 meters)",
+      "toothpick or pencil (for the knot anchor)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "sound vibration understanding, experimentation",
+    "parent_role": "fellow scientist",
+    "steps": [
+      "Poke a small hole in the bottom of each cup with a pencil.",
+      "Thread the string through both holes. Tie a toothpick across each end inside the cup so it can't pull through.",
+      "Walk apart until the string is fully taut — no slack.",
+      "One person talks into their cup while the other holds theirs to their ear. Keep the string tight.",
+      "Experiment: what happens if you let the string go slack? What if you pinch it in the middle?",
+      "Try whispering something — can the listener hear it clearly from across the room?"
+    ],
+    "extension": "Add a third cup on a branch of string and try a three-way call.",
+    "credit": "classic physics demonstration",
+    "go_deeper_query": "cup and string telephone how it works sound vibration kids",
+    "place_categories": [
+      "children's museum",
+      "hands-on science center"
+    ]
+  },
+  {
+    "id": "index-card-tower-challenge",
+    "title": "Build the tallest tower you can from index cards alone",
+    "duration_min": 30,
+    "age_min": 6,
+    "age_max": 12,
+    "interests": [
+      "engineering",
+      "building",
+      "challenges",
+      "architecture",
+      "physics"
+    ],
+    "vibe": [
+      "focused",
+      "creative"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "index cards (20)",
+      "tape (optional — try it without first)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "structural intuition, trial-and-error thinking, geometry",
+    "parent_role": "co-builder",
+    "steps": [
+      "First round: no tape. Fold, bend, and stand cards any way you want. How high can you get?",
+      "Measure the height with a ruler or hand-widths.",
+      "Study what fell and why. Where did it get wobbly?",
+      "Second round: tape allowed. Does that help as much as you expected?",
+      "Try folding a card in half vertically — it stands on its own and holds weight on top.",
+      "Final round: both of you build at the same time, and measure the winner."
+    ],
+    "extension": "Add a small toy on top as cargo and see whose tower holds it without collapsing.",
+    "credit": "classic engineering challenge",
+    "go_deeper_query": "index card tower challenge how to build tall structures kids",
+    "place_categories": [
+      "children's museum",
+      "hands-on science center"
+    ]
+  },
+  {
+    "id": "make-paper-airplane-that-loops",
+    "title": "Make a paper airplane that actually loops",
+    "duration_min": 30,
+    "age_min": 6,
+    "age_max": 12,
+    "interests": [
+      "flight",
+      "engineering",
+      "paper-crafts",
+      "physics",
+      "challenges"
+    ],
+    "vibe": [
+      "physical",
+      "silly"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "printer paper (4 sheets)",
+      "tape",
+      "scissors"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "medium",
+    "skill_developed": "aerodynamics intuition, fine motor control, hypothesis testing",
+    "parent_role": "co-builder and flight tester",
+    "steps": [
+      "Fold a classic dart plane first — two diagonal nose folds, then fold in half, fold the wings down.",
+      "Throw it level and watch what it does. Does it nose-dive? Climb? Curve?",
+      "To make it loop: bend both wing tips slightly upward. This is called elevators — it pushes the nose up.",
+      "Throw with a smooth forward push (not a spike). It should climb and loop over.",
+      "Adjust elevator angle until you get a consistent loop.",
+      "Each person designs their own variation and you compare distance, loops, and hang time."
+    ],
+    "extension": "Try a stunt sequence: fly it through a hula hoop or a doorway frame.",
+    "credit": "classic paper aviation",
+    "go_deeper_query": "paper airplane that does a loop tutorial kids",
+    "place_categories": [
+      "children's museum"
+    ]
+  },
+  {
+    "id": "four-question-dinosaur-interview",
+    "title": "The 4-question dinosaur interview",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 8,
+    "interests": [
+      "dinosaurs",
+      "animals",
+      "storytelling",
+      "science",
+      "prehistory"
+    ],
+    "vibe": [
+      "silly",
+      "creative"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper (for notes)",
+      "pencil",
+      "kid's dinosaur book or print-out (optional)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "narrative thinking, scientific vocabulary, memory and recall",
+    "parent_role": "interview subject (plays the dinosaur)",
+    "steps": [
+      "Together, pick a dinosaur the kid knows something about.",
+      "The kid writes (or the parent writes for them) four questions to ask the dinosaur. Anything goes: 'What do you eat for breakfast?' 'Were you ever scared?' 'Do you have friends?'",
+      "The parent becomes the dinosaur — answer in character, but sneak in one real fact per answer.",
+      "After the interview, the kid draws a portrait of the dinosaur they just met.",
+      "Flip roles: kid becomes a different dinosaur, parent does the interviewing.",
+      "Compare the two drawings and the real facts you each snuck in."
+    ],
+    "extension": "Record the interview on a phone as a podcast episode and play it back.",
+    "credit": "original",
+    "go_deeper_query": "fun dinosaur facts for kids educational video",
+    "place_categories": [
+      "natural history museum",
+      "children's museum"
+    ]
+  },
+  {
+    "id": "bug-observation-journal",
+    "title": "Make a bug observation journal from scratch",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 10,
+    "interests": [
+      "bugs",
+      "insects",
+      "nature",
+      "animals",
+      "science",
+      "drawing"
+    ],
+    "vibe": [
+      "calm",
+      "focused"
+    ],
+    "setting": [
+      "yard",
+      "home"
+    ],
+    "materials": [
+      "paper (stapled together as a journal)",
+      "pencil or crayons",
+      "magnifying glass (optional)",
+      "jar with lid (for temporary observation)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "observation skills, scientific illustration, classification",
+    "parent_role": "fellow scientist",
+    "steps": [
+      "Fold and staple 4 sheets of paper into a little book. This is the journal.",
+      "Go outside and find three bugs — under rocks, in the grass, on leaves.",
+      "For each bug: draw it as accurately as you can, then write or dictate three things you notice (how many legs, what it was doing, where you found it).",
+      "Capture one in a jar briefly for a closer look, then let it go.",
+      "Name each bug — the real name if you know it, or an invented one if you don't.",
+      "Back inside, compare your drawings and decide which bug was most interesting."
+    ],
+    "extension": "Look up one of the bugs together and find out what it eats and what eats it.",
+    "credit": "classic naturalist practice",
+    "go_deeper_query": "how to observe and draw bugs insects nature journal kids",
+    "place_categories": [
+      "nature center",
+      "natural history museum"
+    ]
+  },
+  {
+    "id": "toilet-paper-roll-bird-feeder",
+    "title": "Make a bird feeder from a toilet paper roll",
+    "duration_min": 30,
+    "age_min": 3,
+    "age_max": 8,
+    "interests": [
+      "birds",
+      "animals",
+      "nature",
+      "crafts",
+      "outdoors"
+    ],
+    "vibe": [
+      "calm",
+      "creative",
+      "messy"
+    ],
+    "setting": [
+      "home",
+      "yard"
+    ],
+    "materials": [
+      "toilet paper tube (1)",
+      "peanut butter or shortening",
+      "birdseed or oats",
+      "string (30cm)",
+      "plate"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "caring for animals, fine motor control, patience",
+    "parent_role": "co-builder",
+    "steps": [
+      "Thread and tie string through the top of the tube so it can hang.",
+      "Spread peanut butter or shortening all over the outside of the tube.",
+      "Pour birdseed onto a plate. Roll the tube in it until coated.",
+      "Hang it outside from a branch or hook.",
+      "While you wait for birds: draw three birds you might see and look them up in a book or together online.",
+      "Check back every 30 minutes to see if any visitors have arrived."
+    ],
+    "extension": "Keep a tally of how many birds visit in a day and which kind comes most.",
+    "credit": "classic nature craft",
+    "go_deeper_query": "toilet paper roll bird feeder how to make kids craft",
+    "place_categories": [
+      "bird sanctuary",
+      "nature center",
+      "zoo"
+    ]
+  },
+  {
+    "id": "sort-leaves-by-shape-and-size",
+    "title": "Collect leaves and sort them every way you can think of",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 9,
+    "interests": [
+      "nature",
+      "plants",
+      "science",
+      "sorting",
+      "outdoor"
+    ],
+    "vibe": [
+      "calm",
+      "focused"
+    ],
+    "setting": [
+      "yard",
+      "park"
+    ],
+    "materials": [
+      "bag for collecting",
+      "flat surface",
+      "paper",
+      "crayons"
+    ],
+    "no_special_materials": true,
+    "outdoor": true,
+    "noise_level": "quiet",
+    "skill_developed": "classification, observational vocabulary, pattern recognition",
+    "parent_role": "fellow scientist",
+    "steps": [
+      "Collect at least 15 different leaves — different shapes, sizes, colors.",
+      "Lay them all out on a flat surface.",
+      "First sort: big vs. small. Then resort: smooth edges vs. jagged edges.",
+      "How many other ways can you sort? Try: pointy tips vs. round tips, dark green vs. light green, thick vs. thin.",
+      "Pick your favorite leaf and do a rubbing: put it under paper and rub a crayon over it.",
+      "Try to name as many trees as you can that these leaves came from."
+    ],
+    "extension": "Press your five favorite leaves between heavy books and come back in a week to find them preserved.",
+    "credit": "classic nature study",
+    "go_deeper_query": "how to identify tree leaves for kids nature study",
+    "place_categories": [
+      "nature center",
+      "botanical garden",
+      "nature preserve"
+    ]
+  },
+  {
+    "id": "mimic-animal-movement-game",
+    "title": "Move like 10 different animals and guess each one",
+    "duration_min": 15,
+    "age_min": 3,
+    "age_max": 8,
+    "interests": [
+      "animals",
+      "movement",
+      "games",
+      "silly",
+      "nature"
+    ],
+    "vibe": [
+      "physical",
+      "silly",
+      "noisy"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "loud",
+    "skill_developed": "body awareness, animal knowledge, imagination",
+    "parent_role": "fellow player",
+    "steps": [
+      "Together, name 10 animals and write them on slips of paper. Put them in a bowl.",
+      "One person draws a slip and has to move like that animal — no words, no sounds.",
+      "The other person guesses. When they get it, you talk about how the real animal actually moves.",
+      "Swap who performs and who guesses.",
+      "Add a harder round: animals that are hard to mimic (worm, jellyfish, crab).",
+      "Final round: both people act out the same animal at the same time without telling each other — see if you match."
+    ],
+    "extension": "Pick one animal and research how it actually moves (slow-motion video if you want, or a book) and improve your imitation.",
+    "credit": "classic drama game",
+    "go_deeper_query": "how animals move kids educational video zoo animals",
+    "place_categories": [
+      "zoo",
+      "children's museum"
+    ]
+  },
+  {
+    "id": "habitat-diorama-in-shoebox",
+    "title": "Build a habitat diorama in a shoebox",
+    "duration_min": 60,
+    "age_min": 5,
+    "age_max": 11,
+    "interests": [
+      "animals",
+      "nature",
+      "habitats",
+      "crafts",
+      "building",
+      "ecosystems"
+    ],
+    "vibe": [
+      "creative",
+      "focused"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "shoebox",
+      "crayons or markers",
+      "scissors",
+      "paper",
+      "tape",
+      "cotton balls",
+      "dried leaves or grass (optional)",
+      "small plastic animals (optional)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "ecosystem thinking, creative representation, research skills",
+    "parent_role": "co-builder",
+    "steps": [
+      "Pick a habitat together: ocean, desert, rainforest, arctic, grassland.",
+      "Draw and color the background on the inside of the box (sky, water, terrain).",
+      "Make at least three animals from paper — cut them out and fold a tab at the bottom to stand them up.",
+      "Add terrain features: crumpled paper for rocks, cotton ball clouds, torn paper for trees.",
+      "Place the animals in spots they'd actually live in that habitat.",
+      "Give each animal a name tag and one fact about what it eats."
+    ],
+    "extension": "Add a food chain arrow: draw a line from the plant to the herbivore to the carnivore.",
+    "credit": "classic school project, adapted for home",
+    "go_deeper_query": "shoebox habitat diorama how to make step by step kids",
+    "place_categories": [
+      "natural history museum",
+      "zoo",
+      "aquarium"
+    ]
+  },
+  {
+    "id": "make-clay-fossil-impression",
+    "title": "Make fossil impressions in clay and excavate them",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 10,
+    "interests": [
+      "dinosaurs",
+      "fossils",
+      "nature",
+      "science",
+      "archaeology"
+    ],
+    "vibe": [
+      "focused",
+      "messy"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "air-dry clay or playdough",
+      "small objects to press (shell, leaf, toy dinosaur, twig)",
+      "plastic knife"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "understanding fossil formation, fine motor control, scientific imagination",
+    "parent_role": "fellow scientist",
+    "steps": [
+      "Flatten clay into a thick slab about 1cm deep.",
+      "Press a shell, leaf, or toy dinosaur foot firmly into the clay. Lift it out — that's a cast fossil.",
+      "Make 4-5 impressions from different objects in different slabs.",
+      "Let a parent secretly make one impression while the kid covers their eyes.",
+      "The kid has to figure out what made each impression by looking closely.",
+      "Talk about how real fossils form (creatures get covered in mud that hardens over millions of years)."
+    ],
+    "extension": "Let the clay dry and paint the fossils brown with a coffee wash for an aged look.",
+    "credit": "classic paleontology activity",
+    "go_deeper_query": "how to make clay fossil impressions kids paleontology",
+    "place_categories": [
+      "natural history museum",
+      "children's museum"
+    ]
+  },
+  {
+    "id": "design-a-backyard-creature",
+    "title": "Design a creature perfectly adapted to your backyard",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 12,
+    "interests": [
+      "animals",
+      "nature",
+      "science",
+      "drawing",
+      "evolution",
+      "imagination"
+    ],
+    "vibe": [
+      "creative",
+      "calm"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper",
+      "crayons or markers",
+      "pencil"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "adaptation thinking, biological reasoning, creative illustration",
+    "parent_role": "co-designer",
+    "steps": [
+      "Go outside for 5 minutes and observe: what's in your backyard? What does it eat? What dangers are there?",
+      "Back inside, each person designs a creature perfectly built to survive in that backyard.",
+      "For each body part you draw, write one sentence explaining why it's useful there.",
+      "What does it eat? How does it hide? What eats it?",
+      "Name your creature using made-up Latin-sounding words.",
+      "Present your creature to each other like you're a scientist at a discovery press conference."
+    ],
+    "extension": "Draw your two creatures side by side and decide: would they compete or would one eat the other?",
+    "credit": "original, inspired by evolutionary biology education",
+    "go_deeper_query": "animal adaptations explained for kids how animals survive",
+    "place_categories": [
+      "natural history museum",
+      "zoo",
+      "nature center"
+    ]
+  },
+  {
+    "id": "listen-only-nature-walk",
+    "title": "Go on a listen-only nature walk and map what you hear",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 10,
+    "interests": [
+      "nature",
+      "sound",
+      "outdoor",
+      "mindfulness",
+      "animals"
+    ],
+    "vibe": [
+      "calm",
+      "quiet",
+      "focused"
+    ],
+    "setting": [
+      "yard",
+      "park",
+      "walk"
+    ],
+    "materials": [
+      "paper",
+      "pencil or crayons"
+    ],
+    "no_special_materials": true,
+    "outdoor": true,
+    "noise_level": "silent",
+    "skill_developed": "auditory attention, nature awareness, symbol-making",
+    "parent_role": "fellow explorer",
+    "steps": [
+      "Before you leave: draw a simple map of where you're going (even just a rectangle for the backyard).",
+      "The rule: no talking for the first 10 minutes. Just walk and listen.",
+      "Each time you hear something, mark it on the map with a symbol (bird = B, wind = wavy line, car = box).",
+      "After 10 minutes, you can whisper to compare what each of you heard.",
+      "Sit still in one spot for 5 minutes and see if new sounds appear.",
+      "Back home, count how many different sounds you each heard. Who caught the most?"
+    ],
+    "extension": "Make the same walk at a different time of day (morning vs. evening) and compare what changes.",
+    "credit": "adapted from naturalist sound-mapping practice",
+    "go_deeper_query": "nature sound mapping mindful nature walk for kids",
+    "place_categories": [
+      "nature preserve",
+      "state park",
+      "nature center"
+    ]
+  },
+  {
+    "id": "plant-a-seed-growth-chart",
+    "title": "Plant a seed and make a growth prediction chart",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 10,
+    "interests": [
+      "plants",
+      "nature",
+      "gardening",
+      "science",
+      "growing-things"
+    ],
+    "vibe": [
+      "calm",
+      "focused",
+      "messy"
+    ],
+    "setting": [
+      "home",
+      "yard"
+    ],
+    "materials": [
+      "seeds (bean, sunflower, or any fast-germinating seed)",
+      "cup or small pot",
+      "soil or paper towels",
+      "marker",
+      "ruler",
+      "paper for chart"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "scientific prediction and observation, plant biology basics, patience",
+    "parent_role": "co-planter and fellow scientist",
+    "steps": [
+      "Put damp soil or a wet paper towel in a cup. Poke a seed about 1cm deep.",
+      "Before you seal it up: make a prediction chart. How tall do you think it will be in 3 days? 7 days? 14 days?",
+      "Draw the seed underground in its starting position.",
+      "Put the cup on a sunny windowsill.",
+      "Check every day and draw what you see. Measure with a ruler when it sprouts.",
+      "Compare the real growth to your predictions. Were you close?"
+    ],
+    "extension": "Plant two identical seeds — one in a sunny spot, one in a dark closet. Compare them after a week.",
+    "credit": "classic science demonstration",
+    "go_deeper_query": "how to grow a bean seed in a cup kids science experiment",
+    "place_categories": [
+      "botanical garden",
+      "nature center",
+      "urban farm"
+    ]
+  },
+  {
+    "id": "cloud-shapes-and-sketching",
+    "title": "Identify cloud shapes and sketch what they look like",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 10,
+    "interests": [
+      "weather",
+      "nature",
+      "outdoor",
+      "drawing",
+      "sky"
+    ],
+    "vibe": [
+      "calm",
+      "creative"
+    ],
+    "setting": [
+      "yard",
+      "park"
+    ],
+    "materials": [
+      "paper",
+      "pencil or crayons"
+    ],
+    "no_special_materials": true,
+    "outdoor": true,
+    "noise_level": "quiet",
+    "skill_developed": "observational drawing, visual imagination, weather awareness",
+    "parent_role": "fellow observer",
+    "steps": [
+      "Lie on your backs in the yard or a park. Look up.",
+      "First person names a shape they see in a cloud. Second person finds it too.",
+      "Each person picks their three favorite cloud shapes and quickly sketches them.",
+      "Learn the three main types: cumulus (puffy), stratus (flat layers), cirrus (wispy streaks). Which do you see?",
+      "Predict: do the clouds look like rain might come, or clear skies?",
+      "Look at the same spot 15 minutes later. How much have the clouds moved and changed?"
+    ],
+    "extension": "Look up cloud types together and see how many official types you can spot from your yard.",
+    "credit": "classic nature observation",
+    "go_deeper_query": "cloud types for kids cumulus stratus cirrus explained",
+    "place_categories": [
+      "science museum",
+      "planetarium"
+    ]
+  },
+  {
+    "id": "shake-cream-into-butter",
+    "title": "Shake heavy cream into butter and eat it on toast",
+    "duration_min": 30,
+    "age_min": 3,
+    "age_max": 10,
+    "interests": [
+      "cooking",
+      "food-science",
+      "kitchen",
+      "dairy",
+      "experiments"
+    ],
+    "vibe": [
+      "physical",
+      "silly",
+      "messy"
+    ],
+    "setting": [
+      "kitchen"
+    ],
+    "materials": [
+      "heavy whipping cream (half cup)",
+      "jar with tight lid",
+      "pinch of salt",
+      "bread for toast"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "medium",
+    "skill_developed": "food science basics (emulsions), cause and effect, patience",
+    "parent_role": "fellow shaker",
+    "steps": [
+      "Pour half a cup of heavy cream into a jar. Add a pinch of salt. Seal it tightly.",
+      "Shake it. Keep shaking. Take turns — it takes about 10-15 minutes.",
+      "Around minute 5: it'll thicken into whipped cream. Keep going — don't stop here.",
+      "Around minute 12-15: a yellowish lump will form and the liquid separates. That's butter and buttermilk.",
+      "Pour off the white liquid (that's buttermilk — taste it!). Rinse the butter lump under cold water.",
+      "Spread on toast and eat it immediately."
+    ],
+    "extension": "Make a second batch and add garlic powder or honey before shaking — flavored butter.",
+    "credit": "classic food science activity",
+    "go_deeper_query": "making butter from heavy cream kids food science",
+    "place_categories": []
+  },
+  {
+    "id": "layered-density-column",
+    "title": "Stack liquids in a glass to make a rainbow column",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 12,
+    "interests": [
+      "food-science",
+      "physics",
+      "experiments",
+      "kitchen",
+      "color"
+    ],
+    "vibe": [
+      "focused",
+      "messy"
+    ],
+    "setting": [
+      "kitchen"
+    ],
+    "materials": [
+      "tall clear glass or jar",
+      "honey",
+      "dish soap (colored if possible)",
+      "water (with food coloring)",
+      "vegetable oil",
+      "rubbing alcohol (for 10+, parent handles)",
+      "food coloring"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "density concepts, careful observation, hypothesis testing",
+    "parent_role": "fellow scientist",
+    "steps": [
+      "Set up your glass in the center. You'll pour slowly down the side — not straight in.",
+      "Pour honey first (heaviest). Then carefully add dish soap down the side.",
+      "Add food-colored water next, very slowly. Then oil.",
+      "Watch the layers settle. Don't stir.",
+      "Drop small objects in — a grape, a raisin, a coin, a small piece of wax. Each will float at the layer that matches its density.",
+      "Predict where each object will settle before you drop it in."
+    ],
+    "extension": "Try stirring it all together, then leaving it overnight. Do the layers separate back out?",
+    "credit": "classic kitchen science",
+    "go_deeper_query": "liquid density column rainbow experiment kids step by step",
+    "place_categories": [
+      "children's museum",
+      "hands-on science center"
+    ]
+  },
+  {
+    "id": "rainbow-fruit-salad",
+    "title": "Make a rainbow fruit salad — one fruit per color",
+    "duration_min": 30,
+    "age_min": 3,
+    "age_max": 9,
+    "interests": [
+      "cooking",
+      "food",
+      "kitchen",
+      "colors",
+      "health"
+    ],
+    "vibe": [
+      "creative",
+      "messy"
+    ],
+    "setting": [
+      "kitchen"
+    ],
+    "materials": [
+      "7 different colored fruits (e.g., strawberries, oranges, banana, kiwi, blueberries, grapes, watermelon)",
+      "cutting board",
+      "bowl",
+      "knife (parent cuts for under-8)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "color matching, knife safety basics (8+), food preparation",
+    "parent_role": "sous chef",
+    "steps": [
+      "List the colors of the rainbow: red, orange, yellow, green, blue, indigo, violet.",
+      "Find a fruit for each color from what you have. Improvise if you're missing one.",
+      "Wash everything together.",
+      "Cut each fruit — parent handles sharp knife for younger kids; 8+ can help with a child-safe knife.",
+      "Layer the fruit in the bowl in rainbow order from bottom to top.",
+      "Eat it as-is or with a spoonful of yogurt or honey drizzled over."
+    ],
+    "extension": "Make a rainbow plate with vegetables instead — try carrots, yellow pepper, peas, blueberries, purple cabbage.",
+    "credit": "original",
+    "go_deeper_query": "rainbow fruit salad recipe for kids healthy cooking",
+    "place_categories": [
+      "farmers market"
+    ]
+  },
+  {
+    "id": "sweet-sour-salty-taste-test",
+    "title": "Run a blind taste test for sweet, sour, salty, and bitter",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 12,
+    "interests": [
+      "food-science",
+      "cooking",
+      "experiments",
+      "senses",
+      "kitchen"
+    ],
+    "vibe": [
+      "silly",
+      "focused"
+    ],
+    "setting": [
+      "kitchen"
+    ],
+    "materials": [
+      "small amounts of: sugar, salt, lemon juice, bitter greens or strong coffee (for older kids)",
+      "small cups",
+      "blindfold or just closed eyes",
+      "paper for recording"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "sensory vocabulary, scientific method, taste biology",
+    "parent_role": "fellow tester and quiz master",
+    "steps": [
+      "Prepare 8 small cups: 2 sweet (sugar water, juice), 2 salty (salt water, pretzel bite), 2 sour (lemon, vinegar diluted), 2 bitter (tonic water, dark chocolate).",
+      "The tester closes their eyes. The quiz master picks a cup and says 'ready.'",
+      "Taster takes a tiny sip or bite, then says what taste they think it is.",
+      "Record results on paper. Swap roles halfway through.",
+      "Talk about the score. Were the sour ones harder than the salty ones?",
+      "Try holding your nose while tasting — does that change anything?"
+    ],
+    "extension": "Try mixing: is lemon plus sugar better than each alone? That's what lemonade is.",
+    "credit": "classic sensory science",
+    "go_deeper_query": "how taste buds work kids taste test sweet sour salty bitter",
+    "place_categories": []
+  },
+  {
+    "id": "no-bake-energy-balls",
+    "title": "Roll no-bake energy balls and pick your own mix-ins",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 12,
+    "interests": [
+      "cooking",
+      "food",
+      "kitchen",
+      "healthy-eating"
+    ],
+    "vibe": [
+      "messy",
+      "creative"
+    ],
+    "setting": [
+      "kitchen"
+    ],
+    "materials": [
+      "1 cup rolled oats",
+      "half cup peanut butter or nut butter",
+      "3 tablespoons honey",
+      "mix-ins: chocolate chips, raisins, shredded coconut, sunflower seeds"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "measurement, food preparation, creative decision-making",
+    "parent_role": "sous chef",
+    "steps": [
+      "Put oats, peanut butter, and honey in a bowl. Mix until combined.",
+      "Taste the base. Together, decide what mix-ins to add.",
+      "Stir in your mix-ins.",
+      "Put the bowl in the fridge for 15 minutes (the mix gets easier to roll when cold).",
+      "Roll into balls about the size of a ping-pong ball. Both of you roll.",
+      "Eat one now, refrigerate the rest — they last a week."
+    ],
+    "extension": "Make two batches with different mix-ins and do a taste test to vote on the better version.",
+    "credit": "adapted from common no-bake recipe",
+    "go_deeper_query": "no bake energy balls recipe easy kids cooking",
+    "place_categories": [
+      "kids cooking class"
+    ]
+  },
+  {
+    "id": "color-milk-with-dish-soap",
+    "title": "Make milk swirl with food coloring and a drop of dish soap",
+    "duration_min": 15,
+    "age_min": 3,
+    "age_max": 10,
+    "interests": [
+      "food-science",
+      "experiments",
+      "color",
+      "kitchen",
+      "chemistry"
+    ],
+    "vibe": [
+      "focused",
+      "messy"
+    ],
+    "setting": [
+      "kitchen"
+    ],
+    "materials": [
+      "whole milk or half-and-half (half cup)",
+      "food coloring (3-4 colors)",
+      "liquid dish soap",
+      "shallow plate or bowl",
+      "cotton swab"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "surface tension concepts, observation, color mixing",
+    "parent_role": "fellow scientist",
+    "steps": [
+      "Pour milk into a shallow plate — just enough to cover the bottom.",
+      "Drop 4-5 drops of different food coloring onto the milk surface. Space them apart.",
+      "Dip the cotton swab in dish soap.",
+      "Touch the soapy swab to the center of the milk. Watch what happens.",
+      "Try touching different spots — each touch creates a new burst of movement.",
+      "Predict: what do you think causes the swirling? (Answer: the soap breaks the surface tension of the fat molecules.)"
+    ],
+    "extension": "Try skim milk vs. whole milk — does the effect change? The fat content matters.",
+    "credit": "classic kitchen science",
+    "go_deeper_query": "milk surface tension experiment food coloring dish soap kids",
+    "place_categories": [
+      "children's museum",
+      "hands-on science center"
+    ]
+  },
+  {
+    "id": "blind-taste-test-fruits",
+    "title": "Run a blind taste test: can you tell the difference?",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 12,
+    "interests": [
+      "food-science",
+      "cooking",
+      "senses",
+      "experiments",
+      "kitchen"
+    ],
+    "vibe": [
+      "silly",
+      "focused"
+    ],
+    "setting": [
+      "kitchen"
+    ],
+    "materials": [
+      "5-6 similar foods to compare (e.g., 3 apple varieties, different brands of crackers, different juices)",
+      "small plates or cups",
+      "blindfold"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "sensory discrimination, vocabulary for taste and texture, experimental design",
+    "parent_role": "quiz master (then swap)",
+    "steps": [
+      "Pick a food category: all apples, all crackers, all orange juices, all pasta sauces.",
+      "Get 3-4 versions of that food. Label them A, B, C secretly.",
+      "Tester closes eyes. Taste A, then B, then C.",
+      "After tasting: rank them from favorite to least favorite, and describe each in two words.",
+      "Reveal what they were. Were the descriptions accurate?",
+      "Swap roles. Does the second tester agree with the first person's ranking?"
+    ],
+    "extension": "Design a scoring sheet together and run the test with a third family member as a tiebreaker judge.",
+    "credit": "adapted from professional sensory evaluation",
+    "go_deeper_query": "blind taste test different foods kids how senses work",
+    "place_categories": [
+      "farmers market"
+    ]
+  },
+  {
+    "id": "drawing-by-feel",
+    "title": "Draw an object by feel alone — eyes closed",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 12,
+    "interests": [
+      "art",
+      "drawing",
+      "games",
+      "senses",
+      "touch"
+    ],
+    "vibe": [
+      "silly",
+      "quiet",
+      "creative"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper",
+      "crayons or markers",
+      "a bag with 5 small objects (key, spoon, toy, apple, eraser)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "spatial reasoning, observation through touch, drawing from imagination",
+    "parent_role": "fellow player",
+    "steps": [
+      "Fill a bag with 5 small objects. Don't let the other person see inside.",
+      "First player closes eyes and reaches into the bag. Feel one object for 30 seconds without looking.",
+      "Draw what you felt — with your eyes still closed.",
+      "Open eyes. Now draw it again, looking at the real object.",
+      "Compare the two drawings. What did your hands get right? What did they miss?",
+      "Swap and repeat with a different object."
+    ],
+    "extension": "Make it a guessing game: draw blind, and the other person guesses what you were feeling before you reveal it.",
+    "credit": "classic art warm-up",
+    "go_deeper_query": "blind contour drawing challenge for kids art warm up",
+    "place_categories": []
+  },
+  {
+    "id": "sock-puppet-news-show",
+    "title": "Put on a sock puppet news show",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 9,
+    "interests": [
+      "puppets",
+      "storytelling",
+      "drama",
+      "silly",
+      "news"
+    ],
+    "vibe": [
+      "silly",
+      "noisy",
+      "creative"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "old socks (2+)",
+      "markers",
+      "googly eyes (optional)",
+      "buttons (optional)",
+      "yarn scraps"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "loud",
+    "skill_developed": "narrative sequencing, public speaking basics, character voice",
+    "parent_role": "co-performer and audience",
+    "steps": [
+      "Make puppets: put a sock on your hand, draw eyes and a mouth, stick on yarn hair or buttons.",
+      "Agree on three stories to report. They can be real (what happened this week) or completely made up.",
+      "Give your puppet a name and a job title.",
+      "Set up a 'desk' — sit behind a table with just your arms and puppets visible.",
+      "Record the news show. Each story gets a headline and at least two facts (real or invented).",
+      "Play back the recording and watch together."
+    ],
+    "extension": "Do a weather report with a paper map of your neighborhood as the weather graphic.",
+    "credit": "original",
+    "go_deeper_query": "how to make a sock puppet kids craft tutorial",
+    "place_categories": [
+      "community theater",
+      "children's museum"
+    ]
+  },
+  {
+    "id": "paper-weaving",
+    "title": "Weave a colorful paper mat using strips and a frame",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 11,
+    "interests": [
+      "art",
+      "crafts",
+      "weaving",
+      "patterns",
+      "colors"
+    ],
+    "vibe": [
+      "calm",
+      "focused",
+      "creative"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "colored paper or old magazines (3+ sheets)",
+      "scissors",
+      "tape"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "fine motor control, pattern understanding, over-under sequencing",
+    "parent_role": "co-maker",
+    "steps": [
+      "Take one sheet and fold it in half. Cut slits from the fold toward the open edge, stopping about 2cm before the edge. Unfold — this is your loom.",
+      "Cut the second sheet into strips about 2cm wide.",
+      "Weave the first strip over-under-over-under through the slits.",
+      "Weave the second strip under-over-under-over (opposite of the first).",
+      "Keep alternating until the loom is full.",
+      "Tape down the loose ends and trim any overhang."
+    ],
+    "extension": "Try a pattern: alternate two colors for a checkerboard, or use magazine pages for a collage effect.",
+    "credit": "classic paper craft",
+    "go_deeper_query": "how to weave paper strips over under kids craft tutorial",
+    "place_categories": [
+      "children's museum",
+      "art museum kids program"
+    ]
+  },
+  {
+    "id": "origami-jumping-frog",
+    "title": "Fold an origami frog that actually jumps",
+    "duration_min": 30,
+    "age_min": 6,
+    "age_max": 12,
+    "interests": [
+      "origami",
+      "paper-crafts",
+      "art",
+      "animals",
+      "frogs"
+    ],
+    "vibe": [
+      "focused",
+      "silly"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "index cards or stiff paper (3x5 cards work best)",
+      "markers for decorating"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "fine motor control, following multi-step instructions, spatial folding",
+    "parent_role": "co-folder",
+    "steps": [
+      "Start with a 3x5 index card held horizontally.",
+      "Fold the top-right corner down to touch the left edge. Unfold. Fold the top-left corner to the right edge. Unfold. You have an X crease.",
+      "Push the sides in along those creases to make a triangle point at the top.",
+      "Fold the triangle's two bottom corners up to meet the top point.",
+      "Fold the sides of the remaining rectangle inward to the center. Then fold up the bottom flap.",
+      "Fold that flap back down halfway to make the back legs. Flip over — press the back to make it jump."
+    ],
+    "extension": "Make 4 frogs and race them across a table. First one off the edge wins.",
+    "credit": "classic origami",
+    "go_deeper_query": "origami jumping frog step by step tutorial kids easy",
+    "place_categories": [
+      "children's museum",
+      "library kids program"
+    ]
+  },
+  {
+    "id": "leaf-print-with-paint",
+    "title": "Make leaf prints and turn them into a nature poster",
+    "duration_min": 30,
+    "age_min": 3,
+    "age_max": 9,
+    "interests": [
+      "art",
+      "nature",
+      "plants",
+      "printing",
+      "color"
+    ],
+    "vibe": [
+      "messy",
+      "creative"
+    ],
+    "setting": [
+      "home",
+      "yard"
+    ],
+    "materials": [
+      "leaves (5+ different shapes)",
+      "tempera paint or watercolors",
+      "paper",
+      "paintbrush",
+      "old newspaper to cover the table"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "fine motor control, pattern observation, color mixing",
+    "parent_role": "co-artist",
+    "steps": [
+      "Collect leaves — different shapes, sizes, and textures.",
+      "Lay a leaf vein-side up on newspaper.",
+      "Paint the leaf with one color using a brush.",
+      "Press the painted side firmly onto paper. Lift carefully.",
+      "Make 8-10 prints using different colors and leaves.",
+      "When dry, write the name of each plant next to its print, or invent names for the ones you don't know."
+    ],
+    "extension": "Use the prints as wrapping paper for a gift, or cut them out and make a mobile.",
+    "credit": "classic nature printing",
+    "go_deeper_query": "leaf printing with paint nature art for kids tutorial",
+    "place_categories": [
+      "art museum kids program",
+      "nature center"
+    ]
+  },
+  {
+    "id": "watercolor-resist-white-crayon",
+    "title": "Draw in invisible ink and reveal it with watercolor",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 10,
+    "interests": [
+      "art",
+      "magic",
+      "drawing",
+      "painting",
+      "surprises"
+    ],
+    "vibe": [
+      "creative",
+      "focused"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "white crayon",
+      "watercolor paint or diluted food coloring",
+      "thick white paper",
+      "brush"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "art technique (wax resist), planning and anticipation, color mixing",
+    "parent_role": "fellow artist",
+    "steps": [
+      "Use the white crayon to draw a picture on white paper. Press firmly — it won't show much.",
+      "Swap papers with the other person — neither of you can see what was drawn.",
+      "Brush watercolor paint over the whole paper with broad strokes.",
+      "Watch the hidden drawing appear as the wax repels the water.",
+      "Add more colors by painting in sections — the crayon lines stay white.",
+      "Reveal whose picture is whose and compare."
+    ],
+    "extension": "Leave a secret message for someone else in the house to find and reveal on their own.",
+    "credit": "classic wax-resist technique",
+    "go_deeper_query": "wax resist art white crayon watercolor reveal technique kids",
+    "place_categories": [
+      "art museum kids program",
+      "children's museum"
+    ]
+  },
+  {
+    "id": "make-a-mini-book",
+    "title": "Make a one-sheet mini book and fill it with a story",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 10,
+    "interests": [
+      "books",
+      "storytelling",
+      "art",
+      "drawing",
+      "writing"
+    ],
+    "vibe": [
+      "calm",
+      "creative"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "one sheet of printer paper",
+      "scissors",
+      "crayons or markers"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "narrative sequencing, visual storytelling, book structure",
+    "parent_role": "co-author",
+    "steps": [
+      "Fold the paper in half lengthwise, then crosswise, then crosswise again. Unfold.",
+      "You should have 8 rectangles. Cut along the center fold only from the middle — just a short slit.",
+      "Refold lengthwise, then push the two ends toward each other so the slit opens into a diamond. Push flat into a book.",
+      "Number the pages 1-8. Page 1 is your cover.",
+      "Write or dictate a story: one moment per page — beginning, middle, end.",
+      "Each person makes their own book. Trade and read each other's when done."
+    ],
+    "extension": "Make a series: same characters, new adventure, new book — a trilogy.",
+    "credit": "classic bookmaking fold",
+    "go_deeper_query": "how to fold a one page mini book from single sheet paper",
+    "place_categories": [
+      "library kids program",
+      "public library"
+    ]
+  },
+  {
+    "id": "shadow-tracing",
+    "title": "Trace shadows from objects and see how they change",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 10,
+    "interests": [
+      "art",
+      "light",
+      "physics",
+      "drawing",
+      "shadow"
+    ],
+    "vibe": [
+      "calm",
+      "creative",
+      "focused"
+    ],
+    "setting": [
+      "home",
+      "yard"
+    ],
+    "materials": [
+      "paper",
+      "pencil",
+      "desk lamp or sunlight",
+      "small objects (toy, cup, plant, scissors)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "observation, understanding of light and shadow, spatial reasoning",
+    "parent_role": "co-artist",
+    "steps": [
+      "Set up a lamp shining at a flat angle across a piece of paper, or use morning sunlight.",
+      "Place an object on the paper. Trace its shadow with a pencil.",
+      "Move the lamp to a different angle. Trace again with a different color. What changed?",
+      "Now trace your own hand shadow: flat, then cupped, then fingers spread.",
+      "Make a shadow animal on the wall and try to trace that too.",
+      "Write the time next to each tracing if using sunlight — see how shadows change throughout the day."
+    ],
+    "extension": "Make a shadow puppet show: craft characters from cardboard and perform a short story.",
+    "credit": "classic art and light exploration",
+    "go_deeper_query": "shadow art for kids tracing shadows light experiment",
+    "place_categories": [
+      "children's museum",
+      "hands-on science center"
+    ]
+  },
+  {
+    "id": "contour-drawing",
+    "title": "Draw your hand without lifting the pen — contour drawing",
+    "duration_min": 30,
+    "age_min": 6,
+    "age_max": 12,
+    "interests": [
+      "art",
+      "drawing",
+      "hands",
+      "observation",
+      "challenge"
+    ],
+    "vibe": [
+      "calm",
+      "focused"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper",
+      "pen or marker"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "observational drawing, hand-eye coordination, letting go of perfectionism",
+    "parent_role": "fellow artist",
+    "steps": [
+      "Place your non-drawing hand flat on the paper. Spread the fingers slightly.",
+      "Put your pen at the wrist edge of your hand. The rule: never lift the pen, and try to look at your hand — not at the paper — as much as possible.",
+      "Slowly move the pen along every edge: fingers, wrinkles, knuckles.",
+      "Let it look weird. Contour drawings always look a little strange.",
+      "Do three versions: one with eyes mostly on the hand, one looking at the paper, one with eyes closed.",
+      "Compare all three — which one has the most life in it?"
+    ],
+    "extension": "Move to a more complex subject: a shoe, a crumpled paper bag, a cluster of fruit.",
+    "credit": "classic art school warm-up, attributed to Kimon Nicolaïdes",
+    "go_deeper_query": "contour drawing lesson for kids how to draw without lifting pen",
+    "place_categories": [
+      "art museum kids program"
+    ]
+  },
+  {
+    "id": "newspaper-headline-collage",
+    "title": "Make a newspaper collage that tells a story",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 12,
+    "interests": [
+      "art",
+      "collage",
+      "words",
+      "storytelling",
+      "recycling"
+    ],
+    "vibe": [
+      "creative",
+      "messy"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "old newspapers or magazines",
+      "scissors",
+      "glue stick",
+      "paper or cardboard backing"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "visual composition, narrative construction, scissors control",
+    "parent_role": "co-artist",
+    "steps": [
+      "Tear out headlines, photos, and interesting words from old newspapers or magazines.",
+      "Pick a theme for your collage: one word, like FAST or WILD or HOME.",
+      "Arrange pieces on the backing without gluing first. Play with the composition.",
+      "Overlap things, layer text under images, let edges be rough.",
+      "When you like the arrangement, glue everything down.",
+      "Give the finished piece a title different from your original theme."
+    ],
+    "extension": "Use only words — no images — and make a poem collage that someone could read aloud.",
+    "credit": "adapted from Dadaist cut-up technique",
+    "go_deeper_query": "newspaper collage art for kids cut and paste storytelling",
+    "place_categories": [
+      "art museum kids program"
+    ]
+  },
+  {
+    "id": "sponge-painting-portraits",
+    "title": "Paint portraits of each other using only kitchen sponges",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 10,
+    "interests": [
+      "art",
+      "painting",
+      "portraits",
+      "color",
+      "crafts"
+    ],
+    "vibe": [
+      "messy",
+      "creative",
+      "silly"
+    ],
+    "setting": [
+      "kitchen"
+    ],
+    "materials": [
+      "kitchen sponges (cut into small pieces)",
+      "tempera paint or thick poster paint",
+      "paper",
+      "paper plates for palettes"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "color mixing, observational portrait skills, texturing technique",
+    "parent_role": "fellow artist and subject",
+    "steps": [
+      "Cut sponges into different shapes: round, square, triangular, tiny squares.",
+      "Squeeze paint onto paper plates — at least 4 colors.",
+      "Each person sits across from the other. You're painting each other's portrait.",
+      "Use sponge dabbing instead of brushstrokes — dab in layers to build up the face.",
+      "Mix colors directly on the paper by overlapping dabs.",
+      "When dry, compare: which portrait is more recognizable? More colorful? Funnier?"
+    ],
+    "extension": "Do a self-portrait using a mirror as your reference.",
+    "credit": "original",
+    "go_deeper_query": "sponge painting portrait technique for kids art tutorial",
+    "place_categories": [
+      "art museum kids program",
+      "children's museum"
+    ]
+  },
+  {
+    "id": "measurement-hunt",
+    "title": "Measure everything in the living room and make a chart",
+    "duration_min": 30,
+    "age_min": 6,
+    "age_max": 11,
+    "interests": [
+      "math",
+      "measuring",
+      "numbers",
+      "home",
+      "data"
+    ],
+    "vibe": [
+      "focused",
+      "physical"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "ruler or measuring tape",
+      "paper",
+      "pencil"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "measurement skills, data organization, unit understanding",
+    "parent_role": "fellow measurer",
+    "steps": [
+      "Pick 10 objects in the room. Guess the length of each one before you measure.",
+      "Write the guess down, then measure the real length with a ruler or tape.",
+      "Record both numbers in a two-column chart.",
+      "Compare: which guess was closest? Which was most off?",
+      "Now find the shortest and longest objects. What's the ratio? (The longest is how many times bigger than the shortest?)",
+      "Measure your own heights and add them to the chart."
+    ],
+    "extension": "Predict how many times you'd have to lay the shortest object end-to-end to reach the longest, then test it.",
+    "credit": "original",
+    "go_deeper_query": "measurement activity for kids estimating and measuring objects",
+    "place_categories": []
+  },
+  {
+    "id": "estimation-jar-game",
+    "title": "Fill a jar with objects and practice estimation",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 11,
+    "interests": [
+      "math",
+      "numbers",
+      "counting",
+      "games",
+      "estimation"
+    ],
+    "vibe": [
+      "focused",
+      "silly"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "clear jar",
+      "small objects to count (dried beans, pennies, pasta, paper clips, M&Ms)",
+      "paper for guesses"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "estimation strategies, number sense, counting in groups",
+    "parent_role": "fellow estimator",
+    "steps": [
+      "Fill the jar with one type of small object (don't count as you fill).",
+      "Each person writes down their estimate: how many are in the jar?",
+      "Talk about your strategy: did you count how many fit in one layer? Guess by weight?",
+      "Now count together — count by 5s or 10s, grouping into piles.",
+      "Compare the real number to your guesses. Who was closer?",
+      "Refill with a different object. Does your strategy improve?"
+    ],
+    "extension": "Fill it with two types of objects mixed and estimate how many of each type there are.",
+    "credit": "classic math game",
+    "go_deeper_query": "estimation jar activity kids math number sense strategies",
+    "place_categories": []
+  },
+  {
+    "id": "dice-probability-experiment",
+    "title": "Roll dice 50 times and graph the results",
+    "duration_min": 30,
+    "age_min": 7,
+    "age_max": 12,
+    "interests": [
+      "math",
+      "probability",
+      "numbers",
+      "games",
+      "dice"
+    ],
+    "vibe": [
+      "focused",
+      "calm"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "2 dice",
+      "paper",
+      "pencil",
+      "ruler (optional)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "probability basics, data collection, bar graph reading",
+    "parent_role": "fellow scientist",
+    "steps": [
+      "Draw a bar graph with columns 2 through 12 on the x-axis.",
+      "Predict: which sum will come up most often when you roll 2 dice?",
+      "Take turns rolling both dice. Add the two numbers. Mark a tally above that column.",
+      "After 50 rolls, color in each column to make a bar graph.",
+      "What does the shape look like? (It should be a bell shape — 7 is most common.)",
+      "Talk about why 7 comes up most: how many ways can you make 7 with two dice? How many ways can you make 2 or 12?"
+    ],
+    "extension": "Add a third die and re-run the experiment. How does the shape of the graph change?",
+    "credit": "classic probability demonstration",
+    "go_deeper_query": "probability with two dice for kids bar graph experiment",
+    "place_categories": []
+  },
+  {
+    "id": "floor-map-of-your-home",
+    "title": "Draw a floor map of your home, to scale",
+    "duration_min": 30,
+    "age_min": 7,
+    "age_max": 12,
+    "interests": [
+      "math",
+      "architecture",
+      "mapping",
+      "measurement",
+      "home"
+    ],
+    "vibe": [
+      "focused",
+      "calm"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "measuring tape or ruler",
+      "graph paper or printer paper",
+      "pencil"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "scale thinking, measurement, spatial representation",
+    "parent_role": "co-mapper",
+    "steps": [
+      "Decide on a scale: one square on your paper equals one step (foot) in real life.",
+      "Measure the length and width of the first room. Write it down.",
+      "Draw that room on paper using your scale.",
+      "Move to the next room and add it. Make sure the walls line up.",
+      "Add doorways, windows, and big furniture.",
+      "When done, compare your map to walking the actual rooms. Does the scale feel right?"
+    ],
+    "extension": "Mark where the sun hits each room in the morning — then check in the afternoon to see how it moved.",
+    "credit": "original",
+    "go_deeper_query": "how to draw a floor plan to scale for kids architecture",
+    "place_categories": [
+      "children's museum"
+    ]
+  },
+  {
+    "id": "count-and-graph-candy-colors",
+    "title": "Count, sort, and graph the colors in a bag of candy",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 10,
+    "interests": [
+      "math",
+      "data",
+      "counting",
+      "candy",
+      "color"
+    ],
+    "vibe": [
+      "focused",
+      "silly"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "1 bag of multicolor candy (M&Ms, Skittles, or Fruit Loops)",
+      "paper",
+      "pencil",
+      "crayons"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "data collection, graphing, fractions (what fraction are red?)",
+    "parent_role": "fellow data collector",
+    "steps": [
+      "Pour out the candy and separate by color.",
+      "Count each color and write the numbers down.",
+      "Draw a bar graph with colors on the x-axis and count on the y-axis. Color each bar to match.",
+      "Which color has the most? Least? Are you surprised?",
+      "What fraction of the whole bag is each color? (Red count ÷ total count)",
+      "Eat the candy in order from least to most common."
+    ],
+    "extension": "Compare to what the candy company claims the distribution should be (M&Ms publishes this) and see if yours matches.",
+    "credit": "classic data science activity",
+    "go_deeper_query": "count and graph candy colors data activity kids math",
+    "place_categories": []
+  },
+  {
+    "id": "fraction-pizza-with-paper",
+    "title": "Build a paper pizza and cut it into fractions",
+    "duration_min": 30,
+    "age_min": 6,
+    "age_max": 10,
+    "interests": [
+      "math",
+      "fractions",
+      "pizza",
+      "food",
+      "numbers"
+    ],
+    "vibe": [
+      "creative",
+      "focused"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper (4 sheets)",
+      "scissors",
+      "crayons or markers"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "fraction concepts, equal parts, numerator and denominator meaning",
+    "parent_role": "co-pizza-maker",
+    "steps": [
+      "Cut a big circle from one sheet — that's your pizza crust.",
+      "Draw and cut toppings from colored paper: red circles for pepperoni, green strips for pepper, yellow dots for cheese.",
+      "Decorate the pizza together, then fold it in half. Cut along the fold. You have 2 halves: 1/2 each.",
+      "Fold a second pizza into quarters and cut. Now you have 4 pieces: 1/4 each.",
+      "Compare: is 1/4 bigger or smaller than 1/2?",
+      "Now make a pizza with 8 slices. If you eat 3 pieces, what fraction did you eat?"
+    ],
+    "extension": "Add unlike fractions: give each person 3 pieces from different sized pizzas — who got more pizza total?",
+    "credit": "classic fractions teaching activity",
+    "go_deeper_query": "fractions with paper pizza visual math lesson for kids",
+    "place_categories": []
+  },
+  {
+    "id": "shape-hunt-and-tally",
+    "title": "Hunt for shapes around the house and tally them up",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 9,
+    "interests": [
+      "math",
+      "shapes",
+      "geometry",
+      "home",
+      "counting"
+    ],
+    "vibe": [
+      "physical",
+      "focused"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper with a tally chart (shapes listed down the left)",
+      "pencil"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "geometric recognition, categorization, tallying and counting",
+    "parent_role": "fellow hunter",
+    "steps": [
+      "Make a tally chart with: circle, square, rectangle, triangle, oval, hexagon, other.",
+      "Set a timer for 10 minutes. Go through the house and mark every shape you spot.",
+      "Count wall outlets, book spines, windows, tiles, plates, lids — everything.",
+      "Compare tallies. Who found more triangles? Who found something the other missed?",
+      "Which shape is most common in your home? Why might that be?",
+      "Draw your five favorite objects and label all the shapes you see inside them."
+    ],
+    "extension": "Do a second hunt outdoors and compare — does the shape distribution change outside vs. inside?",
+    "credit": "original",
+    "go_deeper_query": "shape hunt geometry activity kids tally chart math",
+    "place_categories": []
+  },
+  {
+    "id": "doubling-pennies-game",
+    "title": "Play the penny doubling game and see how fast it explodes",
+    "duration_min": 30,
+    "age_min": 7,
+    "age_max": 12,
+    "interests": [
+      "math",
+      "money",
+      "numbers",
+      "exponential-growth",
+      "puzzles"
+    ],
+    "vibe": [
+      "focused",
+      "calm"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper and pencil",
+      "pennies or a calculator (for checking)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "exponential thinking, multiplication, estimation of large numbers",
+    "parent_role": "fellow mathematician",
+    "steps": [
+      "The question: if you get 1 penny on day 1, 2 pennies on day 2, 4 on day 3, 8 on day 4 — how much will you have on day 30?",
+      "Make a chart: Day | Pennies that day | Running total.",
+      "Fill it in together, multiplying by 2 each row. Use a calculator for the big numbers.",
+      "When do you first pass $1? $100? $1,000?",
+      "Day 30: how much is it in dollars? (Spoiler: over $5 million.)",
+      "Talk about where this kind of doubling shows up in real life."
+    ],
+    "extension": "What if it tripled each day instead of doubled? When does that first pass the doubling total?",
+    "credit": "classic exponential growth illustration",
+    "go_deeper_query": "penny doubling exponential growth math for kids explained",
+    "place_categories": []
+  },
+  {
+    "id": "interview-a-parent-about-childhood",
+    "title": "Interview a parent about their childhood",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 12,
+    "interests": [
+      "stories",
+      "family",
+      "history",
+      "talking",
+      "interviewing"
+    ],
+    "vibe": [
+      "calm",
+      "focused"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper for questions",
+      "pencil",
+      "phone to record (optional)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "interview skills, listening, oral history, formulating questions",
+    "parent_role": "interview subject",
+    "steps": [
+      "Kid writes 5 questions to ask. Start them off: 'What was the weirdest thing about being my age?' 'What did you get in trouble for?'",
+      "Kid conducts the interview — they ask, parent answers. Kid takes notes or records.",
+      "After each answer, kid asks one follow-up question ('Wait, then what happened?').",
+      "After all 5 questions, roles swap: parent interviews kid about their life now.",
+      "Together, find one thing that was the same about your childhoods and one thing totally different.",
+      "Kid draws a portrait of the parent at the age they were describing."
+    ],
+    "extension": "Write up the interview as a two-paragraph profile and read it aloud to the rest of the family.",
+    "credit": "inspired by StoryCorps oral history practice",
+    "go_deeper_query": "how to interview family members oral history for kids",
+    "place_categories": [
+      "public library",
+      "historical site"
+    ]
+  },
+  {
+    "id": "story-dice-game",
+    "title": "Roll story dice and build a story from the pictures",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 10,
+    "interests": [
+      "storytelling",
+      "games",
+      "imagination",
+      "dice",
+      "language"
+    ],
+    "vibe": [
+      "silly",
+      "creative"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "6 dice (or one die + paper for drawing symbols)",
+      "paper",
+      "pen"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "narrative construction, improvisation, vocabulary, creative connection",
+    "parent_role": "co-storyteller",
+    "steps": [
+      "Make story dice: draw a simple picture on each face of a paper cube (you can tape paper to regular dice), or just write word prompts on slips of paper.",
+      "Symbols to include: castle, monster, key, river, flying creature, strange food, a door, a friend, a storm, a treasure.",
+      "Roll all dice (or draw 5 slips). Both people can see the results.",
+      "One person starts the story and has to use the first two symbols.",
+      "The other person continues and uses two more symbols.",
+      "Keep going until all symbols are used and the story reaches an ending."
+    ],
+    "extension": "Write it down as you go — read back the full story at the end as if it's a book.",
+    "credit": "inspired by Rory's Story Cubes concept (unplugged version)",
+    "go_deeper_query": "story dice storytelling game kids how to play",
+    "place_categories": [
+      "library kids program",
+      "public library"
+    ]
+  },
+  {
+    "id": "letter-to-future-self",
+    "title": "Write a letter to yourself five years from now",
+    "duration_min": 30,
+    "age_min": 6,
+    "age_max": 12,
+    "interests": [
+      "writing",
+      "storytelling",
+      "reflection",
+      "future",
+      "letters"
+    ],
+    "vibe": [
+      "calm",
+      "focused"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper",
+      "pen",
+      "envelope",
+      "tape to seal"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "reflective writing, self-awareness, letter writing conventions",
+    "parent_role": "fellow letter-writer",
+    "steps": [
+      "Both of you write a letter. Kid writes to their future self; parent writes to theirs.",
+      "Things to include: what you love doing right now, your best friend's name, the most delicious food you ate this year, something you're worried about, a prediction for what life will be like.",
+      "Add a drawing of yourself today.",
+      "Seal the envelope, write 'Open in [year]' on the front.",
+      "Read parts aloud if you want — or keep them private.",
+      "Put it somewhere memorable and put a reminder in a calendar to open it."
+    ],
+    "extension": "If the parent has any old photos from 5 years ago, look at them together and compare past-you to now.",
+    "credit": "original",
+    "go_deeper_query": "letter to your future self time capsule activity kids",
+    "place_categories": []
+  },
+  {
+    "id": "campfire-story-chain",
+    "title": "Build a story one sentence at a time — no plan allowed",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 12,
+    "interests": [
+      "storytelling",
+      "language",
+      "games",
+      "imagination",
+      "family"
+    ],
+    "vibe": [
+      "silly",
+      "calm"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "narrative building, listening, improvisation, sentence structure",
+    "parent_role": "co-author",
+    "steps": [
+      "Sit together and decide on a setting and a character name. Write those down.",
+      "First person says one sentence to start the story.",
+      "Second person continues with the next sentence — it must connect to the last one.",
+      "The rule: you can only say one sentence at a time. No summarizing, no skipping ahead.",
+      "After 10 minutes, the next person to speak has to end the story — no matter how weird things got.",
+      "Recap the whole story from memory. What's the title?"
+    ],
+    "extension": "Record it on a phone and listen back — then draw your favorite moment from the story.",
+    "credit": "classic improv game",
+    "go_deeper_query": "collaborative storytelling game one sentence at a time kids",
+    "place_categories": [
+      "community theater"
+    ]
+  },
+  {
+    "id": "wordless-picture-book",
+    "title": "Make a wordless picture book together",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 10,
+    "interests": [
+      "art",
+      "storytelling",
+      "books",
+      "drawing",
+      "language"
+    ],
+    "vibe": [
+      "creative",
+      "calm"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "5 sheets of paper",
+      "stapler or tape",
+      "crayons or markers"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "visual storytelling, sequencing, narrative arc",
+    "parent_role": "co-author",
+    "steps": [
+      "Fold and staple 5 sheets into a book — you get 20 pages.",
+      "Together, decide on a character and one problem they have to solve. No talking it through too much — leave room for surprise.",
+      "Each person draws alternating pages — page 1, page 3, page 5, etc.",
+      "No words allowed anywhere in the book. Only pictures.",
+      "When done, each person 'reads' the book to the other by narrating the pictures.",
+      "Compare your two narrations — same story or totally different?"
+    ],
+    "extension": "Add speech bubbles with just symbols (hearts, question marks, lightning bolts) — no actual words.",
+    "credit": "original",
+    "go_deeper_query": "how to make a wordless picture book kids storytelling drawing",
+    "place_categories": [
+      "library kids program",
+      "art museum kids program"
+    ]
+  },
+  {
+    "id": "news-anchor-living-room-report",
+    "title": "Film a live news report from your living room",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 12,
+    "interests": [
+      "storytelling",
+      "drama",
+      "news",
+      "journalism",
+      "language"
+    ],
+    "vibe": [
+      "silly",
+      "noisy",
+      "creative"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper for notes",
+      "phone to film (optional)",
+      "ruler as a pretend microphone"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "medium",
+    "skill_developed": "public speaking, narrative structure, summarizing events",
+    "parent_role": "field reporter (to the kid anchor)",
+    "steps": [
+      "Kid is the anchor at the desk. Parent is the field reporter.",
+      "Agree on three news stories: one real event from this week, one made up, one about a pet or a toy.",
+      "Write three bullet points for each story.",
+      "The anchor introduces each story ('We go now to our reporter in the kitchen…'). The reporter delivers the story.",
+      "Film it if you want — then watch the broadcast back.",
+      "Swap roles and do a second broadcast."
+    ],
+    "extension": "Add a weather segment with a paper map of your town as the weather graphic.",
+    "credit": "original",
+    "go_deeper_query": "kids news reporter pretend play how to film a news report",
+    "place_categories": [
+      "children's museum"
+    ]
+  },
+  {
+    "id": "the-question-game",
+    "title": "Talk in questions only — statements are forbidden",
+    "duration_min": 15,
+    "age_min": 6,
+    "age_max": 12,
+    "interests": [
+      "language",
+      "games",
+      "wordplay",
+      "thinking",
+      "silly"
+    ],
+    "vibe": [
+      "silly",
+      "focused"
+    ],
+    "setting": [
+      "home",
+      "car"
+    ],
+    "materials": [],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "language flexibility, quick thinking, listening",
+    "parent_role": "fellow player",
+    "steps": [
+      "The rule: you can only speak in questions. Every response must be a question. Statements lose.",
+      "Parent starts: 'Isn't it a nice day?' Kid must respond with a question.",
+      "If anyone says a statement, the other person says 'Out!' and gets a point.",
+      "Try to actually have a real conversation, not just repeat 'Is it?' endlessly.",
+      "Play three 2-minute rounds. Count points.",
+      "Variation: make it about a specific topic — planning a trip, deciding on dinner."
+    ],
+    "extension": "Try playing with a third person — three-way question conversations are much harder.",
+    "credit": "adapted from improv theater game",
+    "go_deeper_query": "improv theater games for kids questions only game",
+    "place_categories": [
+      "community theater"
+    ]
+  },
+  {
+    "id": "radio-drama-with-sound-effects",
+    "title": "Record a radio drama with homemade sound effects",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 12,
+    "interests": [
+      "drama",
+      "storytelling",
+      "sound",
+      "radio",
+      "music"
+    ],
+    "vibe": [
+      "noisy",
+      "silly",
+      "creative"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "phone or tablet to record",
+      "kitchen items for sound effects (pot lid, crinkling paper, water in a cup)",
+      "paper for script"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "loud",
+    "skill_developed": "storytelling, voice acting, sound design, collaboration",
+    "parent_role": "co-performer and sound designer",
+    "steps": [
+      "Pick a story: a chase, a mystery, a sea voyage, a haunted house.",
+      "Assign sound effects: thunder = pounding a pot lid; rain = crinkling paper; horse = patting hands on knees.",
+      "Write a short 5-line script. Each line has a place for a sound effect.",
+      "Rehearse once, then record for real.",
+      "Play it back with eyes closed — does it feel like the real scene?",
+      "Try a second take and improve one thing."
+    ],
+    "extension": "Make a sequel episode with new characters and different sound effects.",
+    "credit": "inspired by old radio drama production",
+    "go_deeper_query": "how to make a radio drama with sound effects kids tutorial",
+    "place_categories": [
+      "community theater",
+      "children's museum"
+    ]
+  },
+  {
+    "id": "rubber-band-guitar",
+    "title": "Build a rubber band guitar from a tissue box",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 11,
+    "interests": [
+      "music",
+      "instruments",
+      "engineering",
+      "building",
+      "sound"
+    ],
+    "vibe": [
+      "noisy",
+      "creative"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "empty tissue box",
+      "rubber bands (4-6, different thicknesses)",
+      "pencil or ruler (as a bridge)",
+      "tape"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "medium",
+    "skill_developed": "sound production basics, pitch vs. tension, fine motor control",
+    "parent_role": "co-builder and bandmate",
+    "steps": [
+      "Stretch 4-6 rubber bands of different thicknesses across the opening of the tissue box.",
+      "Lay a pencil under the bands, near one end — this is the bridge, like on a real guitar.",
+      "Pluck each band. Which makes the highest pitch? Which the lowest?",
+      "Move the pencil closer to the center. What changes?",
+      "Try tightening a band by twisting it. Does that change the pitch?",
+      "Play a simple rhythm on all the strings together — make a song with at least 4 notes."
+    ],
+    "extension": "Add a paper tube as a neck and try to tune your guitar to match a note you can hum.",
+    "credit": "classic DIY instrument",
+    "go_deeper_query": "how to make a rubber band guitar tissue box kids diy",
+    "place_categories": [
+      "children's museum",
+      "maker space"
+    ]
+  },
+  {
+    "id": "water-xylophone",
+    "title": "Make a water xylophone from glasses",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 11,
+    "interests": [
+      "music",
+      "sound",
+      "instruments",
+      "water",
+      "physics"
+    ],
+    "vibe": [
+      "noisy",
+      "creative",
+      "focused"
+    ],
+    "setting": [
+      "kitchen"
+    ],
+    "materials": [
+      "5-7 identical glasses",
+      "water",
+      "metal spoon or chopstick",
+      "food coloring (optional)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "medium",
+    "skill_developed": "pitch understanding, fine tuning, musical ear",
+    "parent_role": "co-musician",
+    "steps": [
+      "Line up 5 identical glasses.",
+      "Fill the first glass almost to the top, the second a bit less, and so on — each glass has less water than the last.",
+      "Tap each glass gently with a spoon. What do you hear?",
+      "Which glass is the highest note? Lowest?",
+      "Add or remove water to fine-tune. Can you make a scale: do, re, mi, fa, sol?",
+      "Play 'Mary Had a Little Lamb' or make up your own melody."
+    ],
+    "extension": "Add food coloring to each glass and photograph your rainbow xylophone.",
+    "credit": "classic kitchen science and music",
+    "go_deeper_query": "water glass xylophone how to make music with glasses kids",
+    "place_categories": [
+      "children's museum",
+      "hands-on science center"
+    ]
+  },
+  {
+    "id": "rhythm-echo-game",
+    "title": "Play rhythm echo — copy the beat exactly",
+    "duration_min": 30,
+    "age_min": 3,
+    "age_max": 10,
+    "interests": [
+      "music",
+      "rhythm",
+      "games",
+      "listening",
+      "percussion"
+    ],
+    "vibe": [
+      "noisy",
+      "physical",
+      "silly"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "loud",
+    "skill_developed": "rhythmic memory, listening, musical vocabulary",
+    "parent_role": "fellow player",
+    "steps": [
+      "One person claps a short rhythm — 4 to 6 beats. The other person echoes it back exactly.",
+      "Start simple: clap-clap-pause-clap. Work up to more complex patterns.",
+      "Add body percussion: clap, stomp, snap, pat knees.",
+      "Play a call-and-response: one person leads 4 beats, other echoes, then immediately does a new 4-beat response.",
+      "Speed round: rhythms get faster each turn.",
+      "Invent a signature rhythm for each person — the other has to learn it by the end."
+    ],
+    "extension": "Record your two signature rhythms and try to layer them together at the same time.",
+    "credit": "classic music education game, similar to Orff method",
+    "go_deeper_query": "rhythm echo game for kids music clapping patterns call response",
+    "place_categories": [
+      "children's museum"
+    ]
+  },
+  {
+    "id": "kazoo-from-comb-and-paper",
+    "title": "Make a kazoo from a comb and wax paper",
+    "duration_min": 15,
+    "age_min": 3,
+    "age_max": 9,
+    "interests": [
+      "music",
+      "instruments",
+      "silly",
+      "sound",
+      "crafts"
+    ],
+    "vibe": [
+      "noisy",
+      "silly"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "plastic comb",
+      "wax paper or thin tissue paper",
+      "tape (optional)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "loud",
+    "skill_developed": "sound vibration concepts, musical play",
+    "parent_role": "fellow musician",
+    "steps": [
+      "Tear a piece of wax paper slightly bigger than the comb.",
+      "Fold it over the top edge of the comb, covering the teeth.",
+      "Hold the comb so the paper side faces your lips.",
+      "Press your lips loosely against the wax paper and hum — don't blow, hum.",
+      "The paper vibrates and makes a kazoo sound.",
+      "Try humming a real song. Try changing how hard you press the paper to change the sound."
+    ],
+    "extension": "Make two kazoos and play a duet — assign melody to one person and rhythm pattern to the other.",
+    "credit": "classic homemade instrument",
+    "go_deeper_query": "how to make a kazoo from comb wax paper homemade instrument",
+    "place_categories": []
+  },
+  {
+    "id": "kitchen-percussion-band",
+    "title": "Build a percussion band from kitchen objects",
+    "duration_min": 30,
+    "age_min": 3,
+    "age_max": 10,
+    "interests": [
+      "music",
+      "instruments",
+      "kitchen",
+      "percussion",
+      "rhythm"
+    ],
+    "vibe": [
+      "noisy",
+      "silly",
+      "creative"
+    ],
+    "setting": [
+      "kitchen"
+    ],
+    "materials": [
+      "pots, pans, bowls, containers",
+      "wooden spoon, metal spoon, chopsticks",
+      "dried beans or rice in a sealed container"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "loud",
+    "skill_developed": "timbre awareness, rhythm, musical composition",
+    "parent_role": "bandmate",
+    "steps": [
+      "Gather 5 different kitchen objects that each make a different sound when hit.",
+      "Test them: hit each one. Is it high or low? Short or ringing? Loud or soft?",
+      "Assign a role: the pot is the bass drum, the bowl is the snare, the sealed-container shaker is the hi-hat.",
+      "Invent a basic beat together: bass on 1 and 3, snare on 2 and 4.",
+      "Loop that beat for 2 minutes while the other person improvises on top.",
+      "Swap instruments and do it again."
+    ],
+    "extension": "Record the band, then listen back and see if you can identify every instrument.",
+    "credit": "original",
+    "go_deeper_query": "kitchen percussion band pots pans instruments kids music",
+    "place_categories": [
+      "children's museum"
+    ]
+  },
+  {
+    "id": "sound-hunt-around-house",
+    "title": "Find 15 different sounds in the house and classify them",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 10,
+    "interests": [
+      "sound",
+      "music",
+      "listening",
+      "home",
+      "science"
+    ],
+    "vibe": [
+      "quiet",
+      "focused"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper with a chart",
+      "pencil"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "auditory discrimination, sound categorization, vocabulary",
+    "parent_role": "fellow sound hunter",
+    "steps": [
+      "Make a chart: Sound | High or Low | Loud or Soft | Made by: (person / machine / object).",
+      "Move through the house making sounds deliberately: tap the wall, open a door slowly, flick a light switch, drip a faucet.",
+      "Find at least 15. Try unusual ones: the sound of a pillow being punched, paper tearing, a spoon scraping a bowl.",
+      "Classify each one on your chart.",
+      "Close your eyes and let the other person make one sound. Identify it without looking.",
+      "Which was the hardest to classify? The most surprising?"
+    ],
+    "extension": "Arrange all 15 sounds from softest to loudest in your opinion and compare rankings.",
+    "credit": "original",
+    "go_deeper_query": "sound classification activity kids high low loud soft sounds",
+    "place_categories": []
+  },
+  {
+    "id": "robot-commands-game",
+    "title": "Program the parent-robot with exact instructions",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 11,
+    "interests": [
+      "coding",
+      "logic",
+      "robots",
+      "games",
+      "sequencing"
+    ],
+    "vibe": [
+      "silly",
+      "physical"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper for writing commands (optional)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "medium",
+    "skill_developed": "algorithmic thinking, precision in language, debugging",
+    "parent_role": "the robot (follows instructions exactly)",
+    "steps": [
+      "Parent becomes the robot. The robot only follows exact, literal commands — no guessing what was meant.",
+      "Kid's mission: get the robot to pour a cup of water. The robot must wait for each instruction.",
+      "When the kid says 'pick up the cup' — the robot might grab it by the wrong end. The kid has to debug their instructions.",
+      "Work through one full task, then pick a new one: make a sandwich, sit in a chair, give a high five.",
+      "Swap: kid becomes the robot, parent programs.",
+      "Talk about why precision matters — and how computers are even more literal than the robot-parent."
+    ],
+    "extension": "Write out the commands on paper before starting, then 'run the program' and see how it goes.",
+    "credit": "classic CS unplugged activity",
+    "go_deeper_query": "robot programming game for kids precise instructions coding unplugged",
+    "place_categories": [
+      "children's museum",
+      "maker space"
+    ]
+  },
+  {
+    "id": "binary-counting-with-fingers",
+    "title": "Count to 31 on one hand using binary",
+    "duration_min": 30,
+    "age_min": 7,
+    "age_max": 12,
+    "interests": [
+      "coding",
+      "math",
+      "computers",
+      "logic",
+      "numbers"
+    ],
+    "vibe": [
+      "focused",
+      "calm"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper and pencil"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "binary number systems, place value, logical thinking",
+    "parent_role": "fellow learner",
+    "steps": [
+      "Each finger on your right hand has a value: pinky=1, ring=2, middle=4, index=8, thumb=16.",
+      "To show a number: raise the fingers that add up to that number. 5 = middle (4) + pinky (1).",
+      "Practice: what fingers make 3? What fingers make 7? What about 15?",
+      "Count from 0 to 10 in order — raise and lower fingers systematically.",
+      "One person shows a number with fingers. The other figures out what it is.",
+      "What's the highest number you can show with one hand? (31.) Two hands? (1,023.)"
+    ],
+    "extension": "Write a secret message where each letter is a binary number and exchange notes.",
+    "credit": "CS Unplugged — binary numbers activity",
+    "go_deeper_query": "binary counting with fingers kids how computers count",
+    "place_categories": [
+      "children's museum",
+      "hands-on science center"
+    ]
+  },
+  {
+    "id": "secret-code-message",
+    "title": "Write a secret message in a substitution cipher",
+    "duration_min": 30,
+    "age_min": 6,
+    "age_max": 12,
+    "interests": [
+      "coding",
+      "language",
+      "puzzles",
+      "secrets",
+      "cryptography"
+    ],
+    "vibe": [
+      "focused",
+      "calm"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper (2 sheets)",
+      "pencil"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "pattern thinking, cryptography basics, writing",
+    "parent_role": "co-codemaker and decoder",
+    "steps": [
+      "Together, create a cipher key: assign a different symbol to each letter of the alphabet. Keep it simple (A=★, B=◆, etc.).",
+      "Each person writes out the cipher key for reference.",
+      "Each person writes a secret message of at least 10 words and encodes it using the cipher.",
+      "Exchange encoded messages.",
+      "Decode each other's message using the key.",
+      "Read them aloud — were the decodings accurate?"
+    ],
+    "extension": "Try the Caesar cipher: shift every letter by 3 (A becomes D). Can you decode a message without the key if you know it's shifted by 3?",
+    "credit": "inspired by classic cryptography education",
+    "go_deeper_query": "substitution cipher secret code for kids how to make",
+    "place_categories": []
+  },
+  {
+    "id": "sorting-algorithm-with-cards",
+    "title": "Sort a card deck using only two cards at a time",
+    "duration_min": 30,
+    "age_min": 7,
+    "age_max": 12,
+    "interests": [
+      "coding",
+      "logic",
+      "cards",
+      "puzzles",
+      "algorithms"
+    ],
+    "vibe": [
+      "focused",
+      "calm"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "standard deck of playing cards (or numbered index cards)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "algorithmic thinking, sorting logic, patience",
+    "parent_role": "fellow algorithm-runner",
+    "steps": [
+      "Use just the numbered cards, Ace through 10, from one suit. Shuffle them.",
+      "The rule: you may only compare two adjacent cards at a time. If the left is bigger, swap them.",
+      "Walk through the whole row once comparing pairs. Then do it again from the start. Keep going until no swaps are needed.",
+      "This is called bubble sort. Count how many passes it took.",
+      "Shuffle again and try a different method: pick the smallest, place it first. Find the next smallest, place it second. Count passes.",
+      "Which method felt faster? Which needed fewer total comparisons?"
+    ],
+    "extension": "Try sorting 20 cards instead of 10. How much longer does it take? That's why algorithm efficiency matters.",
+    "credit": "CS Unplugged — sorting algorithms",
+    "go_deeper_query": "bubble sort algorithm explained for kids playing cards activity",
+    "place_categories": [
+      "children's museum",
+      "maker space"
+    ]
+  },
+  {
+    "id": "treasure-map-directions",
+    "title": "Hide something and write exact directions to find it",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 11,
+    "interests": [
+      "coding",
+      "logic",
+      "maps",
+      "treasure",
+      "sequencing"
+    ],
+    "vibe": [
+      "physical",
+      "silly"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper",
+      "pencil",
+      "small object to hide (coin, toy, treat)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "medium",
+    "skill_developed": "directional language, algorithmic instruction-writing, debugging",
+    "parent_role": "treasure finder",
+    "steps": [
+      "Kid hides a small object somewhere in the home.",
+      "Kid writes exact directions from the front door: '4 steps forward. Turn right. Open the drawer...'",
+      "Parent reads the instructions exactly as written — no guessing, no improvising.",
+      "If the instructions lead to the wrong spot, kid debugs: which step was wrong?",
+      "Find the treasure. Swap: parent hides, kid follows.",
+      "Try making directions that use only left/right and step counts — no room names."
+    ],
+    "extension": "Use coordinates: make a grid map and write directions as (row, column) moves only.",
+    "credit": "classic unplugged programming activity",
+    "go_deeper_query": "treasure map directions coding activity for kids step by step",
+    "place_categories": []
+  },
+  {
+    "id": "rock-paper-scissors-tournament",
+    "title": "Run a single-elimination tournament with imaginary players",
+    "duration_min": 30,
+    "age_min": 6,
+    "age_max": 12,
+    "interests": [
+      "logic",
+      "games",
+      "math",
+      "tournaments",
+      "strategy"
+    ],
+    "vibe": [
+      "focused",
+      "silly"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper",
+      "pencil"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "bracket logic, probability thinking, systematic organization",
+    "parent_role": "co-organizer and player",
+    "steps": [
+      "Name 8 imaginary players. Give them each a personality and a tendency (Alice always throws rock, Bob likes scissors).",
+      "Draw a bracket: 8 players, 4 first-round matches, 2 semis, 1 final.",
+      "Play each match by rock-paper-scissors. Each match is best-of-3.",
+      "Record winners and advance them in the bracket.",
+      "Who ends up winning? Did it match the 'strategy' you assigned to each player?",
+      "Talk about: is there a winning strategy in RPS? Or is it always random?"
+    ],
+    "extension": "Add a villain character who cheats (always seems to know your throw). Can you find a strategy to beat a cheater?",
+    "credit": "original",
+    "go_deeper_query": "how to run a single elimination tournament bracket kids",
+    "place_categories": []
+  },
+  {
+    "id": "logic-puzzle-with-clues",
+    "title": "Solve a 4-clue who-lives-where logic puzzle",
+    "duration_min": 30,
+    "age_min": 7,
+    "age_max": 12,
+    "interests": [
+      "logic",
+      "puzzles",
+      "coding",
+      "math",
+      "thinking"
+    ],
+    "vibe": [
+      "focused",
+      "calm"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "paper",
+      "pencil"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "deductive reasoning, process of elimination, logical constraint satisfaction",
+    "parent_role": "co-solver",
+    "steps": [
+      "Write out this puzzle: 'There are 3 houses in a row: red, blue, and yellow. Three families live there: the Smiths, the Nguyens, and the Garcias. Three pets: dog, cat, fish. Clue 1: The Smiths live in the red house. Clue 2: The Nguyens have a cat. Clue 3: The blue house is in the middle. Clue 4: The dog lives next to the yellow house. Who has the fish?'",
+      "Draw a grid: rows for houses, columns for families and pets.",
+      "Work through each clue and mark what it tells you — and what it rules out.",
+      "When you solve it, talk through how each clue removed possibilities.",
+      "Make up your own simpler version with 2 houses and 2 clues for the other person to solve.",
+      "Trade puzzles and compare difficulty."
+    ],
+    "extension": "Find or make a 5x5 grid logic puzzle and work through it together — these scale up beautifully.",
+    "credit": "inspired by classic grid logic puzzles (Einstein's puzzle variants)",
+    "go_deeper_query": "logic grid puzzle for kids how to solve who lives where",
+    "place_categories": []
+  },
+  {
+    "id": "indoor-obstacle-course",
+    "title": "Build an indoor obstacle course and race it",
+    "duration_min": 30,
+    "age_min": 3,
+    "age_max": 10,
+    "interests": [
+      "movement",
+      "physical",
+      "games",
+      "building",
+      "challenges"
+    ],
+    "vibe": [
+      "physical",
+      "noisy",
+      "silly"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "pillows",
+      "tape for lines on the floor",
+      "chairs",
+      "blankets",
+      "hula hoop (optional)",
+      "timer"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "loud",
+    "skill_developed": "gross motor coordination, spatial awareness, course design thinking",
+    "parent_role": "co-designer and competitor",
+    "steps": [
+      "Design together: what are the obstacles? Crawl under the table, step over the pillows, spin 3 times, balance on one foot for 5 seconds.",
+      "Set them up through 2-3 rooms.",
+      "Walk through once to learn the route.",
+      "Time run 1 for each person.",
+      "After both run it, each person gets to change ONE obstacle.",
+      "Race a second time. Did times improve?"
+    ],
+    "extension": "Add a carrying challenge: complete the course while balancing a stuffed animal on your head.",
+    "credit": "classic home PE",
+    "go_deeper_query": "diy obstacle course at home kids indoor how to build",
+    "place_categories": [
+      "children's museum"
+    ]
+  },
+  {
+    "id": "balance-beam-tape-challenge",
+    "title": "Make a balance beam with tape and try every challenge",
+    "duration_min": 30,
+    "age_min": 3,
+    "age_max": 10,
+    "interests": [
+      "movement",
+      "balance",
+      "physical",
+      "games",
+      "challenges"
+    ],
+    "vibe": [
+      "physical",
+      "calm"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "painter's tape or masking tape"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "balance, proprioception, focus, body awareness",
+    "parent_role": "fellow competitor",
+    "steps": [
+      "Put down a straight line of tape about 4 meters long.",
+      "Walk the beam heel-to-toe. Arms out or arms down?",
+      "Walk backward.",
+      "Walk sideways.",
+      "Walk with a book balanced on your head.",
+      "Try adding: stop in the middle and do a 360, crouch and touch the line, hop on one foot for the last meter."
+    ],
+    "extension": "Make a curved or zigzag beam with multiple tape strips — harder to balance on direction changes.",
+    "credit": "classic gym class activity",
+    "go_deeper_query": "balance beam challenge at home tape kids gymnastics skills",
+    "place_categories": []
+  },
+  {
+    "id": "animal-yoga-poses",
+    "title": "Make up animal yoga poses and teach each other 5",
+    "duration_min": 30,
+    "age_min": 3,
+    "age_max": 9,
+    "interests": [
+      "movement",
+      "animals",
+      "yoga",
+      "body",
+      "calm"
+    ],
+    "vibe": [
+      "physical",
+      "calm",
+      "silly"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "body awareness, flexibility, imagination",
+    "parent_role": "fellow yoga student",
+    "steps": [
+      "Each person picks 5 animals and invents a pose for each one that captures how the animal moves or looks.",
+      "Name each pose: the Sleeping Crocodile, the Stretching Giraffe, etc.",
+      "Teach your poses to the other person, one at a time.",
+      "Learn each other's poses.",
+      "Run a slow-motion flow: move through all 10 poses in sequence, holding each for 5 breaths.",
+      "Vote on the best pose name and the hardest pose."
+    ],
+    "extension": "Make a poster of all 10 poses with stick-figure illustrations and the pose names.",
+    "credit": "inspired by kids' yoga programs",
+    "go_deeper_query": "animal yoga poses for kids how to do kids yoga flow",
+    "place_categories": []
+  },
+  {
+    "id": "coin-stacking-elbow-catch",
+    "title": "Stack coins on your elbow and catch them — beat your record",
+    "duration_min": 15,
+    "age_min": 5,
+    "age_max": 12,
+    "interests": [
+      "games",
+      "movement",
+      "balance",
+      "challenges",
+      "coins"
+    ],
+    "vibe": [
+      "silly",
+      "physical"
+    ],
+    "setting": [
+      "home"
+    ],
+    "materials": [
+      "coins (20+)"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "medium",
+    "skill_developed": "hand-eye coordination, patience, proprioception",
+    "parent_role": "fellow competitor",
+    "steps": [
+      "Extend your arm straight out, palm up. Bend it up at the elbow so your forearm is level.",
+      "Stack a coin on your elbow.",
+      "Snap your arm down and try to catch the coin in your palm before it falls.",
+      "Add coins one at a time. How many can you stack and still catch?",
+      "Compete: each person beats their own record, then competes against each other's best.",
+      "Try non-dominant arm. Is it harder?"
+    ],
+    "extension": "Make it multi-step: catch the coins, then immediately stack them back in the other hand.",
+    "credit": "classic trick game",
+    "go_deeper_query": "coin stacking elbow catch trick how to kids challenge",
+    "place_categories": []
+  },
+  {
+    "id": "backyard-scavenger-hunt",
+    "title": "Run a 15-item backyard scavenger hunt",
+    "duration_min": 30,
+    "age_min": 3,
+    "age_max": 10,
+    "interests": [
+      "outdoor",
+      "nature",
+      "exploring",
+      "games",
+      "animals"
+    ],
+    "vibe": [
+      "physical",
+      "creative"
+    ],
+    "setting": [
+      "yard",
+      "park"
+    ],
+    "materials": [
+      "list of 15 items to find",
+      "bag or basket"
+    ],
+    "no_special_materials": true,
+    "outdoor": true,
+    "noise_level": "medium",
+    "skill_developed": "observation, classification, outdoor familiarity",
+    "parent_role": "fellow hunter",
+    "steps": [
+      "Before going out, make the list together: something smooth, something rough, a feather, a bug, a round rock, a straight twig, something yellow, something that smells, something a bird might eat, something dead, something alive, something smaller than your thumbnail, something bigger than your shoe, a web or evidence of a web, something that surprised you.",
+      "Set a 20-minute timer and hunt. Each person has their own bag.",
+      "Check items off as you find them.",
+      "When time's up, compare hauls. Who found the most unusual thing?",
+      "Return living things (bugs, snails) to where you found them.",
+      "Pick one found object each and draw it in detail."
+    ],
+    "extension": "Make a display of found objects arranged from smallest to largest.",
+    "credit": "classic outdoor education activity",
+    "go_deeper_query": "backyard nature scavenger hunt for kids how to play",
+    "place_categories": [
+      "nature center",
+      "state park",
+      "nature preserve"
+    ]
+  },
+  {
+    "id": "sun-clock-with-a-stick",
+    "title": "Build a sundial from a stick and track the sun's movement",
+    "duration_min": 60,
+    "age_min": 5,
+    "age_max": 12,
+    "interests": [
+      "outdoor",
+      "science",
+      "sun",
+      "astronomy",
+      "measurement"
+    ],
+    "vibe": [
+      "calm",
+      "focused"
+    ],
+    "setting": [
+      "yard"
+    ],
+    "materials": [
+      "straight stick (30-40cm)",
+      "paper or cardboard",
+      "pencil",
+      "tape",
+      "watch or phone for reference"
+    ],
+    "no_special_materials": true,
+    "outdoor": true,
+    "noise_level": "quiet",
+    "skill_developed": "earth science basics, time measurement, systematic observation",
+    "parent_role": "fellow scientist",
+    "steps": [
+      "Push the stick vertically into a patch of dirt or tape it upright on cardboard.",
+      "Trace the shadow exactly. Write the time at the tip of the shadow.",
+      "Come back in 30 minutes and trace again. What moved?",
+      "Come back every 30 minutes for 2 hours total.",
+      "Connect the tips of all the shadows — what shape do they make?",
+      "Can you predict where the next shadow will be before you go check?"
+    ],
+    "extension": "Come back on a different season's day and compare shadow lengths — they change with the time of year.",
+    "credit": "classic astronomy and earth science activity",
+    "go_deeper_query": "how to make a sundial with a stick kids earth science",
+    "place_categories": [
+      "planetarium",
+      "science museum",
+      "nature center"
+    ]
+  },
+  {
+    "id": "nature-color-matching-hunt",
+    "title": "Match paint swatches to colors in the backyard",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 10,
+    "interests": [
+      "outdoor",
+      "nature",
+      "color",
+      "art",
+      "observation"
+    ],
+    "vibe": [
+      "calm",
+      "creative"
+    ],
+    "setting": [
+      "yard",
+      "park"
+    ],
+    "materials": [
+      "paint chip swatches from a hardware store (free)",
+      "or crayons held up to compare",
+      "paper to record matches"
+    ],
+    "no_special_materials": true,
+    "outdoor": true,
+    "noise_level": "quiet",
+    "skill_developed": "color discrimination, nature observation, vocabulary",
+    "parent_role": "fellow color hunter",
+    "steps": [
+      "Grab a handful of paint swatches from a hardware store — they're free. Or bring crayons.",
+      "Go outside and hold swatches against natural objects: leaves, bark, soil, rocks, flowers, sky.",
+      "Find the closest match for each swatch. Note where you found it.",
+      "Which color was hardest to find outdoors?",
+      "Collect the 5 most interesting natural colors you found and try to name them like a paint company would: not 'brown' but 'warm bark umber'.",
+      "Record your matches on paper as a field color log."
+    ],
+    "extension": "Go inside and find matches for the same swatches — compare your indoor vs. outdoor color palettes.",
+    "credit": "original",
+    "go_deeper_query": "nature color matching paint swatch outdoor activity kids",
+    "place_categories": [
+      "botanical garden",
+      "nature center"
+    ]
+  },
+  {
+    "id": "homemade-salsa",
+    "title": "Make fresh salsa from scratch — kid chops the soft stuff",
+    "duration_min": 30,
+    "age_min": 5,
+    "age_max": 12,
+    "interests": [
+      "cooking",
+      "food",
+      "kitchen",
+      "vegetables",
+      "mexico"
+    ],
+    "vibe": [
+      "messy",
+      "creative"
+    ],
+    "setting": [
+      "kitchen"
+    ],
+    "materials": [
+      "3-4 tomatoes",
+      "half an onion",
+      "lime (1)",
+      "fresh cilantro (handful)",
+      "salt",
+      "jalapeño (optional, parent handles)",
+      "cutting board",
+      "knife"
+    ],
+    "no_special_materials": true,
+    "outdoor": false,
+    "noise_level": "quiet",
+    "skill_developed": "knife safety (age-appropriate), flavor layering, measurement by taste",
+    "parent_role": "sous chef",
+    "steps": [
+      "Wash everything.",
+      "Kid dice the tomatoes into small pieces using a kid-safe knife — or parent cuts, kid scoops.",
+      "Finely chop the onion (parent or older kid). Add to the tomatoes.",
+      "Kid tears the cilantro leaves from stems, tears into smaller bits.",
+      "Squeeze the lime over everything. Add a pinch of salt.",
+      "Taste. Adjust: more lime? More salt? Parent adds jalapeño if wanted. Eat with chips."
+    ],
+    "extension": "Make two versions — one mild, one spicy — and do a family taste test.",
+    "credit": "original",
+    "go_deeper_query": "easy homemade salsa recipe fresh ingredients for kids",
+    "place_categories": [
+      "farmers market",
+      "kids cooking class"
+    ]
+  },
+  {
+    "id": "worm-observation-and-drawing",
+    "title": "Dig for worms and draw exactly what you find",
+    "duration_min": 30,
+    "age_min": 4,
+    "age_max": 10,
+    "interests": [
+      "animals",
+      "nature",
+      "worms",
+      "soil",
+      "science",
+      "drawing"
+    ],
+    "vibe": [
+      "messy",
+      "calm",
+      "focused"
+    ],
+    "setting": [
+      "yard"
+    ],
+    "materials": [
+      "small shovel or big spoon",
+      "jar or tray",
+      "magnifying glass (optional)",
+      "paper",
+      "pencil"
+    ],
+    "no_special_materials": true,
+    "outdoor": true,
+    "noise_level": "quiet",
+    "skill_developed": "close observation, scientific illustration, invertebrate biology",
+    "parent_role": "fellow scientist",
+    "steps": [
+      "Find a patch of damp soil or dig near a plant bed. Worms like moisture and decomposing leaves.",
+      "Dig gently and lay the soil on a tray. Count every worm you uncover.",
+      "Look closely at one worm: how does it move? Can you see the segments? Does it react to light?",
+      "Draw the worm as accurately as possible — actual size, actual color, actual shape.",
+      "Look at what else you found: beetles, pill bugs, roots. Draw one of those too.",
+      "Return everything to the soil and cover it back up. Worms keep the soil healthy."
+    ],
+    "extension": "Set up a simple worm habitat in a jar with layers of soil and leaf litter. Observe for a week then release.",
+    "credit": "classic naturalist observation",
+    "go_deeper_query": "earthworm observation how worms work for kids science",
+    "place_categories": [
+      "nature center",
+      "urban farm"
+    ]
+  },
+  {
+    "id": "chalk-obstacle-course-outside",
+    "title": "Draw a chalk obstacle course on the sidewalk and run it",
+    "duration_min": 30,
+    "age_min": 3,
+    "age_max": 9,
+    "interests": [
+      "outdoor",
+      "movement",
+      "art",
+      "games",
+      "physical"
+    ],
+    "vibe": [
+      "physical",
+      "creative",
+      "noisy"
+    ],
+    "setting": [
+      "yard",
+      "outdoor"
+    ],
+    "materials": [
+      "sidewalk chalk (3+ colors)"
+    ],
+    "no_special_materials": true,
+    "outdoor": true,
+    "noise_level": "loud",
+    "skill_developed": "gross motor coordination, creative course design, spatial planning",
+    "parent_role": "co-designer and competitor",
+    "steps": [
+      "Design together: what are the obstacles? Draw a hopscotch, a balance beam line, a spinning circle, a zigzag.",
+      "Add instructions inside each obstacle: \"hop on one foot\", \"spin 3 times\", \"walk backward\".",
+      "Walk through once to learn the order.",
+      "Time your first run. Then time each other.",
+      "Each person adds one new obstacle to make it harder.",
+      "Race a final time on the fully designed course."
+    ],
+    "extension": "Make it a relay: one person does the first half, the other finishes. Tag is a hand-slap at the midpoint.",
+    "credit": "original",
+    "go_deeper_query": "chalk obstacle course sidewalk ideas for kids how to draw",
+    "place_categories": []
+  }
+]
