@@ -713,9 +713,9 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   <p class="tagline">Three ideas for tomorrow —<br>and tomorrow always counts.</p>
 </header>
 
-<!-- Buddy + speech bubble, above form, OWN row — no collision -->
+<!-- Buddy + speech bubble, above form. Hidden when results are shown. -->
 <div class="buddy-banner" id="buddy-banner">
-  <span class="speech">Let's pick! 👋</span>
+  <span class="speech" id="buddy-speech">Let's pick! 👋</span>
   <img src="assets/buddy.jpg" alt="Buddy the lobster waving" loading="lazy">
 </div>
 
@@ -803,11 +803,7 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 <!-- ═══════════════ RESULTS ═══════════════ -->
 <section class="shell" id="results-section" aria-live="polite">
 
-  <!-- Buddy + speech bubble -->
-  <div class="results-buddy">
-    <img src="assets/buddy.jpg" alt="Buddy the lobster">
-    <div class="buddy-speech">Here are 3 ideas for tomorrow! 🦞</div>
-  </div>
+
 
   <div class="results-header">
     <h2>Here's what to try</h2>
@@ -964,12 +960,30 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 
     formSec.style.display = 'none';
     resultsSec.classList.add('visible');
+    // Move Buddy to top of results, update speech
+    const buddyBanner = document.getElementById('buddy-banner');
+    const buddySpeech = document.getElementById('buddy-speech');
+    if (buddyBanner && resultsSec) {
+      resultsSec.insertBefore(buddyBanner, resultsSec.firstChild);
+      buddyBanner.style.marginBottom = '20px';
+      buddyBanner.style.marginTop = '0';
+    }
+    if (buddySpeech) buddySpeech.textContent = "Tomorrow's plan! 🎉";
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   backBtn.addEventListener('click', () => {
     resultsSec.classList.remove('visible');
     formSec.style.display = 'block';
+    // Move Buddy back above the form
+    const buddyBanner = document.getElementById('buddy-banner');
+    const buddySpeech = document.getElementById('buddy-speech');
+    if (buddyBanner && formSec && formSec.parentNode) {
+      formSec.parentNode.insertBefore(buddyBanner, formSec);
+      buddyBanner.style.marginBottom = '-32px';
+      buddyBanner.style.marginTop = '';
+    }
+    if (buddySpeech) buddySpeech.textContent = "Let's pick! 👋";
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
