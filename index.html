@@ -89,12 +89,23 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   color: var(--soft);
   line-height: 1.5;
 }
-/* Star doodle top-right corner */
+/* Doodles around header */
 .doodle-star {
   position: absolute;
-  top: 28px;
-  right: 36px;
-  opacity: 0.3;
+  top: 36px;
+  right: 44px;
+  transform: rotate(15deg);
+}
+.doodle-spiral {
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  transform: rotate(-12deg);
+}
+.doodle-sparkle {
+  position: absolute;
+  bottom: 8px;
+  right: 60px;
 }
 
 /* ── Form card ──────────────────────────────────────────── */
@@ -108,23 +119,45 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   position: relative;
 }
 
-/* Buddy mascot: form card top-right */
-.buddy-corner {
+/* Buddy mascot: form card top-right — BIGGER, with speech bubble */
+.buddy-corner-wrap {
   position: absolute;
-  top: -28px;
-  right: 18px;
-  width: 72px;
-  height: 72px;
+  top: -54px;
+  right: -8px;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  z-index: 2;
+}
+.buddy-corner {
+  width: 108px;
+  height: 108px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid var(--paper);
-  box-shadow: 2px 3px 8px rgba(0,0,0,0.15);
+  border: 4px solid var(--saffron);
+  box-shadow: 4px 4px 0 0 var(--ink);
   animation: buddy-wave 3s ease-in-out infinite;
   transform-origin: bottom center;
 }
+.buddy-corner-bubble {
+  position: absolute;
+  bottom: 60px;
+  right: 116px;
+  background: #fff;
+  border: 2.5px solid var(--ink);
+  border-radius: 18px 18px 4px 18px;
+  padding: 8px 14px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  box-shadow: 3px 3px 0 0 var(--ink);
+  white-space: nowrap;
+  transform: rotate(-2deg);
+}
 @keyframes buddy-wave {
-  0%, 100% { transform: rotate(7deg); }
-  50%       { transform: rotate(1deg); }
+  0%, 100% { transform: rotate(8deg); }
+  50%       { transform: rotate(-2deg); }
 }
 
 .field-group { margin-bottom: 28px; }
@@ -153,83 +186,59 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   gap: 10px;
 }
 .chip {
-  padding: 9px 20px;
+  padding: 11px 22px;
   border-radius: 999px;
-  border: 2.5px solid transparent;
+  border: 3px solid var(--ink);
   font-family: 'Quicksand', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
   user-select: none;
   transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, color 0.12s ease;
-  box-shadow: 3px 3px 0 0 rgba(0,0,0,0.08);
-  min-height: 40px;
-  min-width: 48px;
+  box-shadow: 4px 4px 0 0 var(--ink);
+  min-height: 44px;
+  min-width: 52px;
+  color: var(--ink);
 }
-.chip:active { transform: scale(0.94) !important; }
+.chip:active { transform: translate(2px,2px) !important; box-shadow: 2px 2px 0 0 var(--ink) !important; }
+
+/* Per-group wonky rotation (random-feeling but deterministic) */
+.chip-group .chip:nth-child(3n+1) { transform: rotate(-1.5deg); }
+.chip-group .chip:nth-child(3n+2) { transform: rotate( 1deg);   }
+.chip-group .chip:nth-child(3n+3) { transform: rotate(-0.5deg); }
+.chip-group .chip:nth-child(5n+2) { transform: rotate( 1.8deg); }
+.chip-group .chip:nth-child(7n+4) { transform: rotate(-2deg);   }
+.chip-group .chip:hover:not(.selected) {
+  transform: translate(-2px,-2px) rotate(0) !important;
+  box-shadow: 6px 6px 0 0 var(--ink);
+}
 
 /* Age chips → mint */
-#age-group .chip:nth-child(odd)  { transform: rotate(0.5deg);  }
-#age-group .chip:nth-child(even) { transform: rotate(-0.5deg); }
-#age-group .chip {
-  background: #f0fdf4;
-  border-color: var(--mint-d);
-  color: var(--mint-d);
-}
-#age-group .chip:hover:not(.selected) {
-  background: #d1fae5;
-  box-shadow: 4px 4px 0 0 rgba(0,0,0,0.10);
-}
+#age-group .chip { background: #ecfdf5; }
 #age-group .chip.selected {
   background: var(--mint);
-  border-color: var(--mint-d);
   color: #fff;
-  transform: translate(1px,1px) rotate(0.5deg);
-  box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.10);
+  transform: translate(2px,2px) rotate(0) !important;
+  box-shadow: 2px 2px 0 0 var(--ink) !important;
 }
-#age-group .chip:nth-child(even).selected { transform: translate(1px,1px) rotate(-0.5deg); }
 
 /* Vibe chips → grape */
-#vibe-group .chip:nth-child(odd)  { transform: rotate(0.5deg);  }
-#vibe-group .chip:nth-child(even) { transform: rotate(-0.5deg); }
-#vibe-group .chip {
-  background: #faf5ff;
-  border-color: var(--grape-d);
-  color: var(--grape-d);
-}
-#vibe-group .chip:hover:not(.selected) {
-  background: #ede9fe;
-  box-shadow: 4px 4px 0 0 rgba(0,0,0,0.10);
-}
+#vibe-group .chip { background: #faf5ff; }
 #vibe-group .chip.selected {
   background: var(--grape);
-  border-color: var(--grape-d);
   color: #fff;
-  transform: translate(1px,1px) rotate(0.5deg);
-  box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.10);
+  transform: translate(2px,2px) rotate(0) !important;
+  box-shadow: 2px 2px 0 0 var(--ink) !important;
 }
-#vibe-group .chip:nth-child(even).selected { transform: translate(1px,1px) rotate(-0.5deg); }
 
 /* Duration chips → pool */
-#duration-group .chip:nth-child(odd)  { transform: rotate(0.5deg);  }
-#duration-group .chip:nth-child(even) { transform: rotate(-0.5deg); }
-#duration-group .chip {
-  background: #f0f9ff;
-  border-color: var(--pool-d);
-  color: var(--pool-d);
-}
-#duration-group .chip:hover:not(.selected) {
-  background: #e0f2fe;
-  box-shadow: 4px 4px 0 0 rgba(0,0,0,0.10);
-}
+#duration-group .chip { background: #f0f9ff; }
 #duration-group .chip.selected {
   background: var(--pool);
-  border-color: var(--pool-d);
   color: #fff;
-  transform: translate(1px,1px) rotate(0.5deg);
-  box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.10);
+  transform: translate(2px,2px) rotate(0) !important;
+  box-shadow: 2px 2px 0 0 var(--ink) !important;
 }
-#duration-group .chip:nth-child(even).selected { transform: translate(1px,1px) rotate(-0.5deg); }
 
 /* Text input */
 .text-input {
@@ -248,31 +257,32 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 .text-input:focus { border-color: var(--pool); }
 .text-input::placeholder { color: var(--muted); }
 
-/* Submit button → tomato */
+/* Submit button → tomato sticker */
 .btn-primary {
   display: block;
   width: 100%;
-  padding: 16px;
+  padding: 18px;
   margin-top: 28px;
   background: var(--tomato);
   color: #fff;
   font-family: 'Fredoka', sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
-  border: 2.5px solid var(--tomato-d);
+  border: 3px solid var(--ink);
   border-radius: 999px;
   cursor: pointer;
-  box-shadow: 4px 4px 0 0 rgba(0,0,0,0.10);
+  box-shadow: 5px 5px 0 0 var(--ink);
   transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  transform: rotate(-0.5deg);
 }
 .btn-primary:hover:not(:disabled) {
   background: var(--tomato-d);
-  transform: translate(-2px,-2px);
-  box-shadow: 6px 6px 0 0 rgba(0,0,0,0.12);
+  transform: translate(-2px,-2px) rotate(-0.5deg);
+  box-shadow: 7px 7px 0 0 var(--ink);
 }
 .btn-primary:active:not(:disabled) {
-  transform: translate(1px,1px);
-  box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.12);
+  transform: translate(3px,3px) rotate(-0.5deg);
+  box-shadow: 2px 2px 0 0 var(--ink);
 }
 .btn-primary:disabled {
   opacity: 0.45;
@@ -340,30 +350,30 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   flex-wrap: wrap;
 }
 
-/* Secondary buttons → saffron */
+/* Secondary buttons → saffron sticker */
 .btn-secondary {
-  padding: 9px 20px;
-  background: var(--paper);
-  border: 2.5px solid var(--saffron-d);
+  padding: 10px 22px;
+  background: #fffbeb;
+  border: 3px solid var(--ink);
   border-radius: 999px;
   font-family: 'Quicksand', sans-serif;
   font-size: 14px;
   font-weight: 700;
-  color: var(--saffron-d);
+  color: var(--ink);
   cursor: pointer;
-  box-shadow: 3px 3px 0 0 rgba(0,0,0,0.08);
+  box-shadow: 4px 4px 0 0 var(--ink);
   transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, color 0.12s ease;
-  min-height: 40px;
+  min-height: 42px;
 }
 .btn-secondary:hover {
   background: var(--saffron);
   color: #fff;
-  transform: translate(-1px,-1px);
-  box-shadow: 4px 4px 0 0 rgba(0,0,0,0.10);
+  transform: translate(-2px,-2px);
+  box-shadow: 6px 6px 0 0 var(--ink);
 }
 .btn-secondary:active {
-  transform: translate(1px,1px);
-  box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.10);
+  transform: translate(2px,2px);
+  box-shadow: 2px 2px 0 0 var(--ink);
 }
 
 /* Stretch notice */
@@ -670,11 +680,14 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 
 <!-- ═══════════════ HEADER ═══════════════ -->
 <header class="site-header">
-  <!-- Star doodle, top-right -->
-  <svg class="doodle-star" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M19 3L22.8 14.1H34.5L25.4 20.9L28.9 32L19 25.2L9.1 32L12.6 20.9L3.5 14.1H15.2L19 3Z" stroke="#1f2937" stroke-width="2" stroke-linejoin="round" fill="none"/>
+  <!-- Yellow star doodle, top-right -->
+  <svg class="doodle-star" width="48" height="48" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M19 3L22.8 14.1H34.5L25.4 20.9L28.9 32L19 25.2L9.1 32L12.6 20.9L3.5 14.1H15.2L19 3Z" fill="#f59e0b" stroke="#1f2937" stroke-width="2.5" stroke-linejoin="round"/>
   </svg>
-  <div class="clock">🕐</div>
+  <!-- Mint spiral doodle, top-left -->
+  <svg class="doodle-spiral" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M22 22 m -1 0 a 1 1 0 1 1 2 0 a 3 3 0 1 1 -6 0 a 5 5 0 1 1 10 0 a 7 7 0 1 1 -14 0 a 9 9 0 1 1 18 0 a 11 11 0 1 1 -22 0" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  </svg>
   <h1>30 Minute Tomorrow</h1>
   <!-- Wavy underline under h1 -->
   <svg class="wavy-line" viewBox="0 0 240 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -687,8 +700,11 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 <section class="form-section shell" id="form-section">
   <div class="form-card">
 
-    <!-- Buddy mascot, form card corner -->
-    <img class="buddy-corner" src="assets/buddy.jpg" alt="Buddy the lobster waving" loading="lazy">
+    <!-- Buddy mascot + speech bubble, form card corner -->
+    <div class="buddy-corner-wrap">
+      <span class="buddy-corner-bubble">Let's pick! 👋</span>
+      <img class="buddy-corner" src="assets/buddy.jpg" alt="Buddy the lobster waving" loading="lazy">
+    </div>
 
     <!-- Q1: Age -->
     <div class="field-group">
@@ -757,12 +773,9 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 
     <button class="btn-primary" id="find-btn" disabled>Show me 3 ideas! 🎨</button>
 
-    <!-- Dashed arrow doodle pointing at button -->
-    <span class="doodle-arrow-wrap" aria-hidden="true">
-      <svg width="60" height="28" viewBox="0 0 60 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M55 4 C45 4,30 24,5 24" stroke="#1f2937" stroke-width="1.5" stroke-dasharray="4 3" stroke-linecap="round" fill="none"/>
-        <path d="M10 18 L5 24 L12 26" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-      </svg>
+    <!-- Saffron sparkle pointing at submit -->
+    <span style="display:block;text-align:center;margin-top:14px;font-family:'Fredoka',sans-serif;font-size:15px;font-weight:700;color:var(--saffron-d);">
+      ✨ Free · no signup · just 3 ideas ✨
     </span>
 
   </div>
@@ -799,15 +812,18 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
 <footer class="site-footer">
-  <!-- Paper airplane doodle -->
-  <svg class="doodle-footer" width="42" height="38" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M2 19 L40 2 L27 36 L19 23 Z" stroke="#1f2937" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
-    <path d="M19 23 L23 30" stroke="#1f2937" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M2 19 L23 23" stroke="#1f2937" stroke-width="1.5" fill="none"/>
+  <!-- Tomato paper airplane doodle -->
+  <svg class="doodle-footer" width="48" height="42" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M2 19 L40 2 L27 36 L19 23 Z" fill="#ef4444" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M19 23 L23 30" stroke="#1f2937" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M2 19 L23 23" stroke="#1f2937" stroke-width="2" fill="none"/>
   </svg>
-  Built by <a href="https://tinkeryclaw.com" target="_blank" rel="noopener">Tinkeryclaw</a> ·
-  Activities matched client-side from 80 hand-curated ideas ·
-  Place suggestions link to Google Maps
+  <div style="font-family:'Fredoka',sans-serif;font-size:15px;font-weight:700;color:var(--ink);margin-top:6px;">
+    Made for tinkering kids and the grown-ups they drag along.
+  </div>
+  <div style="font-size:13px;color:var(--soft);margin-top:8px;">
+    From <a href="https://tinkeryclaw.com" target="_blank" rel="noopener" style="color:var(--pool-d);font-weight:700;">🦞 Tinkeryclaw</a> · No accounts, no tracking, no kidding.
+  </div>
 </footer>
 
 <script src="matcher.js"></script>
