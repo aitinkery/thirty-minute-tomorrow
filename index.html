@@ -938,7 +938,7 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 
   /* ── AI flavor endpoint (override with ?api=URL for local dev) ── */
   const _urlParams = new URLSearchParams(window.location.search);
-  const FLAVOR_API = _urlParams.get('api') || 'https://30min-api.tinkeryclaw.com/flavor';
+  const FLAVOR_API = _urlParams.get('api') || 'https://thirty-minute-tomorrow-api.tinkeryclaw.workers.dev/flavor';
 
   function hasInterestTagMatch(results, interest) {
     if (!interest) return true;
