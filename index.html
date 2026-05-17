@@ -674,6 +674,33 @@ h1, h2, h3, .serif {
     stretchEl.style.display = stretched ? 'block' : 'none';
     cardsEl.innerHTML = '';
 
+    // Show a small "places near X" banner when a city is set
+    let cityBanner = document.getElementById('city-banner');
+    if (state.city) {
+      if (!cityBanner) {
+        cityBanner = document.createElement('div');
+        cityBanner.id = 'city-banner';
+        cityBanner.style.cssText = 'text-align:center;font-size:13px;color:var(--ink-mute);margin-bottom:18px;font-style:italic;';
+        cardsEl.parentNode.insertBefore(cityBanner, cardsEl);
+      }
+      cityBanner.innerHTML = `Showing places near <strong style="color:var(--ink);font-style:normal;">${esc(state.city)}</strong> · <a href="#" id="change-city-link" style="color:var(--accent);">change</a>`;
+      cityBanner.style.display = 'block';
+      const changeLink = document.getElementById('change-city-link');
+      if (changeLink) {
+        changeLink.onclick = (ev) => {
+          ev.preventDefault();
+          const entered = window.prompt("What city or zip?", state.city);
+          if (entered !== null) {
+            state.city = entered.trim();
+            cityEl.value = state.city;
+            showResults();
+          }
+        };
+      }
+    } else if (cityBanner) {
+      cityBanner.style.display = 'none';
+    }
+
     results.forEach((activity, i) => {
       cardsEl.appendChild(buildCard(activity, i + 1, state.city));
     });
