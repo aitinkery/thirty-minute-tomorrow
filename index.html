@@ -999,8 +999,8 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
     const cityBanner = document.getElementById('city-banner');
     if (cityBanner) cityBanner.style.display = 'none';
 
-    // Build a single card (i=0 → mint accent)
-    cardsEl.appendChild(buildCard(pick, 1, state.city));
+    // Build a single card with total=1 so the badge reads "✨ Wild card"
+    cardsEl.appendChild(buildCard(pick, 1, state.city, 1));
 
     // Change header text + Roll-again behavior to lucky-mode
     const headerH2 = resultsSec.querySelector('.results-header h2');
@@ -1075,7 +1075,7 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
     }
 
     results.forEach((activity, i) => {
-      cardsEl.appendChild(buildCard(activity, i + 1, state.city));
+      cardsEl.appendChild(buildCard(activity, i + 1, state.city, results.length));
     });
 
     formSec.style.display = 'none';
@@ -1122,7 +1122,7 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   });
 
   /* ── Build a result card ── */
-  function buildCard(a, num, city) {
+  function buildCard(a, num, city, total) {
     const card = document.createElement('article');
     const colorIdx = (num - 1) % CARD_COLORS.length;
     const accentColor = CARD_COLORS[colorIdx];
@@ -1160,7 +1160,7 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
     card.innerHTML = `
       <div class="card-spine" style="background:${accentColor}"></div>
       <div class="card-body">
-        <div class="card-number" style="background:${accentColor}">Idea ${num} of 3</div>
+        <div class="card-number" style="background:${accentColor}">${total === 1 ? '✨ Wild card' : `Idea ${num} of ${total}`}</div>
         <h3 class="card-title">${esc(a.title)}</h3>
         <div class="card-meta">${metaTags}</div>
 
