@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>30 Minute Tomorrow</title>
+<meta name="description" content="Three things you and your kid could do in the next 30 minutes. Enter age, interests, and vibe — get back ranked activities with steps.">
+<meta property="og:title" content="30 Minute Tomorrow">
+<meta property="og:description" content="Three things you and your kid could do in the next 30 minutes.">
+<meta property="og:url" content="https://30min.tinkeryclaw.com/">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕐</text></svg>">
+<style>
+/* ── Reset & tokens ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #faf6f0;
+  --paper:   #ffffff;
+  --ink:     #1f2937;
+  --soft:    #4b5563;
+  --muted:   #9ca3af;
+  --line:    #e8e2d8;
+  --coral:   #ef4444;
+  --coral-d: #dc2626;
+  --cyan:    #06b6d4;
+  --green:   #16a34a;
+  --radius:  14px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ── Typography ─────────────────────────────────────────── */
+h1, h2, h3, .serif {
+  font-family: Georgia, serif;
+}
+
+/* ── Layout shells ──────────────────────────────────────── */
+.shell {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Site header ────────────────────────────────────────── */
+.site-header {
+  text-align: center;
+  padding: 52px 24px 36px;
+}
+.site-header .clock {
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+.site-header h1 {
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+.site-header .tagline {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 19px;
+  color: var(--soft);
+  line-height: 1.5;
+}
+
+/* ── Form card ──────────────────────────────────────────── */
+.form-card {
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  padding: 36px 32px;
+  margin-bottom: 40px;
+}
+
+.field-group {
+  margin-bottom: 28px;
+}
+.field-group:last-of-type {
+  margin-bottom: 0;
+}
+
+.field-label {
+  display: block;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.field-label .optional {
+  font-family: -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--muted);
+  margin-left: 6px;
+}
+
+/* Chip button group */
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chip {
+  padding: 8px 18px;
+  border-radius: 100px;
+  border: 1.5px solid var(--line);
+  background: var(--bg);
+  color: var(--soft);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+  user-select: none;
+}
+.chip:hover {
+  border-color: var(--coral);
+  color: var(--coral);
+}
+.chip.selected {
+  background: var(--coral);
+  border-color: var(--coral);
+  color: #fff;
+}
+
+/* Text input */
+.text-input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--ink);
+  background: var(--bg);
+  transition: border-color 0.15s;
+  outline: none;
+}
+.text-input:focus {
+  border-color: var(--coral);
+}
+.text-input::placeholder {
+  color: var(--muted);
+}
+
+/* Submit button */
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-top: 28px;
+  background: var(--coral);
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+.btn-primary:hover {
+  background: var(--coral-d);
+  transform: translateY(-1px);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: default;
+  transform: none;
+}
+
+/* ── Results section ────────────────────────────────────── */
+#results-section {
+  display: none;
+}
+#results-section.visible {
+  display: block;
+}
+
+.results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.results-header h2 {
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--ink);
+}
+.results-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  padding: 9px 18px;
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--soft);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.btn-secondary:hover {
+  border-color: var(--coral);
+  color: var(--coral);
+}
+
+/* Stretch notice */
+.stretch-notice {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-left: 3px solid #f59e0b;
+  border-radius: 0 8px 8px 0;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #92400e;
+  margin-bottom: 20px;
+}
+
+/* ── Activity card ──────────────────────────────────────── */
+.activity-card {
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin-bottom: 24px;
+}
+.activity-card + .activity-card {
+  /* already margin-bottom from prev */
+}
+
+.card-number {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+/* Meta row */
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.meta-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--soft);
+  white-space: nowrap;
+}
+
+/* Materials */
+.card-materials {
+  margin-bottom: 20px;
+}
+.card-materials h4 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.materials-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.materials-list li {
+  padding: 3px 10px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--soft);
+}
+
+/* Steps */
+.card-steps {
+  margin-bottom: 20px;
+}
+.card-steps h4 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.steps-list {
+  list-style: none;
+  counter-reset: step-counter;
+}
+.steps-list li {
+  counter-increment: step-counter;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.55;
+}
+.steps-list li::before {
+  content: counter(step-counter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--coral);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+/* Extension callout */
+.card-extension {
+  background: #fff5f5;
+  border-left: 3px solid var(--coral);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--soft);
+  line-height: 1.55;
+}
+.card-extension strong {
+  color: var(--coral-d);
+  font-weight: 600;
+}
+
+/* Roles row */
+.card-roles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+.role-box {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.role-box .role-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.role-box .role-value {
+  font-size: 13px;
+  color: var(--soft);
+  line-height: 1.45;
+}
+
+/* Card action buttons */
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.btn-yt {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 18px;
+  background: #ff0000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.btn-yt:hover {
+  background: #cc0000;
+}
+.btn-place {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 18px;
+  background: var(--paper);
+  color: var(--cyan);
+  border: 1.5px solid var(--cyan);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.btn-place:hover {
+  background: var(--cyan);
+  color: #fff;
+}
+.place-hint {
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+  align-self: center;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
+.site-footer {
+  text-align: center;
+  padding: 40px 24px 56px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.site-footer a {
+  color: var(--muted);
+  text-decoration: underline;
+}
+
+/* ── Print styles ───────────────────────────────────────── */
+@media print {
+  .site-header, .form-section, .results-header, .card-actions, .site-footer {
+    display: none !important;
+  }
+  .activity-card {
+    break-inside: avoid;
+    border: 1px solid #ccc;
+    margin-bottom: 16px;
+    padding: 20px;
+  }
+  body { background: #fff; }
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .site-header { padding: 36px 16px 24px; }
+  .site-header h1 { font-size: 32px; }
+  .site-header .tagline { font-size: 16px; }
+  .form-card { padding: 24px 18px; }
+  .activity-card { padding: 22px 18px; }
+  .card-roles { grid-template-columns: 1fr; }
+  .results-header { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="site-header">
+  <div class="clock">🕐</div>
+  <h1>30 Minute Tomorrow</h1>
+  <p class="tagline">What's something you and your kid could do<br>in 30 minutes tomorrow?</p>
+</header>
+
+<!-- ═══════════════ FORM ═══════════════ -->
+<section class="form-section shell" id="form-section">
+  <div class="form-card">
+
+    <!-- Q1: Age -->
+    <div class="field-group">
+      <label class="field-label">How old is your kid?</label>
+      <div class="chip-group" id="age-group" role="radiogroup" aria-label="Child's age">
+        <button class="chip" data-group="age" data-value="4">4</button>
+        <button class="chip" data-group="age" data-value="5">5</button>
+        <button class="chip" data-group="age" data-value="6">6</button>
+        <button class="chip" data-group="age" data-value="7">7</button>
+        <button class="chip" data-group="age" data-value="8">8</button>
+        <button class="chip" data-group="age" data-value="9">9</button>
+        <button class="chip" data-group="age" data-value="10">10</button>
+        <button class="chip" data-group="age" data-value="11">11</button>
+        <button class="chip" data-group="age" data-value="12">12</button>
+      </div>
+    </div>
+
+    <!-- Q2: Interests -->
+    <div class="field-group">
+      <label class="field-label" for="interests-input">What are they into right now?</label>
+      <input
+        class="text-input"
+        id="interests-input"
+        type="text"
+        placeholder="dinosaurs, soccer, things that spin, drawing…"
+        autocomplete="off"
+        spellcheck="false"
+      >
+    </div>
+
+    <!-- Q3: Vibe -->
+    <div class="field-group">
+      <label class="field-label">What's the vibe?</label>
+      <div class="chip-group" id="vibe-group" role="radiogroup" aria-label="Activity vibe">
+        <button class="chip" data-group="vibe" data-value="quiet">Quiet</button>
+        <button class="chip" data-group="vibe" data-value="messy">Messy</button>
+        <button class="chip" data-group="vibe" data-value="physical">Active</button>
+        <button class="chip" data-group="vibe" data-value="creative">Creative</button>
+      </div>
+    </div>
+
+    <!-- Q4: Time -->
+    <div class="field-group">
+      <label class="field-label">How much time?</label>
+      <div class="chip-group" id="duration-group" role="radiogroup" aria-label="Available time">
+        <button class="chip" data-group="duration" data-value="15">15 min</button>
+        <button class="chip" data-group="duration" data-value="30">30 min</button>
+        <button class="chip" data-group="duration" data-value="60">60 min</button>
+      </div>
+    </div>
+
+    <!-- Q5: City (optional) -->
+    <div class="field-group">
+      <label class="field-label" for="city-input">
+        Your city or zip
+        <span class="optional">(optional — for nearby place suggestions)</span>
+      </label>
+      <input
+        class="text-input"
+        id="city-input"
+        type="text"
+        placeholder="Berkeley, CA or 94710"
+        autocomplete="off"
+      >
+    </div>
+
+    <button class="btn-primary" id="find-btn" disabled>Find 3 activities</button>
+  </div>
+</section>
+
+<!-- ═══════════════ RESULTS ═══════════════ -->
+<section class="shell" id="results-section" aria-live="polite">
+
+  <div class="results-header">
+    <h2>Here's what you could do</h2>
+    <div class="results-actions">
+      <button class="btn-secondary" id="reroll-btn" title="Get a different set with the same inputs">Try another set</button>
+      <button class="btn-secondary" id="print-btn" title="Save as PDF via print dialog">Save as PDF</button>
+    </div>
+  </div>
+
+  <div id="stretch-notice" class="stretch-notice" style="display:none">
+    Stretching slightly outside your kid's exact age band — adjust steps as needed.
+  </div>
+
+  <div id="cards-container"></div>
+
+  <p style="text-align:center; margin-top: 32px;">
+    <button class="btn-secondary" id="back-btn">Change my answers</button>
+  </p>
+
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="site-footer">
+  Built by <a href="https://tinkeryclaw.com" target="_blank" rel="noopener">Tinkeryclaw</a> ·
+  Activities matched client-side from 80 hand-curated ideas ·
+  Place suggestions link to Google Maps
+</footer>
+
+<script src="matcher.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  /* ── State ── */
+  const state = { age: null, interests: '', vibe: null, duration: null, city: '' };
+  let activities = [];
+
+  /* ── Elements ── */
+  const findBtn    = document.getElementById('find-btn');
+  const rerollBtn  = document.getElementById('reroll-btn');
+  const printBtn   = document.getElementById('print-btn');
+  const backBtn    = document.getElementById('back-btn');
+  const formSec    = document.getElementById('form-section');
+  const resultsSec = document.getElementById('results-section');
+  const cardsEl    = document.getElementById('cards-container');
+  const stretchEl  = document.getElementById('stretch-notice');
+  const interestsEl = document.getElementById('interests-input');
+  const cityEl      = document.getElementById('city-input');
+
+  /* ── Load activities ── */
+  fetch('activities.json')
+    .then(r => r.json())
+    .then(data => { activities = data; })
+    .catch(() => console.warn('Could not load activities.json'));
+
+  /* ── Chip selection (single-select per group) ── */
+  document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const group = chip.dataset.group;
+      document.querySelectorAll(`.chip[data-group="${group}"]`).forEach(c => c.classList.remove('selected'));
+      chip.classList.add('selected');
+      state[group] = chip.dataset.value;
+      updateSubmitState();
+    });
+  });
+
+  interestsEl.addEventListener('input', () => {
+    state.interests = interestsEl.value;
+  });
+
+  cityEl.addEventListener('input', () => {
+    state.city = cityEl.value.trim();
+  });
+
+  function updateSubmitState() {
+    findBtn.disabled = !(state.age && state.duration);
+  }
+
+  /* ── Find activities ── */
+  findBtn.addEventListener('click', showResults);
+  rerollBtn.addEventListener('click', showResults);
+
+  function showResults() {
+    if (!activities.length) {
+      alert('Activities still loading — please try again in a moment.');
+      return;
+    }
+
+    const params = {
+      age: parseInt(state.age, 10),
+      interests: state.interests,
+      vibe: state.vibe,
+      duration: state.duration
+    };
+
+    const { results, stretched } = Matcher.match(activities, params, 3);
+
+    stretchEl.style.display = stretched ? 'block' : 'none';
+    cardsEl.innerHTML = '';
+
+    results.forEach((activity, i) => {
+      cardsEl.appendChild(buildCard(activity, i + 1, state.city));
+    });
+
+    formSec.style.display = 'none';
+    resultsSec.classList.add('visible');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  backBtn.addEventListener('click', () => {
+    resultsSec.classList.remove('visible');
+    formSec.style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  printBtn.addEventListener('click', () => { window.print(); });
+
+  /* ── Build a result card ── */
+  function buildCard(a, num, city) {
+    const card = document.createElement('article');
+    card.className = 'activity-card';
+    card.setAttribute('aria-label', a.title);
+
+    // Meta tags
+    const noiseIcon = { quiet: '🤫', medium: '📢', loud: '📣' }[a.noise_level] || '🔊';
+    const metaTags = [
+      `<span class="meta-tag">Ages ${a.age_min}–${a.age_max}</span>`,
+      `<span class="meta-tag">⏱ ${a.duration_min} min</span>`,
+      `<span class="meta-tag">${noiseIcon} ${a.noise_level || 'medium'}</span>`,
+    ].join('');
+
+    // Materials
+    const materialsHtml = (a.materials || []).map(m => `<li>${esc(m)}</li>`).join('');
+
+    // Steps
+    const stepsHtml = (a.steps || []).map(s => `<li>${esc(s)}</li>`).join('');
+
+    // Roles
+    const skillText = a.skill_developed ? `<strong>Your kid builds:</strong> ${esc(a.skill_developed)}` : '';
+    const roleText  = a.parent_role     ? `<strong>Your role:</strong> ${esc(a.parent_role)}`          : '';
+
+    // YouTube button
+    const ytUrl = 'https://www.youtube.com/results?search_query=' + encodeURIComponent(a.go_deeper_query || a.title);
+
+    // Place button
+    let placeHtml = '';
+    const hasPlaces = a.place_categories && a.place_categories.length > 0;
+    if (hasPlaces) {
+      if (city) {
+        const mapsQuery = a.place_categories.map(c => encodeURIComponent(c)).join('+OR+') + '+near+' + encodeURIComponent(city);
+        const mapsUrl = 'https://www.google.com/maps/search/' + mapsQuery;
+        placeHtml = `<a class="btn-place" href="${mapsUrl}" target="_blank" rel="noopener">📍 Find a place nearby</a>`;
+      } else {
+        placeHtml = `<span class="place-hint">Add your city above to find a place nearby.</span>`;
+      }
+    }
+
+    card.innerHTML = `
+      <div class="card-number">Activity ${num} of 3</div>
+      <h3 class="card-title">${esc(a.title)}</h3>
+      <div class="card-meta">${metaTags}</div>
+
+      <div class="card-materials">
+        <h4>You'll need</h4>
+        <ul class="materials-list">${materialsHtml}</ul>
+      </div>
+
+      <div class="card-steps">
+        <h4>How to do it</h4>
+        <ol class="steps-list">${stepsHtml}</ol>
+      </div>
+
+      ${a.extension ? `
+      <div class="card-extension">
+        <strong>If they want more:</strong> ${esc(a.extension)}
+      </div>` : ''}
+
+      <div class="card-roles">
+        ${skillText ? `<div class="role-box"><div class="role-label">What they build</div><div class="role-value">${skillText.replace('<strong>Your kid builds:</strong> ', '')}</div></div>` : ''}
+        ${roleText  ? `<div class="role-box"><div class="role-label">Your role</div><div class="role-value">${roleText.replace('<strong>Your role:</strong> ', '')}</div></div>` : ''}
+      </div>
+
+      <div class="card-actions">
+        <a class="btn-yt" href="${ytUrl}" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1C4.5 20.4 12 20.4 12 20.4s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5V8.5l6.5 3.5-6.5 3.5z"/></svg>
+          Watch a video about this
+        </a>
+        ${placeHtml}
+      </div>
+    `;
+
+    return card;
+  }
+
+  /* ── HTML escape ── */
+  function esc(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+})();
+</script>
+</body>
+</html>
