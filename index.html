@@ -1163,6 +1163,7 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 
     let activitiesToRender = results;
     let wasFlavored = false;
+    let flavorMode = 'reskin';
 
     if (needsFlavor) {
       if (buddySpeech) buddySpeech.textContent = 'One sec, flavoring these... ✨';
@@ -1189,13 +1190,14 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 
       activitiesToRender = flavorResult.activities || results;
       wasFlavored = flavorResult.flavored === true;
-      if (buddySpeech) buddySpeech.textContent = wasFlavored ? "Tomorrow's plan! 🎉" : "Tomorrow's plan! 🎉";
+      flavorMode = flavorResult.mode || 'reskin';  // 'reskin' or 'generate'
+      if (buddySpeech) buddySpeech.textContent = "Tomorrow's plan! 🎉";
     } else {
       if (buddySpeech) buddySpeech.textContent = "Tomorrow's plan! 🎉";
     }
 
     activitiesToRender.forEach((activity, i) => {
-      cardsEl.appendChild(buildCard(activity, i + 1, state.city, results.length, wasFlavored ? interest : null));
+      cardsEl.appendChild(buildCard(activity, i + 1, state.city, results.length, wasFlavored ? interest : null, flavorMode));
     });
   }
 
@@ -1229,7 +1231,7 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   });
 
   /* ── Build a result card ── */
-  function buildCard(a, num, city, total, flavoredInterest) {
+  function buildCard(a, num, city, total, flavoredInterest, flavorMode) {
     const card = document.createElement('article');
     const colorIdx = (num - 1) % CARD_COLORS.length;
     const accentColor = CARD_COLORS[colorIdx];
@@ -1265,7 +1267,7 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
     }
 
     const flavorBadge = flavoredInterest
-      ? `<div class="ai-flavor-badge">✨ ${esc(flavoredInterest)}-flavored</div>`
+      ? `<div class="ai-flavor-badge">✨ ${esc(flavoredInterest)}-${flavorMode === 'generate' ? 'inspired' : 'flavored'}</div>`
       : '';
 
     card.innerHTML = `
