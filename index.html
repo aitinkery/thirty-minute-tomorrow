@@ -1189,6 +1189,20 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
       activitiesToRender = flavorResult.activities || results;
       wasFlavored = flavorResult.flavored === true;
       flavorMode = flavorResult.mode || 'reskin';  // 'reskin' or 'generate'
+      // When AI generated fresh activities, it doesn't return age_min/age_max/duration_min/noise_level.
+      // Backfill from the user's inputs + matched defaults so meta-chips don't render "undefined".
+      if (wasFlavored && flavorMode === 'generate') {
+        const ageNum = parseInt(state.age, 10);
+        const durNum = state.duration ? parseInt(state.duration, 10) : 30;
+        activitiesToRender = activitiesToRender.map((a, i) => ({
+          ...a,
+          age_min: a.age_min ?? Math.max(4, ageNum - 1),
+          age_max: a.age_max ?? Math.min(12, ageNum + 2),
+          duration_min: a.duration_min ?? durNum,
+          noise_level: a.noise_level ?? (state.vibe === 'quiet' ? 'quiet' : state.vibe === 'physical' ? 'loud' : 'medium'),
+          interests: a.interests ?? [interest],
+        }));
+      }
       if (buddySpeech) buddySpeech.textContent = "Tomorrow's plan! 🎉";
     } else {
       if (buddySpeech) buddySpeech.textContent = "Tomorrow's plan! 🎉";
