@@ -698,6 +698,43 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   right: 48px;
 }
 
+/* ── AI flavor loading state ────────────────────────────── */
+.flavor-loading {
+  text-align: center;
+  padding: 56px 24px 48px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.flavor-loading .spin-lobster {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 16px;
+  animation: lobster-spin 1.2s linear infinite;
+  transform-origin: center;
+}
+@keyframes lobster-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── AI flavor badge ─────────────────────────────────────── */
+.ai-flavor-badge {
+  display: inline-block;
+  background: var(--saffron);
+  color: #fff;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 999px;
+  border: 2px solid var(--ink);
+  box-shadow: 2px 2px 0 0 var(--ink);
+  margin-bottom: 10px;
+  transform: rotate(-1deg);
+}
+
 /* ── Print styles ───────────────────────────────────────── */
 @media print {
   .site-header, .form-section, .results-header, .results-buddy,
@@ -899,6 +936,40 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   const state = { age: null, interests: '', vibe: null, duration: null, city: '' };
   let activities = [];
 
+  /* ── AI flavor endpoint (override with ?api=URL for local dev) ── */
+  const _urlParams = new URLSearchParams(window.location.search);
+  const FLAVOR_API = _urlParams.get('api') || 'https://30min-api.tinkeryclaw.com/flavor';
+
+  function hasInterestTagMatch(results, interest) {
+    if (!interest) return true;
+    const tokens = interest.toLowerCase().split(/[\s,]+/).filter(Boolean);
+    return results.some(a =>
+      (a.interests || []).some(tag =>
+        tokens.some(t => tag.toLowerCase().includes(t) || t.includes(tag.toLowerCase()))
+      )
+    );
+  }
+
+  async function callAIFlavor(acts, interest, age, vibe, duration) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000);
+    try {
+      const resp = await fetch(FLAVOR_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ interest, age, vibe, duration, activities: acts }),
+        signal: controller.signal,
+      });
+      clearTimeout(timeoutId);
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      return await resp.json();
+    } catch (err) {
+      clearTimeout(timeoutId);
+      console.log('AI flavoring endpoint not yet deployed', err && err.message);
+      return { flavored: false, activities: acts };
+    }
+  }
+
   /* ── Card accent colors (rotate: mint, saffron, pool) ── */
   const CARD_COLORS  = ['#10b981', '#f59e0b', '#0ea5e9'];
   const CARD_CLASSES = ['card-mint', 'card-saffron', 'card-pool'];
@@ -1024,7 +1095,7 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  function showResults() {
+  async function showResults() {
     if (!activities.length) {
       alert('Activities still loading — please try again in a moment.');
       return;
@@ -1074,13 +1145,9 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
       cityBanner.style.display = 'none';
     }
 
-    results.forEach((activity, i) => {
-      cardsEl.appendChild(buildCard(activity, i + 1, state.city, results.length));
-    });
-
+    // Show results section immediately so loading state is visible
     formSec.style.display = 'none';
     resultsSec.classList.add('visible');
-    // Move Buddy to top of results, update speech
     const buddyBanner = document.getElementById('buddy-banner');
     const buddySpeech = document.getElementById('buddy-speech');
     if (buddyBanner && resultsSec) {
@@ -1088,8 +1155,48 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
       buddyBanner.style.marginBottom = '20px';
       buddyBanner.style.marginTop = '0';
     }
-    if (buddySpeech) buddySpeech.textContent = "Tomorrow's plan! 🎉";
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Decide whether to call AI flavor
+    const interest = state.interests.trim();
+    const needsFlavor = interest && !hasInterestTagMatch(results, interest);
+
+    let activitiesToRender = results;
+    let wasFlavored = false;
+
+    if (needsFlavor) {
+      if (buddySpeech) buddySpeech.textContent = 'One sec, flavoring these... ✨';
+
+      // Show loading spinner after 500ms (avoids flash on fast responses)
+      const loadingTimer = setTimeout(() => {
+        cardsEl.innerHTML = `
+          <div class="flavor-loading">
+            <span class="spin-lobster">🦞</span>
+            Asking Buddy to flavor these for ${esc(interest)}&hellip;
+          </div>
+        `;
+      }, 500);
+
+      const flavorResult = await callAIFlavor(
+        results,
+        interest,
+        parseInt(state.age, 10),
+        state.vibe,
+        state.duration ? parseInt(state.duration, 10) : 30
+      );
+      clearTimeout(loadingTimer);
+      cardsEl.innerHTML = '';
+
+      activitiesToRender = flavorResult.activities || results;
+      wasFlavored = flavorResult.flavored === true;
+      if (buddySpeech) buddySpeech.textContent = wasFlavored ? "Tomorrow's plan! 🎉" : "Tomorrow's plan! 🎉";
+    } else {
+      if (buddySpeech) buddySpeech.textContent = "Tomorrow's plan! 🎉";
+    }
+
+    activitiesToRender.forEach((activity, i) => {
+      cardsEl.appendChild(buildCard(activity, i + 1, state.city, results.length, wasFlavored ? interest : null));
+    });
   }
 
   backBtn.addEventListener('click', () => {
@@ -1122,7 +1229,7 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   });
 
   /* ── Build a result card ── */
-  function buildCard(a, num, city, total) {
+  function buildCard(a, num, city, total, flavoredInterest) {
     const card = document.createElement('article');
     const colorIdx = (num - 1) % CARD_COLORS.length;
     const accentColor = CARD_COLORS[colorIdx];
@@ -1157,9 +1264,14 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
       }
     }
 
+    const flavorBadge = flavoredInterest
+      ? `<div class="ai-flavor-badge">✨ ${esc(flavoredInterest)}-flavored</div>`
+      : '';
+
     card.innerHTML = `
       <div class="card-spine" style="background:${accentColor}"></div>
       <div class="card-body">
+        ${flavorBadge}
         <div class="card-number" style="background:${accentColor}">${total === 1 ? '✨ Wild card' : `Idea ${num} of ${total}`}</div>
         <h3 class="card-title">${esc(a.title)}</h3>
         <div class="card-meta">${metaTags}</div>
