@@ -691,6 +691,19 @@ h1, h2, h3, .serif {
 
   printBtn.addEventListener('click', () => { window.print(); });
 
+  // Inline city prompt when user clicks "Find a place nearby" without a city set
+  cardsEl.addEventListener('click', (ev) => {
+    const btn = ev.target.closest('[data-action="ask-city"]');
+    if (!btn) return;
+    ev.preventDefault();
+    const entered = window.prompt("What city or zip should we search? (e.g., Berkeley, CA or 94704)");
+    if (!entered) return;
+    state.city = entered.trim();
+    cityEl.value = state.city;
+    // Re-render the cards with the new city
+    showResults();
+  });
+
   /* ── Build a result card ── */
   function buildCard(a, num, city) {
     const card = document.createElement('article');
@@ -711,14 +724,14 @@ h1, h2, h3, .serif {
     // Steps
     const stepsHtml = (a.steps || []).map(s => `<li>${esc(s)}</li>`).join('');
 
-    // Roles
-    const skillText = a.skill_developed ? `<strong>Your kid builds:</strong> ${esc(a.skill_developed)}` : '';
-    const roleText  = a.parent_role     ? `<strong>Your role:</strong> ${esc(a.parent_role)}`          : '';
+    // Roles — "What you each get" frames the SHARED experience: kid + parent both gain.
+    const skillText = a.skill_developed ? esc(a.skill_developed) : '';
+    const roleText  = a.parent_role     ? esc(a.parent_role)     : '';
 
     // YouTube button
     const ytUrl = 'https://www.youtube.com/results?search_query=' + encodeURIComponent(a.go_deeper_query || a.title);
 
-    // Place button
+    // Place button — always shown when activity has place_categories. If no city, prompt for one inline.
     let placeHtml = '';
     const hasPlaces = a.place_categories && a.place_categories.length > 0;
     if (hasPlaces) {
@@ -727,7 +740,8 @@ h1, h2, h3, .serif {
         const mapsUrl = 'https://www.google.com/maps/search/' + mapsQuery;
         placeHtml = `<a class="btn-place" href="${mapsUrl}" target="_blank" rel="noopener">📍 Find a place nearby</a>`;
       } else {
-        placeHtml = `<span class="place-hint">Add your city above to find a place nearby.</span>`;
+        // No city set — show a button that opens a small prompt to capture one now.
+        placeHtml = `<button class="btn-place" type="button" data-action="ask-city">📍 Find a place nearby</button>`;
       }
     }
 
@@ -752,8 +766,8 @@ h1, h2, h3, .serif {
       </div>` : ''}
 
       <div class="card-roles">
-        ${skillText ? `<div class="role-box"><div class="role-label">What they build</div><div class="role-value">${skillText.replace('<strong>Your kid builds:</strong> ', '')}</div></div>` : ''}
-        ${roleText  ? `<div class="role-box"><div class="role-label">Your role</div><div class="role-value">${roleText.replace('<strong>Your role:</strong> ', '')}</div></div>` : ''}
+        ${skillText ? `<div class="role-box"><div class="role-label">What you each get</div><div class="role-value">${skillText}</div></div>` : ''}
+        ${roleText  ? `<div class="role-box"><div class="role-label">Your role</div><div class="role-value">${roleText}</div></div>` : ''}
       </div>
 
       <div class="card-actions">
