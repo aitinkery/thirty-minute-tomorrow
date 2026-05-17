@@ -79,7 +79,7 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 }
 .wavy-line {
   display: block;
-  margin: 0 auto 14px;
+  margin: 14px auto 18px;
   width: 240px;
   height: 12px;
 }
@@ -89,18 +89,22 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   color: var(--soft);
   line-height: 1.5;
 }
-/* Doodles — symmetric anchors in the header's two top corners */
+/* Doodles — symmetric anchors in the header's two top corners (matched sizing) */
 .doodle-star {
   position: absolute;
   top: 30px;
   right: 8%;
   transform: rotate(15deg);
+  width: 50px;
+  height: 50px;
 }
 .doodle-spiral {
   position: absolute;
-  top: 40px;
+  top: 30px;
   left: 8%;
   transform: rotate(-12deg);
+  width: 50px;
+  height: 50px;
 }
 @media (max-width: 540px) {
   .doodle-star, .doodle-spiral { display: none; }
@@ -117,39 +121,45 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   position: relative;
 }
 
-/* Buddy mascot: form card top-right corner — NO subhead collision */
-.buddy-corner-wrap {
-  position: absolute;
-  top: -64px;
-  right: -10px;
+/* Buddy mascot: above the form card, right-aligned, OWN row — no subhead collision */
+.buddy-banner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  max-width: 720px;
+  margin: 0 auto -32px;  /* pull down to overlap form card top by 32px */
+  padding: 0 24px;
+  position: relative;
   z-index: 3;
 }
-.buddy-corner {
-  width: 110px;
-  height: 110px;
+.buddy-banner img {
+  width: 96px;
+  height: 96px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid var(--saffron);
   box-shadow: 4px 4px 0 0 var(--ink);
   animation: buddy-wave 3s ease-in-out infinite;
   transform-origin: bottom center;
-  display: block;
+  flex-shrink: 0;
 }
-.buddy-corner-bubble {
-  position: absolute;
-  top: 0;
-  right: 122px;
+.buddy-banner .speech {
   background: #fff;
   border: 3px solid var(--ink);
   border-radius: 18px 18px 4px 18px;
-  padding: 8px 14px;
+  padding: 9px 16px;
   font-family: 'Fredoka', sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--ink);
   box-shadow: 3px 3px 0 0 var(--ink);
   white-space: nowrap;
-  transform: rotate(-3deg);
+  transform: rotate(-2deg);
+}
+@media (max-width: 480px) {
+  .buddy-banner img { width: 78px; height: 78px; }
+  .buddy-banner .speech { font-size: 13px; padding: 7px 12px; }
 }
 @keyframes buddy-wave {
   0%, 100% { transform: rotate(8deg); }
@@ -192,8 +202,11 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   user-select: none;
   transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, color 0.12s ease;
   box-shadow: 4px 4px 0 0 var(--ink);
-  min-height: 44px;
-  min-width: 52px;
+  min-height: 48px;
+  min-width: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--ink);
 }
 .chip:active { transform: translate(2px,2px) !important; box-shadow: 2px 2px 0 0 var(--ink) !important; }
@@ -677,12 +690,20 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 <!-- ═══════════════ HEADER ═══════════════ -->
 <header class="site-header">
   <!-- Yellow star doodle, top-right -->
-  <svg class="doodle-star" width="48" height="48" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <svg class="doodle-star" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M19 3L22.8 14.1H34.5L25.4 20.9L28.9 32L19 25.2L9.1 32L12.6 20.9L3.5 14.1H15.2L19 3Z" fill="#f59e0b" stroke="#1f2937" stroke-width="2.5" stroke-linejoin="round"/>
   </svg>
-  <!-- Mint spiral doodle, top-left -->
-  <svg class="doodle-spiral" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M22 22 m -1 0 a 1 1 0 1 1 2 0 a 3 3 0 1 1 -6 0 a 5 5 0 1 1 10 0 a 7 7 0 1 1 -14 0 a 9 9 0 1 1 18 0 a 11 11 0 1 1 -22 0" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- Grape sparkle/sun doodle, top-left -->
+  <svg class="doodle-spiral" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="19" cy="19" r="7" fill="#a855f7" stroke="#1f2937" stroke-width="2.5"/>
+    <line x1="19" y1="2" x2="19" y2="8" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="19" y1="30" x2="19" y2="36" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="2" y1="19" x2="8" y2="19" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="30" y1="19" x2="36" y2="19" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="6" y1="6" x2="10" y2="10" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="28" y1="28" x2="32" y2="32" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="6" y1="32" x2="10" y2="28" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="28" y1="10" x2="32" y2="6" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
   </svg>
   <h1>30 Minute Tomorrow</h1>
   <!-- Wavy underline under h1 -->
@@ -692,21 +713,23 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   <p class="tagline">Three ideas for tomorrow —<br>and tomorrow always counts.</p>
 </header>
 
+<!-- Buddy + speech bubble, above form, OWN row — no collision -->
+<div class="buddy-banner" id="buddy-banner">
+  <span class="speech">Let's pick! 👋</span>
+  <img src="assets/buddy.jpg" alt="Buddy the lobster waving" loading="lazy">
+</div>
+
 <!-- ═══════════════ FORM ═══════════════ -->
 <section class="form-section shell" id="form-section">
   <div class="form-card">
 
-    <!-- Buddy mascot + speech bubble, form card corner -->
-    <div class="buddy-corner-wrap">
-      <span class="buddy-corner-bubble">Let's pick! 👋</span>
-      <img class="buddy-corner" src="assets/buddy.jpg" alt="Buddy the lobster waving" loading="lazy">
-    </div>
+
 
     <!-- Q1: Age -->
     <div class="field-group">
-      <label class="field-label">How old's your kiddo?</label>
+      <label class="field-label">How old is your kiddo?</label>
       <div class="chip-group" id="age-group" role="radiogroup" aria-label="Child's age">
-        <button class="chip" data-group="age" data-value="4">4</button>
+        <button class="chip" data-group="age" data-value="4" style="min-height:48px;">4</button>
         <button class="chip" data-group="age" data-value="5">5</button>
         <button class="chip" data-group="age" data-value="6">6</button>
         <button class="chip" data-group="age" data-value="7">7</button>
