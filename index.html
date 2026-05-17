@@ -266,6 +266,45 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 .text-input:focus { transform: translate(-1px,-1px); box-shadow: 5px 5px 0 0 var(--pool); }
 .text-input::placeholder { color: var(--muted); font-weight: 500; }
 
+/* Lucky button row — sits below primary submit */
+.lucky-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 16px;
+}
+.lucky-or {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: lowercase;
+}
+.btn-lucky {
+  padding: 12px 24px;
+  background: var(--grape);
+  color: #fff;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 0 var(--ink);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  transform: rotate(1deg);
+}
+.btn-lucky:hover {
+  background: var(--grape-d);
+  transform: translate(-2px,-2px) rotate(1deg);
+  box-shadow: 6px 6px 0 0 var(--ink);
+}
+.btn-lucky:active {
+  transform: translate(2px,2px) rotate(1deg);
+  box-shadow: 2px 2px 0 0 var(--ink);
+}
+
 /* Submit button → tomato sticker */
 .btn-primary {
   display: block;
@@ -792,9 +831,17 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 
     <button class="btn-primary" id="find-btn" disabled>Show me 3 ideas! 🎨</button>
 
+    <!-- Lucky button: zero-friction single random activity -->
+    <div class="lucky-row">
+      <span class="lucky-or">or</span>
+      <button class="btn-lucky" id="lucky-btn" type="button">
+        🎲 Just surprise us
+      </button>
+    </div>
+
     <!-- Saffron sparkle pointing at submit -->
-    <span style="display:block;text-align:center;margin-top:14px;font-family:'Fredoka',sans-serif;font-size:15px;font-weight:700;color:var(--saffron-d);">
-      ✨ Free · no signup · just 3 ideas ✨
+    <span style="display:block;text-align:center;margin-top:18px;font-family:'Fredoka',sans-serif;font-size:15px;font-weight:700;color:var(--saffron-d);">
+      ✨ Free · no signup · just ideas ✨
     </span>
 
   </div>
@@ -906,14 +953,80 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   }
 
   /* ── Find activities ── */
-  findBtn.addEventListener('click', () => { launchConfetti(); showResults(); });
-  rerollBtn.addEventListener('click', showResults);
+  let resultMode = 'three';  // 'three' or 'lucky'
+
+  findBtn.addEventListener('click', () => {
+    resultMode = 'three';
+    launchConfetti();
+    showResults();
+  });
+  rerollBtn.addEventListener('click', () => {
+    if (resultMode === 'lucky') {
+      showLucky();
+    } else {
+      showResults();
+    }
+  });
+
+  /* ── Lucky button — single random activity, no form needed ── */
+  const luckyBtn = document.getElementById('lucky-btn');
+  if (luckyBtn) {
+    luckyBtn.addEventListener('click', () => {
+      if (!activities.length) {
+        alert('Activities still loading — please try again in a moment.');
+        return;
+      }
+      resultMode = 'lucky';
+      launchConfetti();
+      showLucky();
+    });
+  }
+
+  function showLucky() {
+    const pick = activities[Math.floor(Math.random() * activities.length)];
+    // Reuse the results section so we get the same Buddy/header/etc.
+    stretchEl.style.display = 'none';
+    cardsEl.innerHTML = '';
+
+    // Hide any leftover city banner
+    const cityBanner = document.getElementById('city-banner');
+    if (cityBanner) cityBanner.style.display = 'none';
+
+    // Build a single card (i=0 → mint accent)
+    cardsEl.appendChild(buildCard(pick, 1, state.city));
+
+    // Change header text + Roll-again behavior to lucky-mode
+    const headerH2 = resultsSec.querySelector('.results-header h2');
+    if (headerH2) headerH2.textContent = "Here's your wild card";
+
+    rerollBtn.textContent = 'Surprise me again 🎲';
+
+    formSec.style.display = 'none';
+    resultsSec.classList.add('visible');
+
+    // Move Buddy + speech to results, change copy
+    const buddyBanner = document.getElementById('buddy-banner');
+    const buddySpeech = document.getElementById('buddy-speech');
+    if (buddyBanner && resultsSec) {
+      resultsSec.insertBefore(buddyBanner, resultsSec.firstChild);
+      buddyBanner.style.marginBottom = '20px';
+      buddyBanner.style.marginTop = '0';
+    }
+    if (buddySpeech) buddySpeech.textContent = "Surprise! 🎉";
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   function showResults() {
     if (!activities.length) {
       alert('Activities still loading — please try again in a moment.');
       return;
     }
+
+    // Reset header + reroll back to 3-ideas mode (lucky-mode may have changed them)
+    const headerH2 = resultsSec.querySelector('.results-header h2');
+    if (headerH2) headerH2.textContent = "Here's what to try";
+    rerollBtn.textContent = 'Roll again 🎲';
 
     const params = {
       age: parseInt(state.age, 10),
