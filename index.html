@@ -4,44 +4,54 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>30 Minute Tomorrow</title>
-<meta name="description" content="Three things you and your kid could do in the next 30 minutes. Enter age, interests, and vibe — get back ranked activities with steps.">
+<meta name="description" content="Three ideas for tomorrow — and tomorrow always counts. Enter age, interests, and vibe — get back ranked activities with steps.">
 <meta property="og:title" content="30 Minute Tomorrow">
-<meta property="og:description" content="Three things you and your kid could do in the next 30 minutes.">
+<meta property="og:description" content="Three ideas for tomorrow — and tomorrow always counts.">
 <meta property="og:url" content="https://30min.tinkeryclaw.com/">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕐</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
 <style>
 /* ── Reset & tokens ─────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:      #faf6f0;
-  --paper:   #ffffff;
-  --ink:     #1f2937;
-  --soft:    #4b5563;
-  --muted:   #9ca3af;
-  --line:    #e8e2d8;
-  --coral:   #ef4444;
-  --coral-d: #dc2626;
-  --cyan:    #06b6d4;
-  --green:   #16a34a;
-  --radius:  14px;
+  --cream:     #fff8ec;
+  --tomato:    #ef4444;
+  --tomato-d:  #dc2626;
+  --saffron:   #f59e0b;
+  --saffron-d: #d97706;
+  --pool:      #0ea5e9;
+  --pool-d:    #0284c7;
+  --mint:      #10b981;
+  --mint-d:    #059669;
+  --grape:     #a855f7;
+  --grape-d:   #9333ea;
+  --ink:       #1f2937;
+  --soft:      #4b5563;
+  --muted:     #9ca3af;
+  --paper:     #fffdf7;
+  --radius:    20px;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
-  background: var(--bg);
+  font-family: 'Quicksand', -apple-system, sans-serif;
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(rgba(0,0,0,0.025) 1px, transparent 1px),
+    radial-gradient(rgba(0,0,0,0.015) 1px, transparent 1px);
+  background-size: 12px 12px, 8px 8px;
+  background-position: 0 0, 4px 4px;
   color: var(--ink);
   line-height: 1.6;
   min-height: 100vh;
 }
 
-/* ── Typography ─────────────────────────────────────────── */
-h1, h2, h3, .serif {
-  font-family: Georgia, serif;
-}
+h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 
-/* ── Layout shells ──────────────────────────────────────── */
+/* ── Layout shell ───────────────────────────────────────── */
 .shell {
   max-width: 720px;
   margin: 0 auto;
@@ -52,6 +62,7 @@ h1, h2, h3, .serif {
 .site-header {
   text-align: center;
   padding: 52px 24px 36px;
+  position: relative;
 }
 .site-header .clock {
   font-size: 48px;
@@ -59,136 +70,255 @@ h1, h2, h3, .serif {
   margin-bottom: 16px;
 }
 .site-header h1 {
-  font-size: 42px;
-  font-weight: 900;
+  font-size: 44px;
+  font-weight: 700;
   color: var(--ink);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
   line-height: 1.1;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
+}
+.wavy-line {
+  display: block;
+  margin: 0 auto 14px;
+  width: 240px;
+  height: 12px;
 }
 .site-header .tagline {
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-size: 19px;
+  font-weight: 500;
+  font-size: 18px;
   color: var(--soft);
   line-height: 1.5;
+}
+/* Star doodle top-right corner */
+.doodle-star {
+  position: absolute;
+  top: 28px;
+  right: 36px;
+  opacity: 0.3;
 }
 
 /* ── Form card ──────────────────────────────────────────── */
 .form-card {
   background: var(--paper);
-  border: 1.5px solid var(--line);
+  border: 2px dashed rgba(31,41,55,0.18);
   border-radius: var(--radius);
   padding: 36px 32px;
   margin-bottom: 40px;
+  box-shadow: 0 4px 0 0 rgba(0,0,0,0.06);
+  position: relative;
 }
 
-.field-group {
-  margin-bottom: 28px;
+/* Buddy mascot: form card top-right */
+.buddy-corner {
+  position: absolute;
+  top: -28px;
+  right: 18px;
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--paper);
+  box-shadow: 2px 3px 8px rgba(0,0,0,0.15);
+  animation: buddy-wave 3s ease-in-out infinite;
+  transform-origin: bottom center;
 }
-.field-group:last-of-type {
-  margin-bottom: 0;
+@keyframes buddy-wave {
+  0%, 100% { transform: rotate(7deg); }
+  50%       { transform: rotate(1deg); }
 }
+
+.field-group { margin-bottom: 28px; }
+.field-group:last-of-type { margin-bottom: 0; }
 
 .field-label {
   display: block;
-  font-family: Georgia, serif;
+  font-family: 'Fredoka', sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 17px;
   color: var(--ink);
   margin-bottom: 12px;
 }
 .field-label .optional {
-  font-family: -apple-system, sans-serif;
-  font-weight: 400;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
   font-size: 13px;
   color: var(--muted);
   margin-left: 6px;
 }
 
-/* Chip button group */
+/* ── Chip / sticker buttons ─────────────────────────────── */
 .chip-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 .chip {
-  padding: 8px 18px;
-  border-radius: 100px;
-  border: 1.5px solid var(--line);
-  background: var(--bg);
-  color: var(--soft);
+  padding: 9px 20px;
+  border-radius: 999px;
+  border: 2.5px solid transparent;
+  font-family: 'Quicksand', sans-serif;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
-  transition: border-color 0.15s, background 0.15s, color 0.15s;
   user-select: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, color 0.12s ease;
+  box-shadow: 3px 3px 0 0 rgba(0,0,0,0.08);
+  min-height: 40px;
+  min-width: 48px;
 }
-.chip:hover {
-  border-color: var(--coral);
-  color: var(--coral);
+.chip:active { transform: scale(0.94) !important; }
+
+/* Age chips → mint */
+#age-group .chip:nth-child(odd)  { transform: rotate(0.5deg);  }
+#age-group .chip:nth-child(even) { transform: rotate(-0.5deg); }
+#age-group .chip {
+  background: #f0fdf4;
+  border-color: var(--mint-d);
+  color: var(--mint-d);
 }
-.chip.selected {
-  background: var(--coral);
-  border-color: var(--coral);
+#age-group .chip:hover:not(.selected) {
+  background: #d1fae5;
+  box-shadow: 4px 4px 0 0 rgba(0,0,0,0.10);
+}
+#age-group .chip.selected {
+  background: var(--mint);
+  border-color: var(--mint-d);
   color: #fff;
+  transform: translate(1px,1px) rotate(0.5deg);
+  box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.10);
 }
+#age-group .chip:nth-child(even).selected { transform: translate(1px,1px) rotate(-0.5deg); }
+
+/* Vibe chips → grape */
+#vibe-group .chip:nth-child(odd)  { transform: rotate(0.5deg);  }
+#vibe-group .chip:nth-child(even) { transform: rotate(-0.5deg); }
+#vibe-group .chip {
+  background: #faf5ff;
+  border-color: var(--grape-d);
+  color: var(--grape-d);
+}
+#vibe-group .chip:hover:not(.selected) {
+  background: #ede9fe;
+  box-shadow: 4px 4px 0 0 rgba(0,0,0,0.10);
+}
+#vibe-group .chip.selected {
+  background: var(--grape);
+  border-color: var(--grape-d);
+  color: #fff;
+  transform: translate(1px,1px) rotate(0.5deg);
+  box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.10);
+}
+#vibe-group .chip:nth-child(even).selected { transform: translate(1px,1px) rotate(-0.5deg); }
+
+/* Duration chips → pool */
+#duration-group .chip:nth-child(odd)  { transform: rotate(0.5deg);  }
+#duration-group .chip:nth-child(even) { transform: rotate(-0.5deg); }
+#duration-group .chip {
+  background: #f0f9ff;
+  border-color: var(--pool-d);
+  color: var(--pool-d);
+}
+#duration-group .chip:hover:not(.selected) {
+  background: #e0f2fe;
+  box-shadow: 4px 4px 0 0 rgba(0,0,0,0.10);
+}
+#duration-group .chip.selected {
+  background: var(--pool);
+  border-color: var(--pool-d);
+  color: #fff;
+  transform: translate(1px,1px) rotate(0.5deg);
+  box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.10);
+}
+#duration-group .chip:nth-child(even).selected { transform: translate(1px,1px) rotate(-0.5deg); }
 
 /* Text input */
 .text-input {
   width: 100%;
-  padding: 11px 14px;
-  border: 1.5px solid var(--line);
-  border-radius: 8px;
+  padding: 11px 16px;
+  border: 2px solid rgba(31,41,55,0.18);
+  border-radius: 14px;
   font-size: 15px;
-  font-family: inherit;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
   color: var(--ink);
-  background: var(--bg);
+  background: var(--cream);
   transition: border-color 0.15s;
   outline: none;
 }
-.text-input:focus {
-  border-color: var(--coral);
-}
-.text-input::placeholder {
-  color: var(--muted);
-}
+.text-input:focus { border-color: var(--pool); }
+.text-input::placeholder { color: var(--muted); }
 
-/* Submit button */
+/* Submit button → tomato */
 .btn-primary {
   display: block;
   width: 100%;
-  padding: 15px;
+  padding: 16px;
   margin-top: 28px;
-  background: var(--coral);
+  background: var(--tomato);
   color: #fff;
-  font-family: Georgia, serif;
-  font-size: 18px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 20px;
   font-weight: 700;
-  border: none;
-  border-radius: 10px;
+  border: 2.5px solid var(--tomato-d);
+  border-radius: 999px;
   cursor: pointer;
-  transition: background 0.15s, transform 0.1s;
+  box-shadow: 4px 4px 0 0 rgba(0,0,0,0.10);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
 }
-.btn-primary:hover {
-  background: var(--coral-d);
-  transform: translateY(-1px);
+.btn-primary:hover:not(:disabled) {
+  background: var(--tomato-d);
+  transform: translate(-2px,-2px);
+  box-shadow: 6px 6px 0 0 rgba(0,0,0,0.12);
 }
-.btn-primary:active {
-  transform: translateY(0);
+.btn-primary:active:not(:disabled) {
+  transform: translate(1px,1px);
+  box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.12);
 }
 .btn-primary:disabled {
-  opacity: 0.5;
+  opacity: 0.45;
   cursor: default;
-  transform: none;
+}
+
+/* Dashed arrow doodle under submit */
+.doodle-arrow-wrap {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0.38;
 }
 
 /* ── Results section ────────────────────────────────────── */
-#results-section {
-  display: none;
+#results-section { display: none; }
+#results-section.visible { display: block; }
+
+/* Buddy + speech bubble at top of results */
+.results-buddy {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  margin-bottom: 24px;
 }
-#results-section.visible {
-  display: block;
+.results-buddy img {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 2px 3px 8px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+  animation: buddy-wave 3s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+.buddy-speech {
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 18px 18px 18px 4px;
+  padding: 10px 18px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  box-shadow: 3px 3px 0 0 rgba(0,0,0,0.08);
 }
 
 .results-header {
@@ -200,8 +330,8 @@ h1, h2, h3, .serif {
   margin-bottom: 28px;
 }
 .results-header h2 {
-  font-size: 26px;
-  font-weight: 900;
+  font-size: 28px;
+  font-weight: 700;
   color: var(--ink);
 }
 .results-actions {
@@ -210,30 +340,41 @@ h1, h2, h3, .serif {
   flex-wrap: wrap;
 }
 
+/* Secondary buttons → saffron */
 .btn-secondary {
-  padding: 9px 18px;
+  padding: 9px 20px;
   background: var(--paper);
-  border: 1.5px solid var(--line);
-  border-radius: 8px;
+  border: 2.5px solid var(--saffron-d);
+  border-radius: 999px;
+  font-family: 'Quicksand', sans-serif;
   font-size: 14px;
-  font-weight: 500;
-  color: var(--soft);
+  font-weight: 700;
+  color: var(--saffron-d);
   cursor: pointer;
-  transition: border-color 0.15s, color 0.15s;
+  box-shadow: 3px 3px 0 0 rgba(0,0,0,0.08);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, color 0.12s ease;
+  min-height: 40px;
 }
 .btn-secondary:hover {
-  border-color: var(--coral);
-  color: var(--coral);
+  background: var(--saffron);
+  color: #fff;
+  transform: translate(-1px,-1px);
+  box-shadow: 4px 4px 0 0 rgba(0,0,0,0.10);
+}
+.btn-secondary:active {
+  transform: translate(1px,1px);
+  box-shadow: inset 2px 2px 0 0 rgba(0,0,0,0.10);
 }
 
 /* Stretch notice */
 .stretch-notice {
   background: #fffbeb;
-  border: 1px solid #fde68a;
-  border-left: 3px solid #f59e0b;
-  border-radius: 0 8px 8px 0;
-  padding: 10px 14px;
+  border: 2px dashed #f59e0b;
+  border-radius: 14px;
+  padding: 10px 16px;
   font-size: 13px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
   color: #92400e;
   margin-bottom: 20px;
 }
@@ -241,34 +382,45 @@ h1, h2, h3, .serif {
 /* ── Activity card ──────────────────────────────────────── */
 .activity-card {
   background: var(--paper);
-  border: 1.5px solid var(--line);
+  border: 2px dashed rgba(31,41,55,0.14);
   border-radius: var(--radius);
-  padding: 32px;
+  overflow: hidden;
   margin-bottom: 24px;
-}
-.activity-card + .activity-card {
-  /* already margin-bottom from prev */
+  box-shadow: 0 4px 0 0 rgba(0,0,0,0.06);
 }
 
+/* Colored spine */
+.card-spine {
+  height: 8px;
+}
+
+.card-body {
+  padding: 24px 32px 28px;
+}
+
+/* Sticker number badge */
 .card-number {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 8px;
+  display: inline-block;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  padding: 4px 16px;
+  border-radius: 999px;
+  transform: rotate(2deg);
+  box-shadow: 2px 2px 0 0 rgba(0,0,0,0.10);
+  margin-bottom: 10px;
 }
 
 .card-title {
-  font-family: Georgia, serif;
-  font-size: 26px;
-  font-weight: 900;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
   color: var(--ink);
   line-height: 1.2;
   margin-bottom: 14px;
 }
 
-/* Meta row */
 .card-meta {
   display: flex;
   flex-wrap: wrap;
@@ -279,25 +431,24 @@ h1, h2, h3, .serif {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 3px 10px;
-  border-radius: 100px;
-  background: var(--bg);
-  border: 1px solid var(--line);
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--cream);
+  border: 1.5px solid rgba(31,41,55,0.12);
+  font-family: 'Quicksand', sans-serif;
   font-size: 12px;
+  font-weight: 700;
   color: var(--soft);
   white-space: nowrap;
 }
 
 /* Materials */
-.card-materials {
-  margin-bottom: 20px;
-}
+.card-materials { margin-bottom: 20px; }
 .card-materials h4 {
-  font-size: 13px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--muted);
+  font-family: 'Fredoka', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
   margin-bottom: 8px;
 }
 .materials-list {
@@ -307,24 +458,23 @@ h1, h2, h3, .serif {
   gap: 6px;
 }
 .materials-list li {
-  padding: 3px 10px;
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: 6px;
+  padding: 4px 12px;
+  background: var(--cream);
+  border: 1.5px solid rgba(31,41,55,0.12);
+  border-radius: 999px;
+  font-family: 'Quicksand', sans-serif;
   font-size: 13px;
+  font-weight: 600;
   color: var(--soft);
 }
 
 /* Steps */
-.card-steps {
-  margin-bottom: 20px;
-}
+.card-steps { margin-bottom: 20px; }
 .card-steps h4 {
-  font-size: 13px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--muted);
+  font-family: 'Fredoka', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
   margin-bottom: 10px;
 }
 .steps-list {
@@ -336,7 +486,9 @@ h1, h2, h3, .serif {
   display: flex;
   gap: 12px;
   margin-bottom: 10px;
+  font-family: 'Quicksand', sans-serif;
   font-size: 15px;
+  font-weight: 500;
   color: var(--ink);
   line-height: 1.55;
 }
@@ -346,31 +498,33 @@ h1, h2, h3, .serif {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  background: var(--coral);
-  color: #fff;
-  font-size: 12px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 14px;
   font-weight: 700;
+  color: #fff;
   margin-top: 1px;
 }
+/* Step counter colors per card accent */
+.card-mint    .steps-list li::before { background: var(--mint); }
+.card-saffron .steps-list li::before { background: var(--saffron); }
+.card-pool    .steps-list li::before { background: var(--pool); }
 
 /* Extension callout */
 .card-extension {
-  background: #fff5f5;
-  border-left: 3px solid var(--coral);
-  border-radius: 0 8px 8px 0;
-  padding: 12px 16px;
+  background: var(--tomato);
+  border-radius: 14px;
+  padding: 14px 18px;
   margin-bottom: 20px;
+  font-family: 'Quicksand', sans-serif;
   font-size: 14px;
-  color: var(--soft);
+  font-weight: 600;
+  color: #fff;
   line-height: 1.55;
 }
-.card-extension strong {
-  color: var(--coral-d);
-  font-weight: 600;
-}
+.card-extension strong { font-weight: 700; }
 
 /* Roles row */
 .card-roles {
@@ -380,21 +534,26 @@ h1, h2, h3, .serif {
   margin-bottom: 22px;
 }
 .role-box {
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: 8px;
+  background: var(--cream);
+  border: 2px dashed rgba(31,41,55,0.16);
+  border-radius: 14px;
   padding: 12px 14px;
 }
+.role-box:first-child { transform: rotate(-0.5deg); }
+.role-box:last-child  { transform: rotate(0.5deg); }
 .role-box .role-label {
+  font-family: 'Fredoka', sans-serif;
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--muted);
   margin-bottom: 4px;
 }
 .role-box .role-value {
+  font-family: 'Quicksand', sans-serif;
   font-size: 13px;
+  font-weight: 600;
   color: var(--soft);
   line-height: 1.45;
 }
@@ -405,75 +564,83 @@ h1, h2, h3, .serif {
   flex-wrap: wrap;
   gap: 10px;
   padding-top: 16px;
-  border-top: 1px solid var(--line);
+  border-top: 2px dashed rgba(31,41,55,0.12);
 }
 .btn-yt {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 10px 18px;
+  padding: 10px 20px;
   background: #ff0000;
   color: #fff;
+  font-family: 'Quicksand', sans-serif;
   font-size: 14px;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
+  font-weight: 700;
+  border: 2.5px solid #cc0000;
+  border-radius: 999px;
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.15s;
+  box-shadow: 3px 3px 0 0 rgba(0,0,0,0.10);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  min-height: 44px;
 }
 .btn-yt:hover {
   background: #cc0000;
+  transform: translate(-1px,-1px);
+  box-shadow: 4px 4px 0 0 rgba(0,0,0,0.12);
 }
 .btn-place {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 10px 18px;
+  padding: 10px 20px;
   background: var(--paper);
-  color: var(--cyan);
-  border: 1.5px solid var(--cyan);
+  color: var(--pool-d);
+  border: 2.5px solid var(--pool);
+  font-family: 'Quicksand', sans-serif;
   font-size: 14px;
-  font-weight: 600;
-  border-radius: 8px;
+  font-weight: 700;
+  border-radius: 999px;
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.15s, color 0.15s;
+  box-shadow: 3px 3px 0 0 rgba(0,0,0,0.08);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, color 0.12s ease;
+  min-height: 44px;
 }
 .btn-place:hover {
-  background: var(--cyan);
+  background: var(--pool);
   color: #fff;
-}
-.place-hint {
-  font-size: 12px;
-  color: var(--muted);
-  font-style: italic;
-  align-self: center;
+  transform: translate(-1px,-1px);
+  box-shadow: 4px 4px 0 0 rgba(0,0,0,0.10);
 }
 
 /* ── Footer ─────────────────────────────────────────────── */
 .site-footer {
   text-align: center;
   padding: 40px 24px 56px;
+  font-family: 'Quicksand', sans-serif;
   font-size: 13px;
+  font-weight: 500;
   color: var(--muted);
   line-height: 1.65;
+  position: relative;
 }
-.site-footer a {
-  color: var(--muted);
-  text-decoration: underline;
+.site-footer a { color: var(--muted); text-decoration: underline; }
+.doodle-footer {
+  opacity: 0.28;
+  position: absolute;
+  bottom: 56px;
+  right: 48px;
 }
 
 /* ── Print styles ───────────────────────────────────────── */
 @media print {
-  .site-header, .form-section, .results-header, .card-actions, .site-footer {
-    display: none !important;
-  }
+  .site-header, .form-section, .results-header, .results-buddy,
+  .card-actions, .site-footer { display: none !important; }
   .activity-card {
     break-inside: avoid;
     border: 1px solid #ccc;
     margin-bottom: 16px;
-    padding: 20px;
   }
   body { background: #fff; }
 }
@@ -481,12 +648,21 @@ h1, h2, h3, .serif {
 /* ── Responsive ─────────────────────────────────────────── */
 @media (max-width: 600px) {
   .site-header { padding: 36px 16px 24px; }
-  .site-header h1 { font-size: 32px; }
+  .site-header h1 { font-size: 34px; }
   .site-header .tagline { font-size: 16px; }
   .form-card { padding: 24px 18px; }
-  .activity-card { padding: 22px 18px; }
+  .card-body { padding: 18px 18px 22px; }
   .card-roles { grid-template-columns: 1fr; }
   .results-header { flex-direction: column; align-items: flex-start; }
+  .doodle-star { display: none; }
+  .doodle-footer { display: none; }
+}
+
+@media (max-width: 400px) {
+  .buddy-corner { display: none; }
+  .site-header h1 { font-size: 28px; }
+  .form-card { padding: 20px 14px; }
+  .site-header .tagline { font-size: 15px; }
 }
 </style>
 </head>
@@ -494,18 +670,29 @@ h1, h2, h3, .serif {
 
 <!-- ═══════════════ HEADER ═══════════════ -->
 <header class="site-header">
+  <!-- Star doodle, top-right -->
+  <svg class="doodle-star" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M19 3L22.8 14.1H34.5L25.4 20.9L28.9 32L19 25.2L9.1 32L12.6 20.9L3.5 14.1H15.2L19 3Z" stroke="#1f2937" stroke-width="2" stroke-linejoin="round" fill="none"/>
+  </svg>
   <div class="clock">🕐</div>
   <h1>30 Minute Tomorrow</h1>
-  <p class="tagline">What's something you and your kid could do<br>in 30 minutes tomorrow?</p>
+  <!-- Wavy underline under h1 -->
+  <svg class="wavy-line" viewBox="0 0 240 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M0 6 C20 1,40 11,60 6 C80 1,100 11,120 6 C140 1,160 11,180 6 C200 1,220 11,240 6" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  </svg>
+  <p class="tagline">Three ideas for tomorrow —<br>and tomorrow always counts.</p>
 </header>
 
 <!-- ═══════════════ FORM ═══════════════ -->
 <section class="form-section shell" id="form-section">
   <div class="form-card">
 
+    <!-- Buddy mascot, form card corner -->
+    <img class="buddy-corner" src="assets/buddy.jpg" alt="Buddy the lobster waving" loading="lazy">
+
     <!-- Q1: Age -->
     <div class="field-group">
-      <label class="field-label">How old is your kid?</label>
+      <label class="field-label">How old's your kiddo?</label>
       <div class="chip-group" id="age-group" role="radiogroup" aria-label="Child's age">
         <button class="chip" data-group="age" data-value="4">4</button>
         <button class="chip" data-group="age" data-value="5">5</button>
@@ -521,7 +708,7 @@ h1, h2, h3, .serif {
 
     <!-- Q2: Interests -->
     <div class="field-group">
-      <label class="field-label" for="interests-input">What are they into right now?</label>
+      <label class="field-label" for="interests-input">What are they obsessed with right now?</label>
       <input
         class="text-input"
         id="interests-input"
@@ -534,7 +721,7 @@ h1, h2, h3, .serif {
 
     <!-- Q3: Vibe -->
     <div class="field-group">
-      <label class="field-label">What's the vibe?</label>
+      <label class="field-label">What's the energy?</label>
       <div class="chip-group" id="vibe-group" role="radiogroup" aria-label="Activity vibe">
         <button class="chip" data-group="vibe" data-value="quiet">Quiet</button>
         <button class="chip" data-group="vibe" data-value="messy">Messy</button>
@@ -545,7 +732,7 @@ h1, h2, h3, .serif {
 
     <!-- Q4: Time -->
     <div class="field-group">
-      <label class="field-label">How much time?</label>
+      <label class="field-label">How long do we have?</label>
       <div class="chip-group" id="duration-group" role="radiogroup" aria-label="Available time">
         <button class="chip" data-group="duration" data-value="15">15 min</button>
         <button class="chip" data-group="duration" data-value="30">30 min</button>
@@ -556,8 +743,8 @@ h1, h2, h3, .serif {
     <!-- Q5: City (optional) -->
     <div class="field-group">
       <label class="field-label" for="city-input">
-        Your city or zip
-        <span class="optional">(optional — for nearby place suggestions)</span>
+        Where are you?
+        <span class="optional">(optional — for nearby places)</span>
       </label>
       <input
         class="text-input"
@@ -568,23 +755,38 @@ h1, h2, h3, .serif {
       >
     </div>
 
-    <button class="btn-primary" id="find-btn" disabled>Find 3 activities</button>
+    <button class="btn-primary" id="find-btn" disabled>Show me 3 ideas! 🎨</button>
+
+    <!-- Dashed arrow doodle pointing at button -->
+    <span class="doodle-arrow-wrap" aria-hidden="true">
+      <svg width="60" height="28" viewBox="0 0 60 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M55 4 C45 4,30 24,5 24" stroke="#1f2937" stroke-width="1.5" stroke-dasharray="4 3" stroke-linecap="round" fill="none"/>
+        <path d="M10 18 L5 24 L12 26" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+    </span>
+
   </div>
 </section>
 
 <!-- ═══════════════ RESULTS ═══════════════ -->
 <section class="shell" id="results-section" aria-live="polite">
 
+  <!-- Buddy + speech bubble -->
+  <div class="results-buddy">
+    <img src="assets/buddy.jpg" alt="Buddy the lobster">
+    <div class="buddy-speech">Here are 3 ideas for tomorrow! 🦞</div>
+  </div>
+
   <div class="results-header">
-    <h2>Here's what you could do</h2>
+    <h2>Here's what to try</h2>
     <div class="results-actions">
-      <button class="btn-secondary" id="reroll-btn" title="Get a different set with the same inputs">Try another set</button>
-      <button class="btn-secondary" id="print-btn" title="Save as PDF via print dialog">Save as PDF</button>
+      <button class="btn-secondary" id="reroll-btn" title="Get a different set with the same inputs">Roll again 🎲</button>
+      <button class="btn-secondary" id="print-btn" title="Save as PDF via print dialog">Print these for tomorrow</button>
     </div>
   </div>
 
   <div id="stretch-notice" class="stretch-notice" style="display:none">
-    Stretching slightly outside your kid's exact age band — adjust steps as needed.
+    ⚠️ Stretching slightly outside your kid's exact age band — adjust steps as needed.
   </div>
 
   <div id="cards-container"></div>
@@ -597,6 +799,12 @@ h1, h2, h3, .serif {
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
 <footer class="site-footer">
+  <!-- Paper airplane doodle -->
+  <svg class="doodle-footer" width="42" height="38" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M2 19 L40 2 L27 36 L19 23 Z" stroke="#1f2937" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+    <path d="M19 23 L23 30" stroke="#1f2937" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M2 19 L23 23" stroke="#1f2937" stroke-width="1.5" fill="none"/>
+  </svg>
   Built by <a href="https://tinkeryclaw.com" target="_blank" rel="noopener">Tinkeryclaw</a> ·
   Activities matched client-side from 80 hand-curated ideas ·
   Place suggestions link to Google Maps
@@ -611,15 +819,19 @@ h1, h2, h3, .serif {
   const state = { age: null, interests: '', vibe: null, duration: null, city: '' };
   let activities = [];
 
+  /* ── Card accent colors (rotate: mint, saffron, pool) ── */
+  const CARD_COLORS  = ['#10b981', '#f59e0b', '#0ea5e9'];
+  const CARD_CLASSES = ['card-mint', 'card-saffron', 'card-pool'];
+
   /* ── Elements ── */
-  const findBtn    = document.getElementById('find-btn');
-  const rerollBtn  = document.getElementById('reroll-btn');
-  const printBtn   = document.getElementById('print-btn');
-  const backBtn    = document.getElementById('back-btn');
-  const formSec    = document.getElementById('form-section');
-  const resultsSec = document.getElementById('results-section');
-  const cardsEl    = document.getElementById('cards-container');
-  const stretchEl  = document.getElementById('stretch-notice');
+  const findBtn     = document.getElementById('find-btn');
+  const rerollBtn   = document.getElementById('reroll-btn');
+  const printBtn    = document.getElementById('print-btn');
+  const backBtn     = document.getElementById('back-btn');
+  const formSec     = document.getElementById('form-section');
+  const resultsSec  = document.getElementById('results-section');
+  const cardsEl     = document.getElementById('cards-container');
+  const stretchEl   = document.getElementById('stretch-notice');
   const interestsEl = document.getElementById('interests-input');
   const cityEl      = document.getElementById('city-input');
 
@@ -640,20 +852,35 @@ h1, h2, h3, .serif {
     });
   });
 
-  interestsEl.addEventListener('input', () => {
-    state.interests = interestsEl.value;
-  });
-
-  cityEl.addEventListener('input', () => {
-    state.city = cityEl.value.trim();
-  });
+  interestsEl.addEventListener('input', () => { state.interests = interestsEl.value; });
+  cityEl.addEventListener('input', () => { state.city = cityEl.value.trim(); });
 
   function updateSubmitState() {
     findBtn.disabled = !(state.age && state.duration);
   }
 
+  /* ── Confetti on submit ── */
+  function launchConfetti() {
+    const emojis = ['🎨', '🧪', '🦞', '⭐', '🎲'];
+    const wrap = document.createElement('div');
+    wrap.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;overflow:hidden;';
+    document.body.appendChild(wrap);
+    for (let i = 0; i < 32; i++) {
+      const el = document.createElement('span');
+      el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      const size = 18 + Math.random() * 22;
+      el.style.cssText = `position:absolute;font-size:${size}px;left:${Math.random()*100}%;top:-40px;display:block;transition:transform ${0.9 + Math.random()*0.7}s ease-in,opacity 0.4s ease ${1.1 + Math.random()*0.4}s;`;
+      wrap.appendChild(el);
+      setTimeout(() => {
+        el.style.transform = `translateY(${window.innerHeight + 60}px) rotate(${Math.random()*360}deg)`;
+        el.style.opacity = '0';
+      }, 40 + i * 35);
+    }
+    setTimeout(() => wrap.remove(), 2300);
+  }
+
   /* ── Find activities ── */
-  findBtn.addEventListener('click', showResults);
+  findBtn.addEventListener('click', () => { launchConfetti(); showResults(); });
   rerollBtn.addEventListener('click', showResults);
 
   function showResults() {
@@ -674,16 +901,16 @@ h1, h2, h3, .serif {
     stretchEl.style.display = stretched ? 'block' : 'none';
     cardsEl.innerHTML = '';
 
-    // Show a small "places near X" banner when a city is set
+    // Show city banner if city is set
     let cityBanner = document.getElementById('city-banner');
     if (state.city) {
       if (!cityBanner) {
         cityBanner = document.createElement('div');
         cityBanner.id = 'city-banner';
-        cityBanner.style.cssText = 'text-align:center;font-size:13px;color:var(--ink-mute);margin-bottom:18px;font-style:italic;';
+        cityBanner.style.cssText = 'text-align:center;font-size:13px;color:var(--soft);margin-bottom:18px;font-style:italic;font-family:Quicksand,sans-serif;font-weight:600;';
         cardsEl.parentNode.insertBefore(cityBanner, cardsEl);
       }
-      cityBanner.innerHTML = `Showing places near <strong style="color:var(--ink);font-style:normal;">${esc(state.city)}</strong> · <a href="#" id="change-city-link" style="color:var(--accent);">change</a>`;
+      cityBanner.innerHTML = `Showing places near <strong style="color:var(--ink);font-style:normal;">${esc(state.city)}</strong> · <a href="#" id="change-city-link" style="color:var(--pool);">change</a>`;
       cityBanner.style.display = 'block';
       const changeLink = document.getElementById('change-city-link');
       if (changeLink) {
@@ -718,7 +945,7 @@ h1, h2, h3, .serif {
 
   printBtn.addEventListener('click', () => { window.print(); });
 
-  // Inline city prompt when user clicks "Find a place nearby" without a city set
+  // Inline city prompt when user clicks place button without a city set
   cardsEl.addEventListener('click', (ev) => {
     const btn = ev.target.closest('[data-action="ask-city"]');
     if (!btn) return;
@@ -727,17 +954,18 @@ h1, h2, h3, .serif {
     if (!entered) return;
     state.city = entered.trim();
     cityEl.value = state.city;
-    // Re-render the cards with the new city
     showResults();
   });
 
   /* ── Build a result card ── */
   function buildCard(a, num, city) {
     const card = document.createElement('article');
-    card.className = 'activity-card';
+    const colorIdx = (num - 1) % CARD_COLORS.length;
+    const accentColor = CARD_COLORS[colorIdx];
+    const cardClass   = CARD_CLASSES[colorIdx];
+    card.className = `activity-card ${cardClass}`;
     card.setAttribute('aria-label', a.title);
 
-    // Meta tags
     const noiseIcon = { quiet: '🤫', medium: '📢', loud: '📣' }[a.noise_level] || '🔊';
     const metaTags = [
       `<span class="meta-tag">Ages ${a.age_min}–${a.age_max}</span>`,
@@ -745,64 +973,60 @@ h1, h2, h3, .serif {
       `<span class="meta-tag">${noiseIcon} ${a.noise_level || 'medium'}</span>`,
     ].join('');
 
-    // Materials
     const materialsHtml = (a.materials || []).map(m => `<li>${esc(m)}</li>`).join('');
+    const stepsHtml     = (a.steps     || []).map(s => `<li>${esc(s)}</li>`).join('');
 
-    // Steps
-    const stepsHtml = (a.steps || []).map(s => `<li>${esc(s)}</li>`).join('');
-
-    // Roles — "What you each get" frames the SHARED experience: kid + parent both gain.
     const skillText = a.skill_developed ? esc(a.skill_developed) : '';
     const roleText  = a.parent_role     ? esc(a.parent_role)     : '';
 
-    // YouTube button
     const ytUrl = 'https://www.youtube.com/results?search_query=' + encodeURIComponent(a.go_deeper_query || a.title);
 
-    // Place button — always shown when activity has place_categories. If no city, prompt for one inline.
     let placeHtml = '';
     const hasPlaces = a.place_categories && a.place_categories.length > 0;
     if (hasPlaces) {
       if (city) {
         const mapsQuery = a.place_categories.map(c => encodeURIComponent(c)).join('+OR+') + '+near+' + encodeURIComponent(city);
         const mapsUrl = 'https://www.google.com/maps/search/' + mapsQuery;
-        placeHtml = `<a class="btn-place" href="${mapsUrl}" target="_blank" rel="noopener">📍 Find a place nearby</a>`;
+        placeHtml = `<a class="btn-place" href="${mapsUrl}" target="_blank" rel="noopener">📍 Find a place to go</a>`;
       } else {
-        // No city set — show a button that opens a small prompt to capture one now.
-        placeHtml = `<button class="btn-place" type="button" data-action="ask-city">📍 Find a place nearby</button>`;
+        placeHtml = `<button class="btn-place" type="button" data-action="ask-city">📍 Find a place to go</button>`;
       }
     }
 
     card.innerHTML = `
-      <div class="card-number">Activity ${num} of 3</div>
-      <h3 class="card-title">${esc(a.title)}</h3>
-      <div class="card-meta">${metaTags}</div>
+      <div class="card-spine" style="background:${accentColor}"></div>
+      <div class="card-body">
+        <div class="card-number" style="background:${accentColor}">Idea ${num} of 3</div>
+        <h3 class="card-title">${esc(a.title)}</h3>
+        <div class="card-meta">${metaTags}</div>
 
-      <div class="card-materials">
-        <h4>You'll need</h4>
-        <ul class="materials-list">${materialsHtml}</ul>
-      </div>
+        <div class="card-materials">
+          <h4>Grab these</h4>
+          <ul class="materials-list">${materialsHtml}</ul>
+        </div>
 
-      <div class="card-steps">
-        <h4>How to do it</h4>
-        <ol class="steps-list">${stepsHtml}</ol>
-      </div>
+        <div class="card-steps">
+          <h4>Here's the plan</h4>
+          <ol class="steps-list">${stepsHtml}</ol>
+        </div>
 
-      ${a.extension ? `
-      <div class="card-extension">
-        <strong>If they want more:</strong> ${esc(a.extension)}
-      </div>` : ''}
+        ${a.extension ? `
+        <div class="card-extension">
+          🌟 <strong>Want more? Try this →</strong> ${esc(a.extension)}
+        </div>` : ''}
 
-      <div class="card-roles">
-        ${skillText ? `<div class="role-box"><div class="role-label">What you each get</div><div class="role-value">${skillText}</div></div>` : ''}
-        ${roleText  ? `<div class="role-box"><div class="role-label">Your role</div><div class="role-value">${roleText}</div></div>` : ''}
-      </div>
+        <div class="card-roles">
+          ${skillText ? `<div class="role-box"><div class="role-label">What you both get</div><div class="role-value">${skillText}</div></div>` : ''}
+          ${roleText  ? `<div class="role-box"><div class="role-label">Your job</div><div class="role-value">${roleText}</div></div>` : ''}
+        </div>
 
-      <div class="card-actions">
-        <a class="btn-yt" href="${ytUrl}" target="_blank" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1C4.5 20.4 12 20.4 12 20.4s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5V8.5l6.5 3.5-6.5 3.5z"/></svg>
-          Watch a video about this
-        </a>
-        ${placeHtml}
+        <div class="card-actions">
+          <a class="btn-yt" href="${ytUrl}" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1C4.5 20.4 12 20.4 12 20.4s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5V8.5l6.5 3.5-6.5 3.5z"/></svg>
+            Watch how-to videos 📺
+          </a>
+          ${placeHtml}
+        </div>
       </div>
     `;
 
