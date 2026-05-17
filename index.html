@@ -89,23 +89,21 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   color: var(--soft);
   line-height: 1.5;
 }
-/* Doodles around header */
+/* Doodles — symmetric anchors in the header's two top corners */
 .doodle-star {
   position: absolute;
-  top: 36px;
-  right: 44px;
+  top: 30px;
+  right: 8%;
   transform: rotate(15deg);
 }
 .doodle-spiral {
   position: absolute;
-  top: 60px;
-  left: 40px;
+  top: 40px;
+  left: 8%;
   transform: rotate(-12deg);
 }
-.doodle-sparkle {
-  position: absolute;
-  bottom: 8px;
-  right: 60px;
+@media (max-width: 540px) {
+  .doodle-star, .doodle-spiral { display: none; }
 }
 
 /* ── Form card ──────────────────────────────────────────── */
@@ -119,32 +117,30 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   position: relative;
 }
 
-/* Buddy mascot: form card top-right — BIGGER, with speech bubble */
+/* Buddy mascot: form card top-right corner — NO subhead collision */
 .buddy-corner-wrap {
   position: absolute;
-  top: -54px;
-  right: -8px;
-  display: flex;
-  align-items: flex-end;
-  gap: 8px;
-  z-index: 2;
+  top: -64px;
+  right: -10px;
+  z-index: 3;
 }
 .buddy-corner {
-  width: 108px;
-  height: 108px;
+  width: 110px;
+  height: 110px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid var(--saffron);
   box-shadow: 4px 4px 0 0 var(--ink);
   animation: buddy-wave 3s ease-in-out infinite;
   transform-origin: bottom center;
+  display: block;
 }
 .buddy-corner-bubble {
   position: absolute;
-  bottom: 60px;
-  right: 116px;
+  top: 0;
+  right: 122px;
   background: #fff;
-  border: 2.5px solid var(--ink);
+  border: 3px solid var(--ink);
   border-radius: 18px 18px 4px 18px;
   padding: 8px 14px;
   font-family: 'Fredoka', sans-serif;
@@ -153,7 +149,7 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   color: var(--ink);
   box-shadow: 3px 3px 0 0 var(--ink);
   white-space: nowrap;
-  transform: rotate(-2deg);
+  transform: rotate(-3deg);
 }
 @keyframes buddy-wave {
   0%, 100% { transform: rotate(8deg); }
@@ -202,12 +198,11 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 }
 .chip:active { transform: translate(2px,2px) !important; box-shadow: 2px 2px 0 0 var(--ink) !important; }
 
-/* Per-group wonky rotation (random-feeling but deterministic) */
-.chip-group .chip:nth-child(3n+1) { transform: rotate(-1.5deg); }
-.chip-group .chip:nth-child(3n+2) { transform: rotate( 1deg);   }
-.chip-group .chip:nth-child(3n+3) { transform: rotate(-0.5deg); }
-.chip-group .chip:nth-child(5n+2) { transform: rotate( 1.8deg); }
-.chip-group .chip:nth-child(7n+4) { transform: rotate(-2deg);   }
+/* Per-group wonky rotation (consistent across all chip groups) */
+.chip-group .chip:nth-child(odd)  { transform: rotate(-1.5deg); }
+.chip-group .chip:nth-child(even) { transform: rotate( 1.5deg); }
+.chip-group .chip:nth-child(3n)   { transform: rotate(-0.8deg); }
+.chip-group .chip:nth-child(4n+1) { transform: rotate( 2deg);   }
 .chip-group .chip:hover:not(.selected) {
   transform: translate(-2px,-2px) rotate(0) !important;
   box-shadow: 6px 6px 0 0 var(--ink);
@@ -240,22 +235,23 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   box-shadow: 2px 2px 0 0 var(--ink) !important;
 }
 
-/* Text input */
+/* Text input — chunky to match chip weight */
 .text-input {
   width: 100%;
-  padding: 11px 16px;
-  border: 2px solid rgba(31,41,55,0.18);
+  padding: 13px 18px;
+  border: 3px solid var(--ink);
   border-radius: 14px;
   font-size: 15px;
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
   color: var(--ink);
-  background: var(--cream);
-  transition: border-color 0.15s;
+  background: #fff;
+  transition: box-shadow 0.15s, transform 0.12s;
   outline: none;
+  box-shadow: 4px 4px 0 0 var(--ink);
 }
-.text-input:focus { border-color: var(--pool); }
-.text-input::placeholder { color: var(--muted); }
+.text-input:focus { transform: translate(-1px,-1px); box-shadow: 5px 5px 0 0 var(--pool); }
+.text-input::placeholder { color: var(--muted); font-weight: 500; }
 
 /* Submit button → tomato sticker */
 .btn-primary {
@@ -812,12 +808,7 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
 <footer class="site-footer">
-  <!-- Tomato paper airplane doodle -->
-  <svg class="doodle-footer" width="48" height="42" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M2 19 L40 2 L27 36 L19 23 Z" fill="#ef4444" stroke="#1f2937" stroke-width="2" stroke-linejoin="round"/>
-    <path d="M19 23 L23 30" stroke="#1f2937" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <path d="M2 19 L23 23" stroke="#1f2937" stroke-width="2" fill="none"/>
-  </svg>
+
   <div style="font-family:'Fredoka',sans-serif;font-size:15px;font-weight:700;color:var(--ink);margin-top:6px;">
     Made for tinkering kids and the grown-ups they drag along.
   </div>
