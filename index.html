@@ -941,13 +941,11 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   const FLAVOR_API = _urlParams.get('api') || 'https://thirty-minute-tomorrow-api.tinkeryclaw.workers.dev/flavor';
 
   function hasInterestTagMatch(results, interest) {
-    if (!interest) return true;
-    const tokens = interest.toLowerCase().split(/[\s,]+/).filter(Boolean);
-    return results.some(a =>
-      (a.interests || []).some(tag =>
-        tokens.some(t => tag.toLowerCase().includes(t) || t.includes(tag.toLowerCase()))
-      )
-    );
+    // Always call AI when the user provided ANY interest — the 80-activity
+    // database is too small to trust fuzzy tag matches. "Pokémon cards"
+    // shouldn't keyword-match against a bubble-sort activity tagged "cards".
+    // Only skip AI when interest is empty.
+    return !interest || !interest.trim();
   }
 
   async function callAIFlavor(acts, interest, age, vibe, duration) {
