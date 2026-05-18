@@ -679,6 +679,104 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   box-shadow: 4px 4px 0 0 rgba(0,0,0,0.10);
 }
 
+/* ── Place results panel (inline, after the button) ── */
+.place-panel {
+  margin: 14px 0 6px;
+  padding: 14px 14px 8px;
+  background: var(--paper);
+  border: 2.5px dashed var(--pool);
+  border-radius: 18px;
+  box-shadow: 4px 4px 0 0 rgba(0,0,0,0.06);
+  animation: place-pop-in 0.2s ease-out;
+}
+@keyframes place-pop-in {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.place-panel-loading,
+.place-panel-empty {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 8px 4px;
+}
+.place-panel-empty a {
+  color: var(--pool-d);
+  font-weight: 700;
+}
+.place-panel-header {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 10px;
+  padding: 0 4px;
+}
+.place-cached {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 12px;
+}
+.place-card {
+  display: block;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  background: var(--cream);
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--ink);
+  box-shadow: 2px 2px 0 0 var(--ink);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+.place-card:hover {
+  background: #fff;
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 0 var(--ink);
+}
+.place-card-title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.place-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--soft);
+  margin-bottom: 2px;
+}
+.place-card-type {
+  color: var(--pool-d);
+  font-weight: 700;
+}
+.place-card-addr {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+  color: var(--soft);
+  margin-top: 2px;
+}
+.place-card-hours {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 1px;
+}
+.place-panel-footer {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+  padding: 0 4px;
+  font-style: italic;
+}
+
 /* ── Footer ─────────────────────────────────────────────── */
 .site-footer {
   text-align: center;
@@ -1232,15 +1330,86 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
 
   // Inline city prompt when user clicks place button without a city set
   cardsEl.addEventListener('click', (ev) => {
-    const btn = ev.target.closest('[data-action="ask-city"]');
-    if (!btn) return;
-    ev.preventDefault();
-    const entered = window.prompt("What city or zip should we search? (e.g., Berkeley, CA or 94704)");
-    if (!entered) return;
-    state.city = entered.trim();
-    cityEl.value = state.city;
-    showResults();
+    const askBtn = ev.target.closest('[data-action="ask-city"]');
+    if (askBtn) {
+      ev.preventDefault();
+      const entered = window.prompt("What city or zip should we search? (e.g., Berkeley, CA or 94704)");
+      if (!entered) return;
+      state.city = entered.trim();
+      cityEl.value = state.city;
+      showResults();
+      return;
+    }
+    // Real place lookup via /place endpoint
+    const findBtn = ev.target.closest('[data-action="find-place"]');
+    if (findBtn) {
+      ev.preventDefault();
+      let cats;
+      try { cats = JSON.parse(findBtn.dataset.cats || '[]'); } catch { cats = []; }
+      if (!cats.length || !state.city) return;
+      openPlacePanel(findBtn, cats, state.city);
+      return;
+    }
+    // Close any open place panel when clicking elsewhere
+    if (!ev.target.closest('.place-panel')) {
+      document.querySelectorAll('.place-panel').forEach(p => p.remove());
+    }
   });
+
+  /* ── Place-results panel ── */
+  const PLACE_API = (new URLSearchParams(window.location.search)).get('placeApi')
+    || 'https://thirty-minute-tomorrow-api.tinkeryclaw.workers.dev/place';
+
+  async function openPlacePanel(btn, place_categories, location) {
+    // Close any other open panels
+    document.querySelectorAll('.place-panel').forEach(p => p.remove());
+    // Insert a loading panel right after the button
+    const panel = document.createElement('div');
+    panel.className = 'place-panel';
+    panel.innerHTML = `<div class="place-panel-loading">🔍 Finding real places near <strong>${esc(location)}</strong>…</div>`;
+    btn.insertAdjacentElement('afterend', panel);
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 15000);
+      const resp = await fetch(PLACE_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ place_categories, location }),
+        signal: controller.signal,
+      });
+      clearTimeout(timeoutId);
+      const data = await resp.json();
+      const items = (data.results || []).slice(0, 3);
+      if (items.length === 0) {
+        // Fallback to raw Maps URL
+        const fallback = data.fallback_url || ('https://www.google.com/maps/search/' + place_categories.map(encodeURIComponent).join('+OR+') + '+near+' + encodeURIComponent(location));
+        panel.innerHTML = `<div class="place-panel-empty">No specific matches found. <a href="${fallback}" target="_blank" rel="noopener">Search Maps directly &rarr;</a></div>`;
+        return;
+      }
+      panel.innerHTML = `
+        <div class="place-panel-header">
+          Real places near <strong>${esc(location)}</strong>${data.cached ? ' <span class="place-cached">(cached)</span>' : ''}
+        </div>
+        ${items.map(p => `
+          <a class="place-card" href="${esc(p.link)}" target="_blank" rel="noopener">
+            <div class="place-card-title">${esc(p.title)}</div>
+            <div class="place-card-meta">
+              ${p.rating ? `<span>⭐ ${p.rating}${p.reviews ? ` &middot; ${p.reviews} reviews` : ''}</span>` : ''}
+              ${p.type ? `<span class="place-card-type">${esc(p.type)}</span>` : ''}
+            </div>
+            ${p.address ? `<div class="place-card-addr">${esc(p.address)}</div>` : ''}
+            ${p.hours ? `<div class="place-card-hours">${esc(p.hours)}</div>` : ''}
+          </a>
+        `).join('')}
+        <div class="place-panel-footer">Powered by Google Maps. Tap a card to open in Maps.</div>
+      `;
+    } catch (err) {
+      // Graceful fallback to raw Maps search
+      const fallback = 'https://www.google.com/maps/search/' + place_categories.map(encodeURIComponent).join('+OR+') + '+near+' + encodeURIComponent(location);
+      panel.innerHTML = `<div class="place-panel-empty">Couldn’t reach the place service. <a href="${fallback}" target="_blank" rel="noopener">Search Maps directly &rarr;</a></div>`;
+      console.log('place lookup error', err && err.message);
+    }
+  }
 
   /* ── Build a result card ── */
   function buildCard(a, num, city, total, flavoredInterest, flavorMode) {
@@ -1269,10 +1438,9 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
     let placeHtml = '';
     const hasPlaces = a.place_categories && a.place_categories.length > 0;
     if (hasPlaces) {
+      const catsAttr = esc(JSON.stringify(a.place_categories));
       if (city) {
-        const mapsQuery = a.place_categories.map(c => encodeURIComponent(c)).join('+OR+') + '+near+' + encodeURIComponent(city);
-        const mapsUrl = 'https://www.google.com/maps/search/' + mapsQuery;
-        placeHtml = `<a class="btn-place" href="${mapsUrl}" target="_blank" rel="noopener">📍 Find a place to go</a>`;
+        placeHtml = `<button class="btn-place" type="button" data-action="find-place" data-cats='${catsAttr}'>📍 Find a place to go</button>`;
       } else {
         placeHtml = `<button class="btn-place" type="button" data-action="ask-city">📍 Find a place to go</button>`;
       }
