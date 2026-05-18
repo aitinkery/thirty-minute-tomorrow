@@ -777,6 +777,121 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
   font-style: italic;
 }
 
+/* ── YouTube results panel ── */
+.yt-panel {
+  margin: 14px 0 6px;
+  padding: 14px 14px 10px;
+  background: var(--paper);
+  border: 2.5px dashed var(--tomato);
+  border-radius: 18px;
+  box-shadow: 4px 4px 0 0 rgba(0,0,0,0.06);
+  animation: place-pop-in 0.2s ease-out;
+}
+.yt-panel-loading,
+.yt-panel-empty {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 8px 4px;
+}
+.yt-panel-empty a { color: var(--tomato-d); font-weight: 700; }
+.yt-panel-header {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 10px;
+  padding: 0 4px;
+}
+.yt-cached {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 12px;
+}
+.yt-card {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  margin-bottom: 8px;
+  background: var(--cream);
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--ink);
+  box-shadow: 2px 2px 0 0 var(--ink);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+.yt-card:hover {
+  background: #fff;
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 0 var(--ink);
+}
+.yt-thumb {
+  width: 120px;
+  height: 68px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: cover;
+  background: var(--ink);
+}
+.yt-thumb-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--cream);
+}
+.yt-card-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.yt-card-title {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.yt-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--soft);
+}
+.yt-card-channel {
+  color: var(--tomato-d);
+  font-weight: 700;
+}
+.yt-panel-footer {
+  text-align: right;
+  margin-top: 2px;
+  padding: 0 4px;
+}
+.yt-panel-footer a {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--tomato-d);
+  text-decoration: none;
+}
+.yt-panel-footer a:hover { text-decoration: underline; }
+@media (max-width: 540px) {
+  .yt-thumb { width: 88px; height: 50px; }
+  .yt-card-title { font-size: 13px; }
+}
+
 /* ── Footer ─────────────────────────────────────────────── */
 .site-footer {
   text-align: center;
@@ -1307,6 +1422,7 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
             interests:    a.interests    ?? original?.interests    ?? [interest],
             // place_categories: trust Claude's value (including empty []), fall back to original
             place_categories: a.place_categories !== undefined ? a.place_categories : original?.place_categories,
+            go_deeper_query:  a.go_deeper_query  ?? original?.go_deeper_query  ?? a.title,
           };
         });
       }
@@ -1359,15 +1475,82 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
       openPlacePanel(findBtn, cats, state.city);
       return;
     }
-    // Close any open place panel when clicking elsewhere
-    if (!ev.target.closest('.place-panel')) {
-      document.querySelectorAll('.place-panel').forEach(p => p.remove());
+    // Real YouTube lookup via /youtube endpoint
+    const ytBtn = ev.target.closest('[data-action="find-videos"]');
+    if (ytBtn) {
+      ev.preventDefault();
+      const query = ytBtn.dataset.query || '';
+      const fallback = ytBtn.dataset.fallback || '';
+      if (!query) return;
+      openYouTubePanel(ytBtn, query, fallback);
+      return;
+    }
+    // Close any open panels when clicking elsewhere
+    if (!ev.target.closest('.place-panel') && !ev.target.closest('.yt-panel')) {
+      document.querySelectorAll('.place-panel, .yt-panel').forEach(p => p.remove());
     }
   });
 
-  /* ── Place-results panel ── */
+  /* ── Place + YouTube results panels ── */
   const PLACE_API = (new URLSearchParams(window.location.search)).get('placeApi')
     || 'https://thirty-minute-tomorrow-api.tinkeryclaw.workers.dev/place';
+  const YT_API = (new URLSearchParams(window.location.search)).get('ytApi')
+    || 'https://thirty-minute-tomorrow-api.tinkeryclaw.workers.dev/youtube';
+
+  async function openYouTubePanel(btn, query, fallback) {
+    // Close any other open panels
+    document.querySelectorAll('.place-panel, .yt-panel').forEach(p => p.remove());
+    const panel = document.createElement('div');
+    panel.className = 'yt-panel';
+    panel.innerHTML = `<div class="yt-panel-loading">📺 Finding videos for <strong>${esc(query)}</strong>…</div>`;
+    btn.insertAdjacentElement('afterend', panel);
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 15000);
+      const resp = await fetch(YT_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query, age: state.age ? parseInt(state.age, 10) : null }),
+        signal: controller.signal,
+      });
+      clearTimeout(timeoutId);
+      const data = await resp.json();
+      const items = (data.results || []).slice(0, 3);
+      if (items.length === 0) {
+        const url = data.fallback_url || fallback;
+        panel.innerHTML = `<div class="yt-panel-empty">No videos found. <a href="${url}" target="_blank" rel="noopener">Search YouTube directly →</a></div>`;
+        return;
+      }
+      panel.innerHTML = `
+        <div class="yt-panel-header">
+          Top videos for <strong>${esc(query)}</strong>${data.cached ? ' <span class="yt-cached">(cached)</span>' : ''}
+        </div>
+        ${items.map(v => `
+          <a class="yt-card" href="${esc(v.link)}" target="_blank" rel="noopener">
+            ${v.thumbnail ? `<img class="yt-thumb" src="${esc(v.thumbnail)}" alt="" loading="lazy">` : '<div class="yt-thumb yt-thumb-placeholder">📺</div>'}
+            <div class="yt-card-body">
+              <div class="yt-card-title">${esc(v.title)}</div>
+              <div class="yt-card-meta">
+                ${v.channel ? `<span class="yt-card-channel">${esc(v.channel)}</span>` : ''}
+                ${v.length ? `<span>⏱ ${esc(v.length)}</span>` : ''}
+                ${typeof v.views === 'number' ? `<span>${formatViews(v.views)} views</span>` : ''}
+              </div>
+            </div>
+          </a>
+        `).join('')}
+        <div class="yt-panel-footer"><a href="${esc(fallback)}" target="_blank" rel="noopener">See more on YouTube →</a></div>
+      `;
+    } catch (err) {
+      panel.innerHTML = `<div class="yt-panel-empty">Couldn't reach the video service. <a href="${esc(fallback)}" target="_blank" rel="noopener">Search YouTube directly →</a></div>`;
+      console.log('yt lookup error', err && err.message);
+    }
+  }
+
+  function formatViews(n) {
+    if (n >= 1_000_000) return (n / 1_000_000).toFixed(1).replace(/\.0$/, '') + 'M';
+    if (n >= 1_000) return (n / 1_000).toFixed(1).replace(/\.0$/, '') + 'K';
+    return String(n);
+  }
 
   async function openPlacePanel(btn, place_categories, location) {
     // Close any other open panels
@@ -1442,7 +1625,9 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
     const skillText = a.skill_developed ? esc(a.skill_developed) : '';
     const roleText  = a.parent_role     ? esc(a.parent_role)     : '';
 
-    const ytUrl = 'https://www.youtube.com/results?search_query=' + encodeURIComponent(a.go_deeper_query || a.title);
+    const ytQuery = a.go_deeper_query || a.title;
+    const ytQueryAttr = esc(ytQuery);
+    const ytFallbackUrl = 'https://www.youtube.com/results?search_query=' + encodeURIComponent(ytQuery);
 
     let placeHtml = '';
     const hasPlaces = a.place_categories && a.place_categories.length > 0;
@@ -1490,10 +1675,10 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
         </div>
 
         <div class="card-actions">
-          <a class="btn-yt" href="${ytUrl}" target="_blank" rel="noopener">
+          <button class="btn-yt" type="button" data-action="find-videos" data-query="${ytQueryAttr}" data-fallback="${esc(ytFallbackUrl)}">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1C4.5 20.4 12 20.4 12 20.4s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5V8.5l6.5 3.5-6.5 3.5z"/></svg>
             Watch how-to videos 📺
-          </a>
+          </button>
           ${placeHtml}
         </div>
       </div>
