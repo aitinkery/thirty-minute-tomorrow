@@ -1521,9 +1521,12 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
         panel.innerHTML = `<div class="yt-panel-empty">No videos found. <a href="${url}" target="_blank" rel="noopener">Search YouTube directly →</a></div>`;
         return;
       }
+      // Truncate the query for the header label — 5-10 word search queries look
+      // awkward when shown verbatim. Cap at ~40 chars + ellipsis.
+      const headerLabel = query.length > 40 ? query.slice(0, 38).trim() + '…' : query;
       panel.innerHTML = `
         <div class="yt-panel-header">
-          Top videos for <strong>${esc(query)}</strong>${data.cached ? ' <span class="yt-cached">(cached)</span>' : ''}
+          Top videos · <em>“${esc(headerLabel)}”</em>${data.cached ? ' <span class="yt-cached">(cached)</span>' : ''}
         </div>
         ${items.map(v => `
           <a class="yt-card" href="${esc(v.link)}" target="_blank" rel="noopener">
