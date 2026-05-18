@@ -1287,23 +1287,28 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
       activitiesToRender = flavorResult.activities || results;
       wasFlavored = flavorResult.flavored === true;
       flavorMode = flavorResult.mode || 'reskin';  // 'reskin' or 'generate'
-      // When AI generated fresh activities, it doesn't return age_min/age_max/duration_min/noise_level.
-      // Backfill from the user's inputs + matched defaults so meta-chips don't render "undefined".
-      if (wasFlavored && flavorMode === 'generate') {
+      // AI responses (both reskin and generate) only carry the fields we asked Claude
+      // to return (title/materials/steps/extension/skill/role/place_categories). They
+      // do NOT preserve age_min/age_max/duration_min/noise_level from the originals.
+      // Backfill from the user's form inputs + (for reskin) the matched DB activity.
+      if (wasFlavored) {
         const ageNum = parseInt(state.age, 10);
         const durNum = state.duration ? parseInt(state.duration, 10) : 30;
-        activitiesToRender = activitiesToRender.map((a, i) => ({
-          ...a,
-          age_min: a.age_min ?? Math.max(4, ageNum - 1),
-          age_max: a.age_max ?? Math.min(12, ageNum + 2),
-          duration_min: a.duration_min ?? durNum,
-          noise_level: a.noise_level ?? (state.vibe === 'quiet' ? 'quiet' : state.vibe === 'physical' ? 'loud' : 'medium'),
-          interests: a.interests ?? [interest],
-          // Keep place_categories as-is from Claude (may be []). If completely missing,
-          // leave undefined so the place button doesn’t render rather than showing
-          // a guessed category that might not match the activity.
-          place_categories: a.place_categories,
-        }));
+        const noise = state.vibe === 'quiet' ? 'quiet' : state.vibe === 'physical' ? 'loud' : 'medium';
+        activitiesToRender = activitiesToRender.map((a, i) => {
+          // For reskin, pair with the original DB activity at same index (if present)
+          const original = flavorMode === 'reskin' && results[i] ? results[i] : null;
+          return {
+            ...a,
+            age_min:      a.age_min      ?? original?.age_min      ?? Math.max(4, ageNum - 1),
+            age_max:      a.age_max      ?? original?.age_max      ?? Math.min(12, ageNum + 2),
+            duration_min: a.duration_min ?? original?.duration_min ?? durNum,
+            noise_level:  a.noise_level  ?? original?.noise_level  ?? noise,
+            interests:    a.interests    ?? original?.interests    ?? [interest],
+            // place_categories: trust Claude's value (including empty []), fall back to original
+            place_categories: a.place_categories !== undefined ? a.place_categories : original?.place_categories,
+          };
+        });
       }
       if (buddySpeech) buddySpeech.textContent = "Tomorrow's plan! 🎉";
     } else {
@@ -1442,9 +1447,11 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
     let placeHtml = '';
     const hasPlaces = a.place_categories && a.place_categories.length > 0;
     if (hasPlaces) {
-      const catsAttr = esc(JSON.stringify(a.place_categories));
+      // Use double-quoted attribute with full HTML escaping (incl. single quotes) so apostrophes in
+      // category names like "children's museum" don't break the attribute.
+      const catsAttr = esc(JSON.stringify(a.place_categories)).replace(/'/g, '&#39;');
       if (city) {
-        placeHtml = `<button class="btn-place" type="button" data-action="find-place" data-cats='${catsAttr}'>📍 Find a place to go</button>`;
+        placeHtml = `<button class="btn-place" type="button" data-action="find-place" data-cats="${catsAttr}">📍 Find a place to go</button>`;
       } else {
         placeHtml = `<button class="btn-place" type="button" data-action="ask-city">📍 Find a place to go</button>`;
       }
@@ -1502,7 +1509,8 @@ h1, h2, h3 { font-family: 'Fredoka', 'Quicksand', sans-serif; }
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
   }
 
 })();
